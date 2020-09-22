@@ -1,23 +1,12 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 18pt;
+  font-size: 12pt;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
-header {
-  height: 100vh;
-  width: 250px;
-  overflow: auto;
-  border-right: #333 solid 5px;
-}
 
 main {
-  width: calc(100vw - 256px);
-  height: 100vh;
-  overflow: auto;
-  padding: 0 10px;
   background: transparent url(../imgs/bg.gif) no-repeat center center;
 }
 
@@ -59,6 +48,7 @@ figure {
 }
 
 img {
+  max-width: 100%;
   vertical-align: middle;
 }
 
@@ -67,41 +57,6 @@ pre {
   border: 1px solid #000;
   background-color: #eee;
   padding: 3pt;
-}
-
-.row {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.two_cols {
-  width: calc(50% - 16px);
-}
-
-.col_30 {
-  width: calc(30% - 16px);
-}
-
-.col_40 {
-  width: calc(40% - 16px);
-}
-
-.col_50 {
-  width: calc(50% - 16px);
-}
-
-.col_60 {
-  width: calc(60% - 16px);
-}
-
-.col_70 {
-  width: calc(70% - 16px);
-}
-
-.col_30 img, .col_40 img, .col_50 img, .col_60 img, .col_70 img {
-  max-width: 100%;
-  background-size: contain;
 }
 
 header ul {
@@ -198,5 +153,66 @@ header .anc-level-3 li>a:hover, header .anc-level-3 li>a.selected {
   }
   .row {
     page-break-inside: avoid;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    display: flex;
+    font-size: 18pt;
+  }
+  
+  header {
+    height: 100vh;
+    width: 250px;
+    overflow: auto;
+    border-right: #333 solid 5px;
+  }
+  
+  main {
+    width: calc(100vw - 256px);
+    height: 100vh;
+    overflow: auto;
+    padding: 0 10px;
+    background: transparent url(../imgs/bg.gif) no-repeat center center;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .two_cols {
+    width: calc(50% - 16px);
+  }
+  
+  .col_30 {
+    width: calc(30% - 16px);
+  }
+  
+  .col_40 {
+    width: calc(40% - 16px);
+  }
+  
+  .col_50 {
+    width: calc(50% - 16px);
+  }
+  
+  .col_60 {
+    width: calc(60% - 16px);
+  }
+  
+  .col_70 {
+    width: calc(70% - 16px);
+  }
+  
+  .col_30 img, .col_40 img, .col_50 img, .col_60 img, .col_70 img {
+    max-width: 100%;
+    background-size: contain;
+  }
+
+  img {
+    width: initial;
   }
 }
