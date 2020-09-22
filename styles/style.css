@@ -1,0 +1,60 @@
+main {
+  font-size: 18pt;
+}
+
+main nav {
+  font-size: initial;
+}
+
+section {
+  min-height: 65vh;
+}
+
+h1 {
+	text-align: center;
+	color: #217d4c;
+}
+
+h2 {
+  text-align: center;
+	color: #28353b
+}
+
+h3 {
+  text-align: center;
+  color: #479379;
+}
+
+img {
+  max-width: 100%;
+}
+
+figcaption {
+	font-size: 0.8em;
+	text-align: center;
+	font-style: italic;
+	margin: 0.25rem;
+}
+
+figure {
+	text-align: center;
+	margin: 0.5rem 5px;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+pre {
+  font-size: 10pt;
+  border: 1px solid #000;
+  background-color: #eee;
+  padding: 3pt;
+}
+
+@media print {
+  section {
+    min-height: initial;
+  }
+}

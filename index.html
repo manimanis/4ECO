@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tableur</title>
-
-  <link rel="stylesheet" href="styles/main.css">
+  <title>Cours Tableur</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-
   <header>
-    <ul></ul>
-  </header>
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <main>
+      <a class="navbar-brand" href="#">
+        <img src="imgs/ms_excel.svg" alt="" loading="lazy" width="30" height="30">
+        Tableur
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+    </nav>
+  </header>
+  <main class="container">
     <h1>Tableur</h1>
     <article>
       <h2>Introduction</h2>
@@ -104,7 +115,7 @@
     </article>
 
     <article>
-      <h2>Les fonctions de base</h2>
+      <h2>Fonctions de base</h2>
 
       <section>
         <h3>Introduction</h3>
@@ -738,165 +749,143 @@
         </figure>
       </section>
     </article>
+    <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
+      <ul class="pagination justify-content-center"></ul>
+    </nav>
   </main>
   <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
   <script>
-
     $(() => {
-      const roman = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
-      const alphabetic = ['', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'];
-
-      const link_list = $('header > ul');
-
-
-      const h1 = $('main > h1');
-      const articles = $('main > article');
-
-      const headings = [];
-      articles
+      const navbar = $('#navbarSupportedContent');
+      const pagination = $('#nav-bottom .pagination');
+      const menu = $('<ul>')
+        .addClass('navbar-nav')
+        .appendTo(navbar);
+      $('h2')
         .each(function (index) {
-          const article = $(this);
-          const title = article.find('h2');
-          const h2_counter = index + 1;
-          const h2_id = `heading-${h2_counter}`;
-          title
-            .attr('id', h2_id)
-            .text(`${roman[h2_counter]}. ${title.text()}`);
-          const h2_node = {
-            id: h2_id,
-            text: title.text(),
-            childs: []
-          };
-          headings.push(h2_node);
-          const sections = article.find('section');
-          let h3_counter = 0;
-          let h4_counter = 0;
-          let h3_node;
-          let h3_id;
-          sections.find('h3')
+          const h2 = $(this);
+          const h2_id = `h2_${index + 1}`;
+          const dropdown_id = `dropdown_${index + 1}`;
+
+          const li = $('<li>')
+            .addClass('nav-item dropdown')
+            .appendTo(menu);
+          // class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false";
+          const a = $('<a>')
+            .addClass('nav-link dropdown-toggle')
+            .attr('id', dropdown_id)
+            .attr('role', 'button')
+            .attr('href', '#' + h2_id)
+            .attr('data-toggle', 'dropdown')
+            .attr('aria-haspopup', 'true')
+            .attr('aria-expanded', 'false')
+            .attr('data-display', 'static')
+            .text(h2.text())
+            .appendTo(li);
+          const dropdown_div = $('<div>')
+            .addClass('dropdown-menu')
+            .attr('aria-labelledby', dropdown_id)
+            .appendTo(li);
+          h2.closest('article').find('h3')
             .each(function (index) {
-              const title = $(this);
-              if (this.nodeName === 'H3') {
-                h3_counter++;
-                h4_counter = 0;
-                h3_id = `${h2_id}-${h3_counter}`;
-                title
-                  .attr('id', h3_id)
-                  .text(`${h3_counter}. ${title.text()}`);
-                h3_node = {
-                  id: h3_id,
-                  text: title.text(),
-                  childs: []
-                };
-                h2_node.childs.push(h3_node);
-              } else if (this.nodeName === 'H4') {
-                h4_counter++;
-                if (!h3_id) {
-                  h3_id = `${h2_id}-${h3_counter}`;
-                }
-                if (!h3_node) {
-                  h3_node = {
-                    id: h3_id,
-                    text: '',
-                    childs: []
-                  };
-                  h2_node.childs.push(h3_node);
-                }
-                const h4_id = `${h3_id}-${h4_counter}`;
-                title
-                  .attr('id', h4_id)
-                  .text(`${alphabetic[h4_counter]}. ${title.text()}`);
-                h3_node.childs.push({
-                  id: h4_id,
-                  text: title.text()
-                });
-              }
+              const h3 = $(this);
+              const h3_id = `${h2_id}_h3_${index + 1}`;
+              const a = $('<a>')
+                .addClass('dropdown-item')
+                .text(`${index + 1}. ${h3.text()}`)
+                .attr('href', `#${h3_id}`)
+                .appendTo(dropdown_div);
+              h3
+                .attr('id', h3_id);
             });
         });
 
-      const buildList = (arr, level) => {
-        if (!level) {
-          level = 1;
+      $('main article')
+        .addClass('d-none d-print-block');
+      const sections = $('main section')
+        .addClass('d-none d-print-block')
+        .each(function (index) {
+          const section = $(this);
+          section
+            .attr('data-index', index);
+        });
+      function displaySection(h3_id) {
+        const h3 = $(`#${h3_id}`);
+        const section = h3.closest('section');
+        const article = section.closest('article');
+        const index = section.data('index');
+        $('main article')
+          .addClass('d-none');
+        $('section')
+          .addClass('d-none');
+        section
+          .removeClass('d-none');
+        article
+          .removeClass('d-none');
+        displayPagination(index, sections.length, 5);
+      }
+
+      function displayPaginationItem(index, text, isactive) {
+        const h3_id = sections.eq(index).find('h3').attr('id');
+        // <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        const li = $('<li>')
+          .addClass('page-item')
+          .appendTo(pagination);
+        const a = $('<a>')
+          .addClass('page-link')
+          .attr('href', `#${h3_id}`)
+          .text(text)
+          .appendTo(li);
+        if (isactive) {
+          li.addClass('active');
         }
-        const ul = $('<ul>')
-          .addClass(`anc-level-${level}`);
-        arr.forEach(h_node => {
-          const li = $('<li>')
-            .appendTo(ul);
-          if (h_node.text) {
-            const ahref = $('<a>')
-              .attr('href', `#${h_node.id}`)
-              .appendTo(li);
-            const icon = $('<span>')
-              .addClass('excel-icon')
-              .appendTo(ahref);
-            const text = $('<span>')
-              .addClass('link-text')
-              .text(h_node.text)
-              .appendTo(ahref);
-          }
-          if (h_node.childs) {
-            buildList(h_node.childs, level + 1)
-              .appendTo(li);
-          }
-        });
-        return ul;
-      };
-
-      buildList(headings)
-        .appendTo($('header'));
-
-      function hideAll() {
-        $('.anc-level-2')
-          .addClass('hide');
-        $('main > article')
-          .addClass('hide');
-        $('.selected')
-          .removeClass('selected');
       }
 
-      function hideSection(id) {
-        $(`#${id}`).parent('section')
-          .addClass('hide');
+      function displayPagination(current, length, items) {
+        pagination.html('');
+        let start = current - Math.floor(items / 2);
+        if (start < 0) {
+          start = 0;
+        }
+        let end = start + items;
+        if (end > length - 1) {
+          end = length;
+        }
+        if (start > 0) {
+          displayPaginationItem(0, '<<', 0 === current);
+        }
+        for (let i = start; i < end; i++) {
+          displayPaginationItem(i, i + 1, i === current);
+        }
+        if (end < length - 1) {
+          displayPaginationItem(length - 1, '>>', length - 1 === current);
+        }
+        pagination.find('a')
+          .click(handleSectionClick);
+        localStorage.setItem(location.pathname, current);
       }
 
-      function showSection(id) {
-        const article = $(`#${id}`)
-          .closest('article')
-          .removeClass('hide');
-        article.find('section')
-          .addClass('hide');
-        const section = $(`#${id}`)
-          .closest('section')
-          .removeClass('hide');
+      function handleSectionClick(e) {
+        e.preventDefault();
+        anchors
+          .removeClass('active');
+        const link = $(e.target);
+        const href = link.attr('href').substr(1);
+        if (href.indexOf('h3') > 0) {
+          link.addClass('active');
+          displaySection(href);
+        }
       }
 
-      $('header a')
-        .on('click', e => {
-          e.preventDefault();
-          const link = $(e.currentTarget);
-          const li = link.closest('li');
-          const href = link.attr('href').substr(1);
-          const href_split = href.split('-');
-          hideAll();
-          if (href_split.length === 2) {
-            const lvl2 = li.find('.anc-level-2')
-              .removeClass('hide');
-            lvl2.find('a:eq(0)')
-              .click();
-          } else {
-            link
-              .addClass('selected');
-            li.closest('.anc-level-2')
-              .removeClass('hide');
-            showSection(href);
-          }
-        });
-      hideAll();
-      $('header a:eq(0)')
+      const anchors = navbar.find('a.dropdown-item');
+      const current_index = +localStorage.getItem(location.pathname) || 0;
+      anchors
+        .click(handleSectionClick);
+      anchors.eq(current_index)
         .click();
     });
-
 
   </script>
 </body>
