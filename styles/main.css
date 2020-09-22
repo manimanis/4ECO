@@ -1,0 +1,202 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18pt;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header {
+  height: 100vh;
+  width: 250px;
+  overflow: auto;
+  border-right: #333 solid 5px;
+}
+
+main {
+  width: calc(100vw - 256px);
+  height: 100vh;
+  overflow: auto;
+  padding: 0 10px;
+  background: transparent url(../imgs/bg.jpg) no-repeat center center;
+}
+
+p {
+  margin: 3pt 0;
+}
+
+h1, h2, h3, h4 {
+  margin: .25rem auto .75rem;
+}
+
+h1 {
+	text-align: center;
+	color: #217d4c;
+}
+
+h2 {
+	color: #28353b
+}
+
+h3 {
+  color: #314047;
+}
+
+h4 {
+  color: #479379;
+}
+
+figcaption {
+	font-size: 0.8em;
+	text-align: center;
+	font-style: italic;
+	margin: 0.25rem;
+}
+
+figure {
+	text-align: center;
+	margin: 0.5rem 5px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+pre {
+  font-size: 10pt;
+  border: 1px solid #000;
+  background-color: #eee;
+  padding: 3pt;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.two_cols {
+  width: calc(50% - 16px);
+}
+
+.col_30 {
+  width: calc(30% - 16px);
+}
+
+.col_40 {
+  width: calc(40% - 16px);
+}
+
+.col_50 {
+  width: calc(50% - 16px);
+}
+
+.col_60 {
+  width: calc(60% - 16px);
+}
+
+.col_70 {
+  width: calc(70% - 16px);
+}
+
+.col_30 img, .col_40 img, .col_50 img, .col_60 img, .col_70 img {
+  max-width: 100%;
+  background-size: contain;
+}
+
+header ul {
+  padding: 0;
+  list-style: none;
+}
+
+header ul li {}
+
+.excel-icon {
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: transparent url(../imgs/ms_excel.svg) no-repeat left center;
+	align-self: center;
+}
+
+.link-text {
+	display: block;
+	width: 160px;
+  margin-left: 5px;
+  align-self: center;
+}
+
+header a {
+  display: flex;
+  flex-wrap: wrap;
+	text-decoration: none;
+	padding: 0.5em;
+	margin: .25rem;
+	border-radius: 8px;
+	border: transparent solid 1px;
+  font-size: .9rem;
+}
+
+header>.anc-level-1>li>a {
+  background-color: #217d4c;
+  color: #fff;
+}
+
+header>.anc-level-1>li>a:hover {
+  color: #217d4c;
+  background-color: #fff;
+  border: #217d4c solid 1px;
+}
+
+header .anc-level-2 li>a {
+  font-size: .85rem;
+  color: #fff;
+  background-color: #28353b;
+  border: transparent solid 1px;
+}
+
+header .anc-level-2 li>a:hover, header .anc-level-2 li>a.selected {
+  color: #28353b;
+  background-color: #fff;
+  border: #217d4c solid 1px;
+}
+
+header .anc-level-3 li>a {
+  font-weight: bold;
+  font-size: .8rem;
+  background-color: #479379;
+  color: #fff;
+  border: transparent solid 1px;
+}
+
+header .anc-level-3 li>a:hover, header .anc-level-3 li>a.selected {
+  color: #479379;
+  background-color: #fff;
+  border: #217d4c solid 1px;
+}
+
+.hide {
+  display: none;
+}
+
+@media print {
+  body {
+    display: block;
+    font-size: 12pt;
+  }
+  header {
+    display: none;
+  }
+  main {
+    width: initial;
+    height: initial;
+    overflow: initial;
+    padding: initial;
+  }
+  .hide {
+    display: initial;
+  }
+  .row {
+    page-break-inside: avoid;
+  }
+}
