@@ -924,6 +924,12 @@
       </section>
     </article>
     <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
+      <div class="text-center my-2">
+        <span>Page : </span>
+        <input type="number" id="num-page" min="1">
+        <span>/</span>
+        <span id="count-pages"></span>
+      </div>
       <ul class="pagination justify-content-center"></ul>
     </nav>
   </main>
@@ -1024,7 +1030,14 @@
       }
 
       function displayPagination(current, length, items) {
-        pagination.html('');
+        pagination
+          .html('');
+        numPage
+          .attr('max', length)
+          .attr('step', 1)
+          .val(current + 1);
+        countPages
+          .text(length);
         let start = current - Math.floor(items / 2);
         if (start < 0) {
           start = 0;
@@ -1063,6 +1076,29 @@
         }
       }
 
+      function displaySectionByPage(pos) {
+        if (pos < 0) {
+          pos = 0
+        } else if (pos >= sections.length) {
+          pos = sections.length - 1;
+        }
+        const h3_id = sections.eq(pos).find('h3').attr('id');
+        displaySection(h3_id);
+      };
+
+      const numPage = $('#num-page')
+        .on('input', e => {
+          let pos = +numPage.val() - 1;
+          displaySectionByPage(pos);
+        })
+        .on('keydown', e => {
+          if (e.keyCode == 13) {
+            let pos = +numPage.val() - 1;
+            console.log(pos);
+            displaySectionByPage(pos);
+          }
+        });
+      const countPages = $('#count-pages');
       const anchors = navbar.find('a.dropdown-item');
       const current_index = +localStorage.getItem(location.pathname) || 0;
       anchors

@@ -71,6 +71,15 @@ pre {
   padding: 3pt;
 }
 
+.pagination span {
+  line-height: 2.5rem;
+}
+
+#num-page {
+  width: 4rem;
+  text-align: center;
+}
+
 @media print {
   section {
     min-height: initial;
