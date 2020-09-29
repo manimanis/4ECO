@@ -1,3 +1,8 @@
+body {
+	background: transparent url(../imgs/bg.gif) no-repeat center center fixed;
+	background-size: cover;
+}
+
 main {
   font-size: 18pt;
 }
@@ -23,6 +28,19 @@ h2 {
 h3 {
   text-align: center;
   color: #479379;
+}
+
+h4 {
+	text-align: center;
+	color: #fff;
+	background-color: #2e7d32;
+	padding: 0.5rem;
+	margin: 2rem 0 1rem;
+	border-radius: 0.5rem;
+	font-weight: bold;
+	font-style: italic;
+	border: #fff solid 1px;
+	box-shadow: 0 0 10px #333;
 }
 
 img {

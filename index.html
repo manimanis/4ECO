@@ -424,7 +424,8 @@
         <h4>Activité Pratique</h4>
         <p>On demande de :</p>
         <ul>
-          <li>Télécharger le classeur suivant : <a href="classeurs/fonctions_sommesi.xlsx">fonctions_sommesi.xlsx</a></li>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonctions_sommesi.xlsx">fonctions_sommesi.xlsx</a>
+          </li>
           <li>Compléter la feuille <b>Activité 8</b>.</li>
         </ul>
       </section>
@@ -458,14 +459,15 @@
 (5) =SOMME.SI(A2:A6;0,1;C2:C6)</pre>
           </div>
         </div>
-      </section>
 
-      <h4>Activité Pratique</h4>
+        <h4>Activité Pratique</h4>
         <p>On demande de :</p>
         <ul>
-          <li>Télécharger le classeur suivant : <a href="classeurs/fonctions_sommesi.xlsx">fonctions_sommesi.xlsx</a></li>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonctions_sommesi.xlsx">fonctions_sommesi.xlsx</a>
+          </li>
           <li>Compléter la feuille <b>Activité 9</b>.</li>
         </ul>
+      </section>
     </article>
 
     <article>
@@ -501,6 +503,13 @@
             </figure>
           </div>
         </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/tri.xlsx">tri.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 10</b>.</li>
+        </ul>
       </section>
 
       <section>
@@ -555,6 +564,12 @@
             </figure>
           </div>
         </div>
+
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/tri.xltx">tri.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 11</b>.</li>
+        </ul>
       </section>
 
       <section>
@@ -632,6 +647,12 @@
           </picture>
           <figcaption>Exercice d'application sur l'alignement</figcaption>
         </figure>
+
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/mise_en_forme.xlsx">mise_en_forme.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 12</b>.</li>
+        </ul>
       </section>
     </article>
 
@@ -677,6 +698,15 @@
             </figure>
           </div>
         </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a
+              href="classeurs/mise_en_forme_conditionnelle.xlsx">mise_en_forme_conditionnelle.xlsx</a>
+          </li>
+          <li>Compléter la feuille <b>Activité 13</b>.</li>
+        </ul>
       </section>
 
       <section>
@@ -791,6 +821,15 @@
           </picture>
           <figcaption>L'ensemble des règles de mise en forme utilisée dans cette activité</figcaption>
         </figure>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a
+              href="classeurs/mise_en_forme_conditionnelle.xlsx">mise_en_forme_conditionnelle.xlsx</a>
+          </li>
+          <li>Compléter la feuille <b>Activité 14</b>.</li>
+        </ul>
       </section>
     </article>
 
@@ -835,8 +874,14 @@
               <figcaption>Ventes par année</figcaption>
             </figure>
           </div>
-
         </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/graphiques.xlsx">graphiques.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 15</b>.</li>
+        </ul>
       </section>
 
       <section>
@@ -872,7 +917,7 @@
   </main>
   <footer>
     <nav class="d-print-none bg-light px-1 py-3 mt-4">
-      <div class="text-center small">Réalisé par <strong>Mohamed Anis MANI</strong></div>
+      <div class="text-center small">Réalisé avec &hearts; par <strong>Mohamed Anis MANI</strong></div>
       <div class="text-center small">Année Scolaire <strong>2020/2021</strong></div>
     </nav>
   </footer>
@@ -976,15 +1021,15 @@
         if (end > length - 1) {
           end = length;
         }
-        if (start > 0) {
-          displayPaginationItem(0, '<<', 0 === current);
-        }
+        // if (start > 0) {
+        //   displayPaginationItem(0, '<<', 0 === current);
+        // }
         for (let i = start; i < end; i++) {
           displayPaginationItem(i, i + 1, i === current);
         }
-        if (end < length - 1) {
-          displayPaginationItem(length - 1, '>>', length - 1 === current);
-        }
+        // if (end < length - 1) {
+        //   displayPaginationItem(length - 1, '>>', length - 1 === current);
+        // }
         pagination.find('a')
           .click(handleSectionClick);
         localStorage.setItem(location.pathname, current);
