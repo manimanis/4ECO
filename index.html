@@ -911,6 +911,18 @@
         </figure>
       </section>
     </article>
+    <article>
+      <h2>TPs</h2>
+      <section>
+        <h3>Travaux Pratiques</h3>
+        <ul>
+          <li><a href="classeurs/Série01.xlsx">Série 1</a></li>
+          <li><a href="classeurs/Série02.xlsx">Série 2</a></li>
+          <li><a href="classeurs/Série03.xlsx">Série 3</a></li>
+          <li><a href="classeurs/Série04.pdf">Série 4</a></li>
+        </ul>
+      </section>
+    </article>
     <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
       <ul class="pagination justify-content-center"></ul>
     </nav>
@@ -1020,6 +1032,10 @@
         let end = start + items;
         if (end > length - 1) {
           end = length;
+          start = end - items;
+          if (start < 0) {
+            start = 0;
+          }
         }
         // if (start > 0) {
         //   displayPaginationItem(0, '<<', 0 === current);
