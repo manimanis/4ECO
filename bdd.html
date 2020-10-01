@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bases de données</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header class="mb-4">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">
+        <img src="imgbd/ms_access.svg" alt="" loading="lazy" width="30" height="30">
+        Bases de données
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Bases de données</h1>
+
+    <article>
+      <h2>Introduction</h2>
+
+      <section>
+        <h3>Définition</h3>
+        <p>Une base de données (« BD » ou « BDD ») est un lot d'informations stockées dans une mémoire de masse, d'une
+          façon structurée et organisée. </p>
+        <p>Cette organisation a pour but de faciliter la manipulation des données c-à-d l'ajout, la suppression, la mise
+          à jour et/ou l'extraction de données. </p>
+        <p>L'outil (ou le logiciel) permettant de travailler sur une base de données est appelé SGBD (Système de Gestion
+          de Bases de Données).</p>
+        <p>Parmi les SGBD les plus connus on peut citer : Oracle, SQL Server, Access, MySQL.</p>
+        <div class="row">
+          <div class="col-md-6 col-xl-3">
+            <figure>
+              <img src="imgbd/access.png" alt="Microsoft Access">
+              <figcaption>Microsoft Access</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <figure>
+              <img src="imgbd/MySQL.svg.png" alt="MySQL">
+              <figcaption>MySQL</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <figure>
+              <img src="imgbd/sqlserver.png" alt="Microsoft SQLServer">
+              <figcaption>Microsoft SQLServer</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <figure>
+              <img src="imgbd/oracle19c.png" alt="Orcale Database">
+              <figcaption>Orcale Database</figcaption>
+            </figure>
+          </div>
+        </div>
+        <p>Dans ce cours nous allons utiliser le SGBD intégré avec la suite office : <b>Access</b>.</p>
+      </section>
+
+      <section>
+        <h3>Table</h3>
+
+        <p>Les données d'une base de données sont stockées dans des <b>tables</b>.</p>
+        <p>Une table est un tableau contenant des <b>enregistrements</b> ayant une même structure ou ayant les mêmes
+          <b>champs</b>.</p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img01.svg" alt="Exemple de la structure d'une table">
+            <figcaption>Exemple de la structure d'une table</figcaption>
+          </figure>
+        </div>
+
+        <p>Les champs de la table sont : Nom, Prénom, Sexe, Adresse, Ville et Code Postal.</p>
+      </section>
+    </article>
+
+    <article>
+      <h2>Tables</h2>
+
+      <section>
+        <h3>Organisaton</h3>
+
+        <p>Une table possède une structure formée par ses <b>champs</b>. Elle sert à enregistrer des données dans des
+          <b>enregistrements</b> ayant cette structure.</p>
+      </section>
+
+      <section>
+        <h3>Champ</h3>
+
+        <p>Un champ est caractérisé par son <b>nom</b>, son <b>type</b> et sa <b>taille</b>.</p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img02.svg" alt="Caractéristiques d'un champ">
+            <figcaption>Caractéristiques d'un champ</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h3>Enregistrement</h3>
+
+        <p>Un enregistrement est constitué par l'ensemble des valeurs attribuées à l'ensemble de ses champs.</p>
+        <div>
+          <figure>
+            <img src="imgbd/img03.svg" alt="Exemple d'un enregistrement dans une table Eleves">
+            <figcaption>Exemple d'un enregistrement dans une table Eleves</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h3>Clé primaire</h3>
+
+        <p>Au moins un champ de la table doit servir comme clé primaire pour la table. Une clé primaire permet
+          d'identifier un enregistrement d'une façon unique. </p>
+        <div>
+          <figure>
+            <img src="imgbd/img04.svg" alt="Identification de la clé primaire">
+            <figcaption>Identification de la clé primaire</figcaption>
+          </figure>
+        </div>
+
+
+        <p><b>Question :</b> Déterminer quelle est la clé primaire dans la table Eleves ?</p>
+        <div>
+          <figure>
+            <img src="imgbd/img02.png" alt="Table eleves">
+            <figcaption>Table eleves</figcaption>
+          </figure>
+        </div>
+        <p>La clé primaire possède plusieurs avantages dont :</p>
+        <ul>
+          <li>Elle facilite et accélère la recherche des informations dans une table.</li>
+          <li>Elle empêche l'utilisateur de saisir la même information deux fois.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Schéma</h3>
+
+        <p>Le schéma d'une table est donné par l'ensemble de ses attributs (Champs). La clé primaire doit être
+          soulignée.</p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img02.png" alt="Table eleves">
+            <figcaption>Table eleves</figcaption>
+          </figure>
+        </div>
+
+        <p>Le schéma de la table <b>eleves</b> est :<br> <span class="small">eleves(<u>num_eleve</u>, nom, prenom,
+            genre, adresse, ville, code_postal)</span></p>
+
+        <p><b>Question :</b> Donner les schémas des tables suivantes ?</p>
+
+        <div class="row">
+          <div class="col-md-4">
+            <figure>
+              <img src="imgbd/img04.png" alt="Table matieres">
+              <figcaption>Table matieres</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <figure>
+              <img src="imgbd/img05.png" alt="Table notes">
+              <figcaption>Table notes</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <article>
+      <h2>Relations</h2>
+
+      <section>
+        <h3>Problème</h3>
+        <p>Soit la table suivante extraite de la base de données d'une agence de location de voitures :</p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img06.png" alt="Table location">
+            <figcaption>Table location</figcaption>
+          </figure>
+        </div>
+        <p>Cette table contient plusieurs anomalies :</p>
+        <ul>
+          <li>Elle contient des <b>redondances de données</b> : les informations d'un véhicule et celles d'un client
+            sont répétés plusieurs fois.</li>
+          <li><b>Anomalie de suppression</b> : La suppression de la voiture OpelAstra entraine la suppression des
+            informations du client Beji Mohamed.</li>
+          <li><b>Anomalie de mise à jour</b> : Si Soussi Slim change son adresse il faudra modifier tous les
+            enregistrements qui portent son nom.</li>
+          <li><b>Anomalie d'insertion</b> : Lorsqu'on souhaite enregistrer une nouvelle location pour la voiture Peugeot
+            406 on peut écrire par mal attention Peuegot 640.</li>
+        </ul>
+        <p><b>Question :</b> Quelle est la solution ?</p>
+      </section>
+
+      <section>
+        <h3>Solution</h3>
+
+        <p>On remarque que cette table contient les informations des véhicules et celles des clients. </p>
+        <p>On pourra les séparer en deux tables comme suit :</p>
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <img src="imgbd/img04.png" alt="Table clients">
+              <figcaption>Table clients</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <img src="imgbd/img05.png" alt="Table vehicules">
+              <figcaption>Table vehicules</figcaption>
+            </figure>
+          </div>
+        </div>
+        <p>Malgré la décomposition que nous avons effectué sur cette table, nous faisons face à un autre problème :
+          <b>Comment faire pour dire que tel client vient de louer telle voiture ?</b></p>
+      </section>
+
+      <section>
+        <h3>Relation</h3>
+
+        <p>Nous devons relier ces deux tables à une troisième table nommée <b>location_vehicule</b>.</p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img06.svg" alt="Table location_vehicule">
+            <figcaption>Table location_vehicule</figcaption>
+          </figure>
+        </div>
+
+        <p>Et nous devons définir les liaisons entre les trois tables.</p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img08.png" alt="Relation entre les tables">
+            <figcaption>Relation entre les tables</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h3>Types de relations</h3>
+
+        <p>Il existe trois types de relations : un à un, un à plusieurs, plusieurs à plusieurs.</p>
+
+        <h4>Relation un à un</h4>
+
+        <p>Un camion est un type de véhicule, une voiture est un type de véhicule d’où un véhicule ne peut pas être un
+          camion et une voiture d’où la relation un à un.</p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img09.png" alt="Relation un à un">
+            <figcaption>Relation un à un</figcaption>
+          </figure>
+        </div>
+
+        <h4>Relation un à plusieurs</h4>
+
+        <p>Dans le diagramme ci-dessous un client peut effectuer plusieurs locations. La relation entre la table clients
+          et location_vehicule est dite relation un à plusieurs.</p>
+
+        <p>Dans la relation indiquée, entre les tables clients et location_vehicule, la table clients est appelée
+          <b>table mère</b> et la table location_vehicule est dite <b>table fille</b></p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img08.png" alt="Relations entre les tables">
+            <figcaption>Relations entre les tables</figcaption>
+          </figure>
+        </div>
+
+        <p><b>Question</b> Identifier une deuxième relation un à plusieurs dans ce diagramme. Identifier la table mère
+          et la table fille dans cette relation.</p>
+
+        <h4>Relation plusieurs à plusieurs</h4>
+
+        <p>Dans le diagramme précédent plusieurs Véhicules peuvent être louées par plusieurs Clients d’où il existe une
+          relation plusieurs à plusieurs entre les tables Clients et Véhicule.</p>
+      </section>
+    </article>
+
+    <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
+      <div class="text-center my-2">
+        <span>Page : </span>
+        <input type="number" id="num-page" min="1">
+        <span>/</span>
+        <span id="count-pages"></span>
+      </div>
+      <ul class="pagination justify-content-center"></ul>
+    </nav>
+  </main>
+  <footer>
+    <nav class="d-print-none bg-light px-1 py-3 mt-4">
+      <div class="text-center small">Réalisé avec &hearts; par <strong>Mohamed Anis MANI</strong></div>
+      <div class="text-center small">Année Scolaire <strong>2020/2021</strong></div>
+    </nav>
+  </footer>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script>
+    $(() => {
+      const navbar = $('#navbarSupportedContent');
+      const pagination = $('#nav-bottom .pagination');
+      const menu = $('<ul>')
+        .addClass('navbar-nav')
+        .appendTo(navbar);
+      $('h2')
+        .each(function (index) {
+          const h2 = $(this);
+          const h2_id = `h2_${index + 1}`;
+          const dropdown_id = `dropdown_${index + 1}`;
+
+          const li = $('<li>')
+            .addClass('nav-item dropdown')
+            .appendTo(menu);
+          // class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false";
+          const a = $('<a>')
+            .addClass('nav-link dropdown-toggle')
+            .attr('id', dropdown_id)
+            .attr('role', 'button')
+            .attr('href', '#' + h2_id)
+            .attr('data-toggle', 'dropdown')
+            .attr('aria-haspopup', 'true')
+            .attr('aria-expanded', 'false')
+            .attr('data-display', 'static')
+            .text(h2.text())
+            .appendTo(li);
+          const dropdown_div = $('<div>')
+            .addClass('dropdown-menu')
+            .attr('aria-labelledby', dropdown_id)
+            .appendTo(li);
+          h2.closest('article').find('h3')
+            .each(function (index) {
+              const h3 = $(this);
+              const h3_id = `${h2_id}_h3_${index + 1}`;
+              const a = $('<a>')
+                .addClass('dropdown-item')
+                .text(`${index + 1}. ${h3.text()}`)
+                .attr('href', `#${h3_id}`)
+                .appendTo(dropdown_div);
+              h3
+                .attr('id', h3_id);
+            });
+        });
+
+      $('main article')
+        .addClass('d-none d-print-block');
+      const sections = $('main section')
+        .addClass('d-none d-print-block')
+        .each(function (index) {
+          const section = $(this);
+          section
+            .attr('data-index', index);
+        });
+      function displaySection(h3_id) {
+        const h3 = $(`#${h3_id}`);
+        const section = h3.closest('section');
+        const article = section.closest('article');
+        const index = section.data('index');
+        $('main article')
+          .addClass('d-none');
+        $('section')
+          .addClass('d-none');
+        section
+          .removeClass('d-none');
+        article
+          .removeClass('d-none');
+        displayPagination(index, sections.length, 5);
+      }
+
+      function displayPaginationItem(index, text, isactive) {
+        const h3_id = sections.eq(index).find('h3').attr('id');
+        // <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        const li = $('<li>')
+          .addClass('page-item')
+          .appendTo(pagination);
+        const a = $('<a>')
+          .addClass('page-link')
+          .attr('href', `#${h3_id}`)
+          .text(text)
+          .appendTo(li);
+        if (isactive) {
+          li.addClass('active');
+        }
+      }
+
+      function displayPagination(current, length, items) {
+        pagination
+          .html('');
+        numPage
+          .attr('max', length)
+          .attr('step', 1)
+          .val(current + 1);
+        countPages
+          .text(length);
+        let start = current - Math.floor(items / 2);
+        if (start < 0) {
+          start = 0;
+        }
+        let end = start + items;
+        if (end > length - 1) {
+          end = length;
+          start = end - items;
+          if (start < 0) {
+            start = 0;
+          }
+        }
+        // if (start > 0) {
+        //   displayPaginationItem(0, '<<', 0 === current);
+        // }
+        for (let i = start; i < end; i++) {
+          displayPaginationItem(i, i + 1, i === current);
+        }
+        // if (end < length - 1) {
+        //   displayPaginationItem(length - 1, '>>', length - 1 === current);
+        // }
+        pagination.find('a')
+          .click(handleSectionClick);
+        localStorage.setItem(location.pathname, current);
+      }
+
+      function handleSectionClick(e) {
+        e.preventDefault();
+        anchors
+          .removeClass('active');
+        const link = $(e.target);
+        const href = link.attr('href').substr(1);
+        if (href.indexOf('h3') > 0) {
+          link.addClass('active');
+          displaySection(href);
+        }
+      }
+
+      function displaySectionByPage(pos) {
+        if (pos < 0) {
+          pos = 0
+        } else if (pos >= sections.length) {
+          pos = sections.length - 1;
+        }
+        const h3_id = sections.eq(pos).find('h3').attr('id');
+        displaySection(h3_id);
+      };
+
+      const numPage = $('#num-page')
+        .on('input', e => {
+          let pos = +numPage.val() - 1;
+          displaySectionByPage(pos);
+        })
+        .on('keydown', e => {
+          if (e.keyCode == 13) {
+            let pos = +numPage.val() - 1;
+            console.log(pos);
+            displaySectionByPage(pos);
+          }
+        });
+      const countPages = $('#count-pages');
+      const anchors = navbar.find('a.dropdown-item');
+      const current_index = +localStorage.getItem(location.pathname) || 0;
+      anchors
+        .click(handleSectionClick);
+      anchors.eq(current_index)
+        .click();
+    });
+
+  </script>
+</body>
+
+</html>
