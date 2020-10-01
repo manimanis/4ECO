@@ -1,6 +1,6 @@
 body {
-	background: transparent url(../imgs/bg.gif) no-repeat center center fixed;
-	background-size: cover;
+  background: transparent url(../imgs/bg.gif) no-repeat center center fixed;
+  background-size: cover;
 }
 
 main {
@@ -16,13 +16,13 @@ section {
 }
 
 h1 {
-	text-align: center;
-	color: #217d4c;
+  text-align: center;
+  color: #217d4c;
 }
 
 h2 {
   text-align: center;
-	color: #28353b
+  color: #28353b
 }
 
 h3 {
@@ -31,16 +31,16 @@ h3 {
 }
 
 h4 {
-	text-align: center;
-	color: #fff;
-	background-color: #2e7d32;
-	padding: 0.5rem;
-	margin: 2rem 0 1rem;
-	border-radius: 0.5rem;
-	font-weight: bold;
-	font-style: italic;
-	border: #fff solid 1px;
-	box-shadow: 0 0 10px #333;
+  text-align: center;
+  color: #fff;
+  background-color: #2e7d32;
+  padding: 0.5rem;
+  margin: 2rem 0 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-style: italic;
+  border: #fff solid 1px;
+  box-shadow: 0 0 10px #333;
 }
 
 img {
@@ -48,15 +48,15 @@ img {
 }
 
 figcaption {
-	font-size: 0.8em;
-	text-align: center;
-	font-style: italic;
-	margin: 0.25rem;
+  font-size: 0.8em;
+  text-align: center;
+  font-style: italic;
+  margin: 0.25rem;
 }
 
 figure {
-	text-align: center;
-	margin: 0.5rem 5px;
+  text-align: center;
+  margin: 0.5rem 5px;
 }
 
 img {
@@ -81,6 +81,11 @@ pre {
 }
 
 @media print {
+  body {
+    background: initial;
+    background-size: initial;
+  }
+
   section {
     min-height: initial;
   }
