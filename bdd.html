@@ -42,25 +42,25 @@
           de Bases de Données).</p>
         <p>Parmi les SGBD les plus connus on peut citer : Oracle, SQL Server, Access, MySQL.</p>
         <div class="row">
-          <div class="col-md-6 col-xl-3">
+          <div class="col-sm-6 col-xl-3">
             <figure>
               <img src="imgbd/access.png" alt="Microsoft Access">
               <figcaption>Microsoft Access</figcaption>
             </figure>
           </div>
-          <div class="col-md-6 col-xl-3">
+          <div class="col-sm-6 col-xl-3">
             <figure>
               <img src="imgbd/MySQL.svg.png" alt="MySQL">
               <figcaption>MySQL</figcaption>
             </figure>
           </div>
-          <div class="col-md-6 col-xl-3">
+          <div class="col-sm-6 col-xl-3">
             <figure>
               <img src="imgbd/sqlserver.png" alt="Microsoft SQLServer">
               <figcaption>Microsoft SQLServer</figcaption>
             </figure>
           </div>
-          <div class="col-md-6 col-xl-3">
+          <div class="col-sm-6 col-xl-3">
             <figure>
               <img src="imgbd/oracle19c.png" alt="Orcale Database">
               <figcaption>Orcale Database</figcaption>
@@ -169,13 +169,13 @@
         <p><b>Question :</b> Donner les schémas des tables suivantes ?</p>
 
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-sm-6">
             <figure>
               <img src="imgbd/img04.png" alt="Table matieres">
               <figcaption>Table matieres</figcaption>
             </figure>
           </div>
-          <div class="col-md-4">
+          <div class="col-sm-6">
             <figure>
               <img src="imgbd/img05.png" alt="Table notes">
               <figcaption>Table notes</figcaption>
@@ -220,13 +220,13 @@
         <div class="row">
           <div class="col-md-6">
             <figure>
-              <img src="imgbd/img04.png" alt="Table clients">
+              <img src="imgbd/img11.png" alt="Table clients">
               <figcaption>Table clients</figcaption>
             </figure>
           </div>
           <div class="col-md-6">
             <figure>
-              <img src="imgbd/img05.png" alt="Table vehicules">
+              <img src="imgbd/img10.png" alt="Table vehicules">
               <figcaption>Table vehicules</figcaption>
             </figure>
           </div>
@@ -289,13 +289,120 @@
           </figure>
         </div>
 
-        <p><b>Question</b> Identifier une deuxième relation un à plusieurs dans ce diagramme. Identifier la table mère
+        <p><b>Question :</b> Identifier une deuxième relation un à plusieurs dans ce diagramme. Identifier la table mère
           et la table fille dans cette relation.</p>
 
         <h4>Relation plusieurs à plusieurs</h4>
 
         <p>Dans le diagramme précédent plusieurs Véhicules peuvent être louées par plusieurs Clients d’où il existe une
           relation plusieurs à plusieurs entre les tables Clients et Véhicule.</p>
+      </section>
+
+      <section>
+        <h3>Mise en garde</h3>
+
+        <p>Pour créer une relation entre deux tables il faut que :</p>
+        <ul>
+          <li>Les champs reliés possèdent le même type de donnée et la même taille.</li>
+          <li>La valeur tapée pour une <b>clé étrangère</b> (dans la table fille) corresponde à une valeur tapée comme
+            <b>clé primaire</b> (dans la table mère).</li>
+        </ul>
+
+        <div>
+          <figure>
+            <img src="imgbd/img07.svg" alt="Erreur, une relation entre deux champs de types différents">
+            <figcaption>Erreur, une relation entre deux champs de types différents</figcaption>
+          </figure>
+        </div>
+
+        <div>
+          <figure>
+            <img src="imgbd/img08.svg" alt="Erreur d'intégrité référentielle, la valeur tapée dans la table fille n'existe pas dans la table mère">
+            <figcaption>Erreur d'intégrité référentielle, la valeur tapée dans la table fille n'existe pas dans la table mère</figcaption>
+          </figure>
+        </div>
+      </section>
+    </article>
+
+    <article>
+      <h2>Applications</h2>
+
+      <section>
+        <h3>Application n°1</h3>
+
+        <p>Regarder la vidéo suivante et suivre ses étapes.</p>
+
+        <div class="d-print-none">
+          <video controls>
+            <source src="imgbd/base_de_données.wmv.mp4" type="video/mp4">
+              <source src="imgbd/base_de_données.wmv.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>Application n°2</h3>
+
+        <ol>
+          <li>Ouvrir le logiciel de base de données : Microsoft Access</li>
+          <li>Créer les tables suivantes:
+            <div class="row">
+              <div class="col-sm-6">
+                <figure>
+                  <img src="imgbd/img18.png" alt="Table eleves">
+                  <figcaption>Table eleves</figcaption>
+                </figure>
+              </div>
+              <div class="col-sm-6">
+                <figure>
+                  <img src="imgbd/img19.png" alt="Table matieres">
+                  <figcaption>Table matieres</figcaption>
+                </figure>
+              </div>
+              <div class="col-sm-12">
+                <figure>
+                  <img src="imgbd/img20.png" alt="Table libelle">
+                  <figcaption>Table libelle</figcaption>
+                </figure>
+              </div>
+            </div>
+          </li>
+          <li>Créer les relations suivantes entre les tables :
+            <figure>
+              <img src="imgbd/img21.png" alt="Relations entre les tables">
+              <figcaption>Relations entre les tables</figcaption>
+            </figure>
+          </li>
+          <li>Quel est le type de relations entre les tables
+            <ol type="a">
+              <li>Matières & Notes</li>
+              <li>Eleves & Notes</li>
+              <li>Matières & Eleves</li>
+            </ol>
+          </li>
+          <li>Insérer les données suivantes dans les tables :
+            <div class="row">
+              <div class="col-sm-4">
+                <figure>
+                  <img src="imgbd/img22.png" alt="Enregistrements de la table matieres">
+                  <figcaption>Enregistrements de la table matieres</figcaption>
+                </figure>
+              </div>
+              <div class="col-sm-8">
+                <figure>
+                  <img src="imgbd/img23.png" alt="Enregistrements de la table eleves">
+                  <figcaption>Enregistrements de la table eleves</figcaption>
+                </figure>
+              </div>
+              <div class="col-sm-12">
+                <figure>
+                  <img src="imgbd/img24.png" alt="Enregistrements de la table notes">
+                  <figcaption>Enregistrements de la table notes</figcaption>
+                </figure>
+              </div>
+            </div>
+          </li>
+        </ol>
       </section>
     </article>
 
