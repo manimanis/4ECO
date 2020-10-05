@@ -12,14 +12,12 @@
 <body>
   <header class="mb-4">
     <nav class="navbar navbar-expand-xl navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <a class="navbar-brand" href="#">
-        <img src="imgbd/ms_access.svg" alt="" loading="lazy" width="30" height="30">
-        Bases de données
+        <img src="imgbd/ms_access.svg" alt="" loading="lazy" width="30" height="30"> Bases de données
       </a>
 
 
@@ -34,12 +32,9 @@
 
       <section>
         <h3>Définition</h3>
-        <p>Une base de données (« BD » ou « BDD ») est un lot d'informations stockées dans une mémoire de masse, d'une
-          façon structurée et organisée. </p>
-        <p>Cette organisation a pour but de faciliter la manipulation des données c-à-d l'ajout, la suppression, la mise
-          à jour et/ou l'extraction de données. </p>
-        <p>L'outil (ou le logiciel) permettant de travailler sur une base de données est appelé SGBD (Système de Gestion
-          de Bases de Données).</p>
+        <p>Une base de données (« BD » ou « BDD ») est un lot d'informations stockées dans une mémoire de masse, d'une façon structurée et organisée. </p>
+        <p>Cette organisation a pour but de faciliter la manipulation des données c-à-d l'ajout, la suppression, la mise à jour et/ou l'extraction de données. </p>
+        <p>L'outil (ou le logiciel) permettant de travailler sur une base de données est appelé SGBD (Système de Gestion de Bases de Données).</p>
         <p>Parmi les SGBD les plus connus on peut citer : Oracle, SQL Server, Access, MySQL.</p>
         <div class="row">
           <div class="col-sm-6 col-xl-3">
@@ -126,8 +121,7 @@
       <section>
         <h3>Clé primaire</h3>
 
-        <p>Au moins un champ de la table doit servir comme clé primaire pour la table. Une clé primaire permet
-          d'identifier un enregistrement d'une façon unique. </p>
+        <p>Au moins un champ de la table doit servir comme clé primaire pour la table. Une clé primaire permet d'identifier un enregistrement d'une façon unique. </p>
         <div>
           <figure>
             <img src="imgbd/img04.svg" alt="Identification de la clé primaire">
@@ -153,8 +147,8 @@
       <section>
         <h3>Schéma</h3>
 
-        <p>Le schéma d'une table est donné par l'ensemble de ses attributs (Champs). La clé primaire doit être
-          soulignée.</p>
+        <p>Le schéma d'une table est donné par l'ensemble de ses attributs (Champs). La clé primaire doit être soulignée.
+        </p>
 
         <div>
           <figure>
@@ -200,14 +194,10 @@
         </div>
         <p>Cette table contient plusieurs anomalies :</p>
         <ul>
-          <li>Elle contient des <b>redondances de données</b> : les informations d'un véhicule et celles d'un client
-            sont répétés plusieurs fois.</li>
-          <li><b>Anomalie de suppression</b> : La suppression de la voiture OpelAstra entraine la suppression des
-            informations du client Beji Mohamed.</li>
-          <li><b>Anomalie de mise à jour</b> : Si Soussi Slim change son adresse il faudra modifier tous les
-            enregistrements qui portent son nom.</li>
-          <li><b>Anomalie d'insertion</b> : Lorsqu'on souhaite enregistrer une nouvelle location pour la voiture Peugeot
-            406 on peut écrire par mal attention Peuegot 640.</li>
+          <li>Elle contient des <b>redondances de données</b> : les informations d'un véhicule et celles d'un client sont répétés plusieurs fois.</li>
+          <li><b>Anomalie de suppression</b> : La suppression de la voiture OpelAstra entraine la suppression des informations du client Beji Mohamed.</li>
+          <li><b>Anomalie de mise à jour</b> : Si Soussi Slim change son adresse il faudra modifier tous les enregistrements qui portent son nom.</li>
+          <li><b>Anomalie d'insertion</b> : Lorsqu'on souhaite enregistrer une nouvelle location pour la voiture Peugeot 406 on peut écrire par mal attention Peuegot 640.</li>
         </ul>
         <p><b>Question :</b> Quelle est la solution ?</p>
       </section>
@@ -264,8 +254,7 @@
 
         <h4>Relation un à un</h4>
 
-        <p>Un camion est un type de véhicule, une voiture est un type de véhicule d’où un véhicule ne peut pas être un
-          camion et une voiture d’où la relation un à un.</p>
+        <p>Un camion est un type de véhicule, une voiture est un type de véhicule d’où un véhicule ne peut pas être un camion et une voiture d’où la relation un à un.</p>
 
         <div>
           <figure>
@@ -276,8 +265,7 @@
 
         <h4>Relation un à plusieurs</h4>
 
-        <p>Dans le diagramme ci-dessous un client peut effectuer plusieurs locations. La relation entre la table clients
-          et location_vehicule est dite relation un à plusieurs.</p>
+        <p>Dans le diagramme ci-dessous un client peut effectuer plusieurs locations. La relation entre la table clients et location_vehicule est dite relation un à plusieurs.</p>
 
         <p>Dans la relation indiquée, entre les tables clients et location_vehicule, la table clients est appelée
           <b>table mère</b> et la table location_vehicule est dite <b>table fille</b></p>
@@ -289,13 +277,11 @@
           </figure>
         </div>
 
-        <p><b>Question :</b> Identifier une deuxième relation un à plusieurs dans ce diagramme. Identifier la table mère
-          et la table fille dans cette relation.</p>
+        <p><b>Question :</b> Identifier une deuxième relation un à plusieurs dans ce diagramme. Identifier la table mère et la table fille dans cette relation.</p>
 
         <h4>Relation plusieurs à plusieurs</h4>
 
-        <p>Dans le diagramme précédent plusieurs Véhicules peuvent être louées par plusieurs Clients d’où il existe une
-          relation plusieurs à plusieurs entre les tables Clients et Véhicule.</p>
+        <p>Dans le diagramme précédent plusieurs Véhicules peuvent être louées par plusieurs Clients d’où il existe une relation plusieurs à plusieurs entre les tables Clients et Véhicule.</p>
       </section>
 
       <section>
@@ -332,7 +318,7 @@
 
         <p>Regarder la vidéo suivante et suivre ses étapes.</p>
 
-        <div class="d-print-none">
+        <div class="d-print-none text-center">
           <video controls>
             <source src="imgbd/base_de_données.wmv.mp4" type="video/mp4">
               <source src="imgbd/base_de_données.wmv.webm" type="video/webm">
@@ -406,6 +392,172 @@
       </section>
     </article>
 
+    <article>
+      <h2>Requêtes</h2>
+
+      <section>
+        <h3>Présentation</h3>
+
+        <p>Une base de données peut être exploitée à travers des <b>requêtes</b>.</p>
+        <p>Il existe plusieurs types de requêtes :</p>
+        <ul>
+          <li>Les <b>requêtes de sélection</b> : pour extraire des informations filtrées et triés à partir des tables.</li>
+          <li>Les <b>requêtes d'insertion</b> : pour insérer de nouvelles valeurs dans une table.</li>
+          <li>Les <b>requêtes de mise à jour</b> : pour mettre à jour les valeurs contenues dans une table.</li>
+          <li>Les <b>requêtes de suppression</b> : pour supprimer les valeurs inutiles dans une table.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Requêtes de sélection</h3>
+
+        <p>On demande de trouver les noms des élèves qui ont obtenus une note inférieure à 1 en Anglais</p>
+
+        <div class="d-print-none text-center">
+          <video controls>
+            <source src="imgbd/requete_selection.wmv.mp4" type="video/mp4">
+              <source src="imgbd/requete_selection.wmv.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>Requêtes d'insertion</h3>
+
+        <p>On demande d'insérer un nouvel élève (Mhiri Seifeddine) dans la table Eleves.</p>
+
+        <div class="d-print-none text-center">
+          <video controls>
+            <source src="imgbd/requete_insertion.wmv.mp4" type="video/mp4">
+              <source src="imgbd/requete_insertion.wmv.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>Requêtes de mise à jour</h3>
+
+        <p>On demande d'ajouter un bonus de 1,5 en Anglais pour tous les élèves.</p>
+
+        <div class="d-print-none text-center">
+          <video controls>
+            <source src="imgbd/requete_mise_a_jour.wmv.mp4" type="video/mp4">
+              <source src="imgbd/requete_mise_a_jour.wmv.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>Requêtes de suppression</h3>
+
+        <p>On demande de supprimer l'élève, Seifeddine Mhiri, en utilisant son ideleve.</p>
+
+        <div class="d-print-none text-center">
+          <video controls>
+            <source src="imgbd/requete_suppression.wmv.mp4" type="video/mp4">
+              <source src="imgbd/requete_suppression.wmv.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>Application</h3>
+
+        <ol>
+          <li>Créer une requête qui permet de retourner le nom et le prénom des élèves qui possèdent une note inférieure à 10 en Français.</li>
+          <li>Créer une requête qui permet de retourner le nom et le prénom des élèves qui ont une note inférieure à 10 en Anglais et en Français.</li>
+          <li>Afficher les notes de tous les élèves en français. Trier les élèves par leurs noms et leurs prénoms.</li>
+          <li>Afficher la liste des élèves, qui ont des notes supérieures à 16, triée par leurs noms et prénoms.</li>
+          <li>Afficher les notes de BEN Slimane Slim dans toutes les matières.</li>
+          <li>Afficher la moyenne de BEN Slimane Slim en Français.</li>
+        </ol>
+      </section>
+    </article>
+
+    <article>
+      <h2>Fonctionnalités</h2>
+
+      <section>
+        <h3>Formulaires</h3>
+
+        <p>On veut insérer un nouvel élève : Abid Sami.</p>
+        <p>Ses notes sont dans le tableau suivant :</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>idmatiere</th>
+              <th>note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Français</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Français</td>
+              <td>17</td>
+            </tr>
+            <tr>
+              <td>Anglais</td>
+              <td>19.5</td>
+            </tr>
+            <tr>
+              <td>Anglais</td>
+              <td>18.75</td>
+            </tr>
+            <tr>
+              <td>Informatique</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>Informatique</td>
+              <td>18</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="text-danger">Il n'est pas pratique d'insérer ces données directement dans la table Notes ou en utilisant des requêtes d'insertion. <b>On préfère utiliser un formulaire pour cette tâche</b></p>
+
+        <p>Les formulaires sont des outils pratiques pour permettre l'entrée/la saisie aisée des données dans une ou plusieurs tables.</p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img27.png" alt="Utilisation d'un formulaire pour l'insertion des notes">
+            <figcaption>Utilisation d'un formulaire pour l'insertion des notes</figcaption>
+          </figure>
+        </div>
+
+        <div class="d-print-none text-center">
+          <video controls>
+            <source src="imgbd/formulaires.wmv.mp4" type="video/mp4">
+            <source src="imgbd/formulaires.wmv.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>Etats</h3>
+
+        <p>Les états permettent de créer des rapports à partir des données et des requêtes enregistrées dans les tables d'une base de données. Les états sont généralement destinés à l'impression.</p>
+        <p><b>Question :</b> Créer un état pour afficher les notes des élèves classées par matière.</p>
+
+        <div>
+          <figure>
+            <img src="imgbd/img28.png" alt="Etat des notes des élèves classées par matière">
+            <figcaption>Etat des notes des élèves classées par matière</figcaption>
+          </figure>
+        </div>
+
+        <div class="d-print-none text-center">
+          <video controls>
+            <source src="imgbd/etats.wmv.mp4" type="video/mp4">
+            <source src="imgbd/etats.wmv.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+    </article>
+
     <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
       <div class="text-center my-2">
         <span>Page : </span>
@@ -433,7 +585,7 @@
         .addClass('navbar-nav')
         .appendTo(navbar);
       $('h2')
-        .each(function (index) {
+        .each(function(index) {
           const h2 = $(this);
           const h2_id = `h2_${index + 1}`;
           const dropdown_id = `dropdown_${index + 1}`;
@@ -458,7 +610,7 @@
             .attr('aria-labelledby', dropdown_id)
             .appendTo(li);
           h2.closest('article').find('h3')
-            .each(function (index) {
+            .each(function(index) {
               const h3 = $(this);
               const h3_id = `${h2_id}_h3_${index + 1}`;
               const a = $('<a>')
@@ -475,11 +627,12 @@
         .addClass('d-none d-print-block');
       const sections = $('main section')
         .addClass('d-none d-print-block')
-        .each(function (index) {
+        .each(function(index) {
           const section = $(this);
           section
             .attr('data-index', index);
         });
+
       function displaySection(h3_id) {
         const h3 = $(`#${h3_id}`);
         const section = h3.closest('section');
@@ -589,7 +742,6 @@
       anchors.eq(current_index)
         .click();
     });
-
   </script>
 </body>
 
