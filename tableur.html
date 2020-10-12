@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cours Tableur</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header class="mb-4">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">
+        <img src="imgs/ms_excel.svg" alt="" loading="lazy" width="30" height="30">
+        Tableur
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Tableur</h1>
+    <article>
+      <h2>Introduction</h2>
+
+      <section>
+        <h3>Définition</h3>
+
+        <p>C’est un logiciel qui permet de créer des <b>tables de calculs</b> illustrées par des <b>graphiques</b>.</p>
+        <p>Exemples de logiciels tableurs :</p>
+
+        <figure>
+          <picture>
+            <img style="height: 2cm" alt="Microsoft Excel" src="imgs/img01.png">
+          </picture>
+          <picture>
+            <img style="height: 2cm" alt="OpenOffice Calc" src="imgs/img02.png">
+          </picture>
+          <figcaption>Exemples de logiciels tableurs les plus courants : Microsoft Excel et LibreOffice Calc
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Eléments</h3>
+
+        <p>La figure suivante résume l'ensemble des éléments d'un document Tableur :</p>
+
+        <ul>
+          <li>Un document tableur est appelé : <strong>Classeur</strong></li>
+          <li>Un <strong>classeur</strong> est composé d'une ou plusieurs <strong>feuilles</strong>.</li>
+          <li>Une <strong>feuille</strong> est formée par un ensemble de <strong>cellules</strong>.</li>
+          <li>Une <strong>cellule</strong> est l'intersection entre une colonne (exemple <strong>A</strong>) et d'une
+            ligne
+            (exemple <strong>7</strong>). <strong>A7</strong> est appelé la référence de la cellule.</li>
+        </ul>
+
+        <figure>
+          <picture>
+            <img style="height: 6cm" src="imgs/img03.png" alt="Composition d'un document tableur">
+          </picture>
+          <figcaption>Composition d'un document tableur</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Références de cellules</h3>
+
+        <p><strong>A1:B8</strong> est appelée une <strong><u>plage de cellules</u></strong>.</p>
+
+        <figure>
+          <picture>
+            <img style="height: 5cm" src="imgs/img04.png" alt="Plage de cellules">
+          </picture>
+          <figcaption>Plage de cellules</figcaption>
+        </figure>
+
+        <p>La référence d'une cellule peut être :</p>
+
+        <ul>
+          <li>Une <strong>référence relative</strong> : B5 (Colonne B, Ligne 5)</li>
+          <li>Une <strong>référence absolue</strong> : $B$5 (Colonne B fixe, Ligne 5fixe)</li>
+          <li>Une <strong>référence mixte (colonne fixe)</strong> : $B5 (Colonne B fixe, Ligne 5)</li>
+          <li>Une <strong>référence mixte (ligne fixe)</strong> : B$5 (Colonne B, Ligne 5 fixe)</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img05.png" alt="Référence relative">
+              </picture>
+              <figcaption>Référence relative</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img06.png" alt="Référence absolue">
+              </picture>
+              <figcaption>Référence absolue</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <p>L'intérêt de ces types de références est visible lorsqu'on souhaite <strong>recopier une formule</strong>
+          <em><u>vers la droite</u></em> ou <em><u>vers le bas</u></em>.</p>
+      </section>
+
+      <section>
+        <h3>Activité Pratique</h3>
+
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/ref_cellules.xlsx">ref_cellules.xlsx</a></li>
+          <li>Ouvrir la feuille <b>Références relatives</b> et compléter par la formule manquante.</li>
+          <li>Ouvrir la feuille <b>Références absolues</b> et compléter par la formule manquante.</li>
+          <li>Ouvrir la feuille <b>Références mixtes</b> et compléter par la formule manquante.</li>
+        </ul>
+      </section>
+    </article>
+
+    <article>
+      <h2>Fonctions de base</h2>
+
+      <section>
+        <h3>Introduction</h3>
+        <p>On utilise des <strong>formules</strong> pour effectuer le calcul dans les cellules d'une feuille.</p>
+      </section>
+
+      <section>
+        <h3>Activité 1</h3>
+
+        <p>Dans la feuille suivante on demande de calculer :</p>
+
+        <ul>
+          <li><strong>Total Article</strong>, Total Article = Quantité * Prix/Pièce</li>
+          <li><strong>Total à payer</strong>, <img src="imgs/img09.png" alt="formule du total à payer"></li>
+        </ul>
+
+        <div class="row">
+          <div class="col-md-8">
+            <figure>
+              <picture>
+                <img src="imgs/img07.png" alt="calcul d'une somme">
+              </picture>
+              <figcaption>Calcul de la somme d'une plage de cellules</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <div>
+              <pre>(1) =B2*C2 
+(2) =SOMME(D2:D5)</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Activité 2</h3>
+
+        <p>Dans la feuille suivante, on demande de calculer :</p>
+
+        <ul>
+          <li>Le chiffre d'affaire du semestre (de tous les mois de Janvier à Juin)</li>
+          <li>Le chiffre d'affaire maximal</li>
+          <li>Le chiffre d'affaire minimal</li>
+          <li>Le chiffre d'affaire moyen</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img08.png" alt="calcul d'une somme, du minimum, du maximum et de la moyenne">
+              </picture>
+              <figcaption>Calcul de la somme, du minimum, du maximum et de la moyenne d'une plage de cellules
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <pre>(1) =SOMME(B3:B8)
+(2) =MAX(B3:B8)
+(3) =MIN(B3:B8)
+(4) =MOYENNE(B3:B8)</pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Activité Pratique</h3>
+
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonctions_base.xlsx">fonctions_base.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 1</b>.</li>
+          <li>Compléter la feuille <b>Activité 2</b>.</li>
+        </ul>
+      </section>
+    </article>
+
+    <article>
+      <h2>Fonctions conditionnelles</h2>
+
+      <section>
+        <h3>Fonction SI</h3>
+
+        <p>La fonction <strong>SI</strong> permet de renvoyer un résultat selon deux ou plusieurs conditions.</p>
+      </section>
+
+      <section>
+        <h3>Activité 3</h3>
+
+        <p>On demande de calculer l'appréciation d'un élève après un examen national.</p>
+
+        <ul>
+          <li>Admis, si la moyenne >= 10</li>
+          <li>Refusé, si la moyenne &lt; 10</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-md-8">
+            <figure>
+              <picture>
+                <img src="imgs/img10.png" alt="calculer l'appréciation d'un élève">
+              </picture>
+              <figcaption>Calculer l'appréciation d'un élève en utilisant la fonction SI</figcaption>
+            </figure>
+          </div>
+
+          <div class="col-md-4">
+            <pre>(1) =SI(B2&gt;=10;"Admis";"Refusé")</pre>
+            ou aussi
+            <pre>(1) =SI(B2&lt;10;"Refusé";"Admis")</pre>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonction_si.xlsx">fonction_si.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 3</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Activité 4</h3>
+
+        <p>On demande de calculer l'appréciation d'un élève après un examen national en tenant compte de la possibilité
+          de
+          passage d'une session de contrôle.</p>
+
+        <ul>
+          <li>Admis, si la moyenne >= 10</li>
+          <li>Contrôle, si la 9 &lt;= moyenne &lt; 10</li>
+          <li>Refusé, si la moyenne &lt; 9</li>
+        </ul>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonction_si.xlsx">fonction_si.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 4</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Activité 5</h3>
+
+        <p>On souhaite retrouver le degré de satisfaction d'un client d'un restaurant. Les clients notent le service
+          d'une
+          façon anonyme les service du restaurant en utilisant de 0 à 5 étoiles.</p>
+        <p>On demande de :</p>
+
+        <ul>
+          <li>Calculer le pourcentage de satisfaction, pourcentage de satisfaction = nombre d'étoiles * 20</li>
+          <li>Calculer le degré de satisfaction du client :
+            <ul>
+              <li>Satisfait, si le pourcentage >= 80</li>
+              <li>Insatisfait, si le pourcentage &lt; 80</li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="row">
+          <div class="col-md-8">
+            <figure>
+              <picture>
+                <img src="imgs/img11.png" alt="calculer le degré de satisfaction d'un client">
+              </picture>
+              <figcaption>Calculer le degré de satisfaction d'un client en utilisant la fonction SI</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <pre>(1) =A2*20
+(2) =SI(B2>=80;"Satisfait";"Insatisfait")</pre>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonction_si.xlsx">fonction_si.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 5</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Fonction NB.SI</h3>
+
+        <p>La fonction <strong>NB.SI</strong> compte le nombre de cellules d’une plage qui répondent à un critère donné.
+        </p>
+      </section>
+
+      <section>
+        <h3>Activité 6</h3>
+
+        <p>On souhaite retrouver le nombre de filles et de garçons dans un groupe d'élèves. On dispose du tableau
+          suivant
+          :
+        </p>
+
+        <div class="row">
+          <div class="col-md-8">
+            <figure>
+              <picture>
+                <img src="imgs/img12.png" alt="calculer le nombre de filles et le nombre de garçons">
+              </picture>
+              <figcaption>Calculer le nombre de filles et de garçons dans un groupe d'élèves en utilisant la fonction
+                NB.SI
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <pre>(1) =NB.SI(A2:A6;"F")
+(2) =NB.SI(A2:A6;"G")</pre>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonction_nbsi.xlsx">fonction_nbsi.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 6</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Activité 7</h3>
+
+        <p>Un développeur de circuits imprimés souhaite faire des statistiques sur le nombre de cartes développées en
+          fonction de leurs surface. Pour cela il a dressé le tableau suivant :</p>
+
+        <p>On demande de calculer le nombre de cartes de chaque catégorie.</p>
+
+        <div class="row">
+          <div class="col-md-8">
+            <figure>
+              <picture>
+                <img src="imgs/img13.png" alt="calculer le nombre de cartes électroniques">
+              </picture>
+              <figcaption>Calculer le nombre de cartes électroniques selon leurs dimensions en utilisant la fonction
+                NB.SI
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <pre>(1) =NB.SI(C2:C7;"&lt;=40")
+(2) =NB.SI(C2:C7;"&lt;=100")
+(3) =NB.SI(C2:C7;"&gt;200")</pre>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonction_nbsi.xlsx">fonction_nbsi.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 7</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Fonction SOMME.SI</h3>
+
+        <p>La fonction <strong>SOMME.SI</strong> permet de calculer la somme des valeurs d’une plage (plage : deux
+          cellules
+          au minimum d’une feuille de calcul. Une plage peut contenir des cellules adjacentes ou non adjacentes.) qui
+          répond
+          à un critère spécifié. </p>
+      </section>
+
+      <section>
+        <h3>Activité 8</h3>
+
+        <p>On demande de calculer la somme des valeurs qui sont supèrieurs ou égaux à 15. Et la somme des valeurs
+          inférieurs
+          à 15.</p>
+
+        <div class="row">
+          <div class="col-md-8">
+            <figure>
+              <picture>
+                <img src="imgs/img14.png" alt="calculer la somme d'un ensemble de valeurs selon une condition">
+              </picture>
+              <figcaption>Calculer la somme d'un ensemble de valeurs selon une condition en utilisant la fonction
+                SOMME.SI
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <pre>(1) =SOMME.SI(A2:A9;"&gt;=15")
+(2) =SOMME.SI(A2:A9;"&lt;15")</pre>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonction_sommesi.xlsx">fonction_sommesi.xlsx</a>
+          </li>
+          <li>Compléter la feuille <b>Activité 8</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Activité 9</h3>
+
+        <p>Un drugstore dispose d'un stock de pièces de monnaie de valeur (50 Millimes) et (100 Millimes), pour compter
+          le
+          montant total de pièces il a dressé le tableau suivant dans un tableur :</p>
+
+        <div class="row">
+          <div class="col-md-8">
+            <figure>
+              <picture>
+                <img src="imgs/img15.png" alt="calculer le montant pour chaque type de pièce de monnaie">
+              </picture>
+              <figcaption>Calculer le montant pour chaque type de pièce de monnaie en utilisant la fonction SOMME.SI
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <pre>(1) =A2*B2
+(2) =SOMME.SI(A2:A6;0,05;B2:B6) 
+    ou 
+    =SOMME.SI($A$2:$A$6;E2;$B$2:$B$6)
+(3) =SOMME.SI(A2:A6;0,1;B2:B6)
+(4) =SOMME.SI(A2:A6;0,05;C2:C6) 
+    ou 
+    =SOMME.SI($A$2:$A$6;E2;$C$2:$C$6)
+(5) =SOMME.SI(A2:A6;0,1;C2:C6)</pre>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonction_sommesi.xlsx">fonction_sommesi.xlsx</a>
+          </li>
+          <li>Compléter la feuille <b>Activité 9</b>.</li>
+        </ul>
+      </section>
+    </article>
+
+    <article>
+      <h2>Fonctions utiles</h2>
+
+      <section>
+        <h3>Tri</h3>
+
+        <p>L'opération de <strong>tri</strong> consiste à ordonner les éléments d'un tableau selon les valeurs d'une ou
+          de plusieurs colonnes en ordre croissant (du plus petit au plus grand) ou en ordre décroissant.</p>
+      </section>
+
+      <section>
+        <h3>Activité 10</h3>
+
+        <p>Nous souhaitons ordonner un groupe d'élève en ordre croissant de leurs noms.</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img16.png" alt="tableau non ordonné">
+              </picture>
+              <figcaption>Tableau non ordonné</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img18.png" alt="tableau ordonné par ordre alphabétique des noms des élèves">
+              </picture>
+              <figcaption>Tableau ordonné par ordre alphabétique des noms des élèves</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/tri.xlsx">tri.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 10</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Procédure de tri</h3>
+
+        <ol>
+          <li>Sélectionner la plage de données à trier (dans l'exemple A1:B9)</li>
+          <li>Dans l'onglet <strong>Accueil</strong>, rubrique <strong>Edition</strong>, cliquer pour dérouler le menu
+          </li>
+          <li>Sélectionner <strong>Tri personnalisé...</strong></li>
+        </ol>
+
+        <figure>
+          <picture>
+            <img src="imgs/img20.png" alt="l'onglet Accueil, rubrique Edition">
+          </picture>
+          <picture>
+            <img src="imgs/img19.png" alt="cliquer pour dérouler le menu">
+          </picture>
+          <figcaption>Procédure de tri, étape 2/3</figcaption>
+        </figure>
+
+        <figure>
+          <picture>
+            <img src="imgs/img17.png" alt="procédure de tri, étape 3/3">
+          </picture>
+          <figcaption>Procédure de tri, étape 3/3</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Activité 11</h3>
+
+        <p>Recopier le tableau précédent dans une nouvelle feuille, puis trier les élèves par ordre décroissant de leurs
+          moyennes.</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img18.png" alt="tableau initial non ordonné">
+              </picture>
+              <figcaption>Tableau initial non ordonné</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img21.png" alt="tableau ordonné par ordre décroissant des moyennes des élèves">
+              </picture>
+              <figcaption>Tableau ordonné par ordre décroissant des moyennes des élèves</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/tri.xltx">tri.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 11</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Alignement</h3>
+
+        <p>On veut centrer le contenu d'une cellule sur plusieurs lignes, comme dans la figure qui suit.</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img22.png" alt="Contenu de la cellule sans mise en forme">
+              </picture>
+              <figcaption>Contenu de la cellule sans mise en forme</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img25.png" alt="Cellule centrée sur plusieurs lignes">
+              </picture>
+              <figcaption>Cellule centrée sur plusieurs lignes</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Procédure d'alignement sur plusieurs lignes</h3>
+
+        <ol>
+          <li>Sélectionner les cellules à mettre en forme</li>
+          <li>Cliquer le bouton droit de la souris, pour dérouler le menu contextuel, puis sélectionner <strong>Format
+              de
+              cellule</strong></li>
+          <li>Ouvrir l'onglet <strong>Alignement</strong>, sélectionner <strong>Alignement du texte</strong> :
+            <ul>
+              <li><em>Horizontal</em> : <u>Centré</u></li>
+              <li><em>Vertical</em> : <u>Centré</u></li>
+            </ul>
+          </li>
+          <li>Cocher la case d'option <strong>Renvoyer à la ligne automatiquement</strong></li>
+        </ol>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img23.png" alt="Alignement, étape 2/4">
+              </picture>
+              <figcaption>Alignement, étape 2/4</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img24.png" alt="Alignement, étapes 3/4 et 4/4">
+              </picture>
+              <figcaption>Alignement, étapes 3/4 et 4/4</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Activité 12</h3>
+
+        <p>Recopier le tableau suivant tout en respectant la mise en forme de son entête.</p>
+
+        <p>Calculer les montants manquants.</p>
+
+        <figure>
+          <picture>
+            <img src="imgs/img26.png" alt="Exercice d'application sur l'alignement">
+          </picture>
+          <figcaption>Exercice d'application sur l'alignement</figcaption>
+        </figure>
+
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/mise_en_forme.xlsx">mise_en_forme.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 12</b>.</li>
+        </ul>
+      </section>
+    </article>
+
+    <article>
+      <h2>Mise en forme conditionnelle</h2>
+
+      <section>
+        <h3>Introduction</h3>
+        <p>La mise en forme conditionnelle permet de mettre en forme les cellules (Couleur, Remplissage, Bordure, etc.)
+          selon
+          une ou plusieurs critères.</p>
+      </section>
+
+      <section>
+        <h3>Activité 13</h3>
+
+        <p>On demande de colorier :</p>
+
+        <ul>
+          <li>en <span
+              style="display: inline-block; width: 7em; padding: 3px; background-color: red; color: #fff">rouge</span>
+            les notes infèrieures à 10,</li>
+          <li>en <span
+              style="display: inline-block; width: 7em; padding: 3px; background-color: green; color: #fff">vert</span>
+            les notes supèrieures ou égales à 10.</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img27.png" alt="Notes de l'élève avant la mise en forme">
+              </picture>
+              <figcaption>Notes de l'élève avant la mise en forme</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img30.png" alt="Notes de l'élève après la mise en forme conditionnelle">
+              </picture>
+              <figcaption>Notes de l'élève après la mise en forme conditionnelle</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a
+              href="classeurs/mise_en_forme_conditionnelle.xlsx">mise_en_forme_conditionnelle.xlsx</a>
+          </li>
+          <li>Compléter la feuille <b>Activité 13</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Procédure</h3>
+
+        <ol>
+          <li>Sélectionner la plage de cellules C2:C11</li>
+          <li>Dérouler le menu <b>Mise en forme conditionnelle</b>, cliquer la commande <b>Gérer les règles...</b></li>
+          <li>Le dialogue <b>Gestionnaire de règles de mise en forme conditionnelles</b> apparaît sur l'écran, cliquer
+            le
+            bouton <b>Nouvelle règle...</b></li>
+          <li>Le dialogue <b>Nouvelle règle de mise en forme</b> est affichée, sélectionner l'option <b>Appliquer une
+              mise
+              en
+              forme uniquement aux cellules qui contiennent</b></li>
+          <li>En bas du dialogue, modifier le contenu des champs du formulaire : <span
+              style="display: inline-block; border: 1px solid #000; padding: 3px; margin:2px;font-weight: bold">Valeur
+              de la cellule</span> <span
+              style="display: inline-block; border: 1px solid #000; padding: 3px; margin:2px;font-weight: bold">infèrieure
+              à</span> <span
+              style="display: inline-block; border: 1px solid #000; padding: 3px; margin:2px;font-weight: bold">10</span>
+          </li>
+          <li>Cliquer sur le bouton <b>Format...</b> pour définir la mise en forme nécessaire,</li>
+          <li>Refaire les étapes 3, 4, 5 et 6, pour colorier en <span
+              style="display: inline-block; width: 7em; padding: 3px; background-color: green; color: #fff">vert</span>
+            les cellules dont la <span
+              style="display: inline-block; border: 1px solid #000; padding: 3px; margin:2px;font-weight: bold">Valeur
+              de la cellule</span> <span
+              style="display: inline-block; border: 1px solid #000; padding: 3px; margin:2px;font-weight: bold">supèrieure
+              ou égale à</span> <span
+              style="display: inline-block; border: 1px solid #000; padding: 3px; margin:2px;font-weight: bold">10</span>.
+          </li>
+        </ol>
+
+        <figure>
+          <picture>
+            <img src="imgs/img31.png" alt="Etape 2/7, dérouler le menu Mise en forme conditionnelle">
+          </picture>
+          <figcaption>Etape 2/5, dérouler le menu Mise en forme conditionnelle</figcaption>
+        </figure>
+
+        <figure>
+          <picture>
+            <img src="imgs/img32.png"
+              alt="Etape 3/7, le dialogue Gestionnaire de règles de mise en forme conditionnelles apparaît sur l'écran">
+          </picture>
+          <figcaption>Etape 3/5, le dialogue Gestionnaire de règles de mise en forme conditionnelles apparaît sur
+            l'écran
+          </figcaption>
+        </figure>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img28.png" alt="Etape 4/7 et 5/7, le dialogue Nouvelle règle de mise en forme<">
+              </picture>
+              <figcaption>Etape 4/7 et 5/7, le dialogue Nouvelle règle de mise en forme</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img29.png" alt="Etape 6/7, sélectionner le format de cellule">
+              </picture>
+              <figcaption>Etape 6/7, sélectionner le format de cellule</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <figure>
+          <picture>
+            <img src="imgs/img34.png"
+              alt="Etape 7/7, le Gestionnaire de règles de mise en forme conditionnelles contient les deux règles souhaitées">
+          </picture>
+          <figcaption>Etape 7/7, le Gestionnaire de règles de mise en forme conditionnelles contient les deux règles
+            souhaitées</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Activité 14</h3>
+
+        <p>Mettre en <span style="color: red">rouge</span> les matières ayant un coefficient supérieur ou égal à 3, en
+          <span style="color: green">vert</span> les matières ayant un coefficient
+          1,5 et en <span style="color: blue">bleu</span> les matières ayant un coefficient 1.</p>
+
+        <div class="row">
+          <div class="col-md-4">
+            <figure>
+              <picture>
+                <img src="imgs/img37.png" alt="Résultat de la mise en forme conditionnelle">
+              </picture>
+              <figcaption>Résultat de la mise en forme conditionnelle</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-8">
+            <figure>
+              <picture>
+                <img src="imgs/img35.png"
+                  alt="Utiliser une formule pour déterminer pour quelles cellules le format sera appliqué">
+              </picture>
+              <figcaption>Utiliser une formule pour déterminer pour quelles cellules le format sera appliqué
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <figure>
+          <picture>
+            <img src="imgs/img36.png" alt="L'ensemble de règles de mise en forme utilisée dans cet exercice">
+          </picture>
+          <figcaption>L'ensemble des règles de mise en forme utilisée dans cette activité</figcaption>
+        </figure>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a
+              href="classeurs/mise_en_forme_conditionnelle.xlsx">mise_en_forme_conditionnelle.xlsx</a>
+          </li>
+          <li>Compléter la feuille <b>Activité 14</b>.</li>
+        </ul>
+      </section>
+    </article>
+
+    <article>
+      <h2>Graphiques</h2>
+
+      <section>
+        <h3>Définition</h3>
+
+        <p>Le tableur permet d'illustrer les tables de calculs par des graphiques. </p>
+      </section>
+
+      <section>
+        <h3>Activité 15</h3>
+
+        <p>Un magasin possédant des filiales dans plusieurs villes souhaite comparer les ventes d'un article dans ses
+          filiales pour les année 2016, 2017 et 2018. Pour cela, il dresse le tableau suivant :</p>
+
+        <figure>
+          <picture>
+            <img src="imgs/img38.png" alt="Historique des ventes d'un article dans les magasins">
+          </picture>
+          <figcaption>Historique des ventes d'un article dans les magasins</figcaption>
+        </figure>
+
+        <p>Voici le résultat souhaité :</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img39.png" alt="Ventes par magasin">
+              </picture>
+              <figcaption>Ventes par magasin</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img40.png" alt="Ventes par année">
+              </picture>
+              <figcaption>Ventes par année</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/graphiques.xlsx">graphiques.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 15</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Procédure</h3>
+
+        <ol>
+          <li>Sélectionner la plage de cellules : A1:D5</li>
+          <li>Ouvrir l'onglet <b>Insertion</b>, dans la rubrique <b>Graphiques</b> cliquer l'icône <img
+              src="imgs/img43.png">
+          </li>
+          <li>La fenêtre <b>Insérer un graphique</b> est affichée, sélectionner un type d'histogramme</li>
+          <li>Valider</li>
+        </ol>
+
+        <figure>
+          <picture>
+            <img src="imgs/img41.png" alt="Etape 2/4, Insertion d'un graphique">
+          </picture>
+          <figcaption>Etape 2/4, Insertion d'un graphique</figcaption>
+        </figure>
+
+        <figure>
+          <picture>
+            <img src="imgs/img42.png" alt="Etape 3/4, sélection du type du graphique">
+          </picture>
+          <figcaption>Etape 3/4, sélection du type du graphique</figcaption>
+        </figure>
+      </section>
+    </article>
+    <article>
+      <h2>TPs</h2>
+      <section>
+        <h3>Travaux Pratiques</h3>
+        <ul>
+          <li><a href="classeurs/Série01.xlsx">Série 1</a></li>
+          <li><a href="classeurs/Série02.xlsx">Série 2</a></li>
+          <li><a href="classeurs/Série03.xlsx">Série 3</a></li>
+          <li><a href="classeurs/Série04.pdf">Série 4</a></li>
+        </ul>
+      </section>
+    </article>
+    <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
+      <div class="text-center my-2">
+        <span>Page : </span>
+        <input type="number" id="num-page" min="1">
+        <span>/</span>
+        <span id="count-pages"></span>
+      </div>
+      <ul class="pagination justify-content-center"></ul>
+    </nav>
+  </main>
+  <footer>
+    <nav class="d-print-none bg-light px-1 py-3 mt-4">
+      <div class="text-center small">Réalisé avec &hearts; par <strong>Mohamed Anis MANI</strong></div>
+      <div class="text-center small">Année Scolaire <strong>2020/2021</strong></div>
+    </nav>
+  </footer>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script>
+    $(() => {
+      const navbar = $('#navbarSupportedContent');
+      const pagination = $('#nav-bottom .pagination');
+      const menu = $('<ul>')
+        .addClass('navbar-nav')
+        .appendTo(navbar);
+      $('h2')
+        .each(function (index) {
+          const h2 = $(this);
+          const h2_id = `h2_${index + 1}`;
+          const dropdown_id = `dropdown_${index + 1}`;
+
+          const li = $('<li>')
+            .addClass('nav-item dropdown')
+            .appendTo(menu);
+          // class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false";
+          const a = $('<a>')
+            .addClass('nav-link dropdown-toggle')
+            .attr('id', dropdown_id)
+            .attr('role', 'button')
+            .attr('href', '#' + h2_id)
+            .attr('data-toggle', 'dropdown')
+            .attr('aria-haspopup', 'true')
+            .attr('aria-expanded', 'false')
+            .attr('data-display', 'static')
+            .text(h2.text())
+            .appendTo(li);
+          const dropdown_div = $('<div>')
+            .addClass('dropdown-menu')
+            .attr('aria-labelledby', dropdown_id)
+            .appendTo(li);
+          h2.closest('article').find('h3')
+            .each(function (index) {
+              const h3 = $(this);
+              const h3_id = `${h2_id}_h3_${index + 1}`;
+              const a = $('<a>')
+                .addClass('dropdown-item')
+                .text(`${index + 1}. ${h3.text()}`)
+                .attr('href', `#${h3_id}`)
+                .appendTo(dropdown_div);
+              h3
+                .attr('id', h3_id);
+            });
+        });
+
+      $('main article')
+        .addClass('d-none d-print-block');
+      const sections = $('main section')
+        .addClass('d-none d-print-block')
+        .each(function (index) {
+          const section = $(this);
+          section
+            .attr('data-index', index);
+        });
+      function displaySection(h3_id) {
+        const h3 = $(`#${h3_id}`);
+        const section = h3.closest('section');
+        const article = section.closest('article');
+        const index = section.data('index');
+        $('main article')
+          .addClass('d-none');
+        $('section')
+          .addClass('d-none');
+        section
+          .removeClass('d-none');
+        article
+          .removeClass('d-none');
+        displayPagination(index, sections.length, 5);
+      }
+
+      function displayPaginationItem(index, text, isactive) {
+        const h3_id = sections.eq(index).find('h3').attr('id');
+        // <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        const li = $('<li>')
+          .addClass('page-item')
+          .appendTo(pagination);
+        const a = $('<a>')
+          .addClass('page-link')
+          .attr('href', `#${h3_id}`)
+          .text(text)
+          .appendTo(li);
+        if (isactive) {
+          li.addClass('active');
+        }
+      }
+
+      function displayPagination(current, length, items) {
+        pagination
+          .html('');
+        numPage
+          .attr('max', length)
+          .attr('step', 1)
+          .val(current + 1);
+        countPages
+          .text(length);
+        let start = current - Math.floor(items / 2);
+        if (start < 0) {
+          start = 0;
+        }
+        let end = start + items;
+        if (end > length - 1) {
+          end = length;
+          start = end - items;
+          if (start < 0) {
+            start = 0;
+          }
+        }
+        // if (start > 0) {
+        //   displayPaginationItem(0, '<<', 0 === current);
+        // }
+        for (let i = start; i < end; i++) {
+          displayPaginationItem(i, i + 1, i === current);
+        }
+        // if (end < length - 1) {
+        //   displayPaginationItem(length - 1, '>>', length - 1 === current);
+        // }
+        pagination.find('a')
+          .click(handleSectionClick);
+        localStorage.setItem(location.pathname, current);
+      }
+
+      function handleSectionClick(e) {
+        e.preventDefault();
+        anchors
+          .removeClass('active');
+        const link = $(e.target);
+        const href = link.attr('href').substr(1);
+        if (href.indexOf('h3') > 0) {
+          link.addClass('active');
+          displaySection(href);
+        }
+      }
+
+      function displaySectionByPage(pos) {
+        if (pos < 0) {
+          pos = 0
+        } else if (pos >= sections.length) {
+          pos = sections.length - 1;
+        }
+        const h3_id = sections.eq(pos).find('h3').attr('id');
+        displaySection(h3_id);
+      };
+
+      const numPage = $('#num-page')
+        .on('input', e => {
+          let pos = +numPage.val() - 1;
+          displaySectionByPage(pos);
+        })
+        .on('keydown', e => {
+          if (e.keyCode == 13) {
+            let pos = +numPage.val() - 1;
+            console.log(pos);
+            displaySectionByPage(pos);
+          }
+        });
+      const countPages = $('#count-pages');
+      const anchors = navbar.find('a.dropdown-item');
+      const current_index = +localStorage.getItem(location.pathname) || 0;
+      anchors
+        .click(handleSectionClick);
+      anchors.eq(current_index)
+        .click();
+    });
+
+  </script>
+</body>
+
+</html>
