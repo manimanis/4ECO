@@ -1,0 +1,426 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>TP N°1 – Bases de données</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;}
+@font-face
+	{font-family:"Berlin Sans FB Demi";
+	panose-1:2 14 8 2 2 5 2 2 3 6;}
+@font-face
+	{font-family:"Bernard MT Condensed";
+	panose-1:2 5 8 6 6 9 5 2 4 4;}
+@font-face
+	{font-family:"Britannic Bold";
+	panose-1:2 11 9 3 6 7 3 2 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+h1
+	{mso-style-link:"Titre 1 Car";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:-14.2pt;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:22.0pt;
+	font-family:"Berlin Sans FB Demi",sans-serif;}
+h2
+	{mso-style-link:"Titre 2 Car";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Bernard MT Condensed",serif;
+	font-weight:normal;}
+h3
+	{mso-style-link:"Titre 3 Car";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:8.5pt;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Britannic Bold",sans-serif;
+	font-weight:normal;}
+h4
+	{mso-style-link:"Titre 4 Car";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:22.7pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Georgia",serif;
+	font-style:italic;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	font-size:13.0pt;
+	font-family:"Book Antiqua",serif;
+	font-style:italic;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:12.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:24.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-link:"Note de bas de page Car";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"Book Antiqua",serif;
+	font-weight:bold;}
+span.MsoFootnoteReference
+	{font-family:"Times New Roman",serif;
+	vertical-align:super;}
+span.MsoEndnoteReference
+	{font-family:"Times New Roman",serif;
+	vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{mso-style-link:"Note de fin Car";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Book Antiqua",serif;}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman",serif;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Texte de bulles Car";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+span.TextedebullesCar
+	{mso-style-name:"Texte de bulles Car";
+	mso-style-link:"Texte de bulles";
+	font-family:"Tahoma",sans-serif;}
+p.codesource, li.codesource, div.codesource
+	{mso-style-name:"code source";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	background:#F2F2F2;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"Courier New";}
+span.NotedefinCar
+	{mso-style-name:"Note de fin Car";
+	mso-style-link:"Note de fin";
+	font-family:"Book Antiqua",serif;}
+span.NotedebasdepageCar
+	{mso-style-name:"Note de bas de page Car";
+	mso-style-link:"Note de bas de page";
+	font-family:"Book Antiqua",serif;}
+span.Titre1Car
+	{mso-style-name:"Titre 1 Car";
+	mso-style-link:"Titre 1";
+	font-family:"Berlin Sans FB Demi",sans-serif;
+	font-weight:bold;}
+span.Titre2Car
+	{mso-style-name:"Titre 2 Car";
+	mso-style-link:"Titre 2";
+	font-family:"Bernard MT Condensed",serif;}
+span.Titre3Car
+	{mso-style-name:"Titre 3 Car";
+	mso-style-link:"Titre 3";
+	font-family:"Britannic Bold",sans-serif;}
+span.Titre4Car
+	{mso-style-name:"Titre 4 Car";
+	mso-style-link:"Titre 4";
+	font-family:"Georgia",serif;
+	font-weight:bold;
+	font-style:italic;}
+p.ListParagraph, li.ListParagraph, div.ListParagraph
+	{mso-style-name:"List Paragraph";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 2.0cm 2.0cm 2.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72">
+
+<div class=WordSection1>
+
+<h1 align=center style='margin-left:0cm;text-align:center'><span lang=FR>TP N°1
+– Bases de données</span></h1>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-indent:-18.0pt'><span
+lang=FR>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span><span lang=FR>Créer les tables suivantes :</span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=662
+ style='width:496.4pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=140 valign=top style='width:104.65pt;border:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-left:0cm;text-align:center'><b><span
+  lang=FR style='font-size:9.0pt'>Clients</span></b></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-left:0cm;text-align:center'><b><span
+  lang=FR style='font-size:9.0pt'>&nbsp;</span></b></p>
+  </td>
+  <td width=161 valign=top style='width:120.5pt;border:solid black 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-left:0cm;text-align:center'><b><span
+  lang=FR style='font-size:9.0pt'>Factures</span></b></p>
+  </td>
+  <td width=23 valign=top style='width:17.1pt;border:none;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-left:0cm;text-align:center'><b><span
+  lang=FR style='font-size:9.0pt'>&nbsp;</span></b></p>
+  </td>
+  <td width=148 valign=top style='width:111.2pt;border:solid black 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-left:0cm;text-align:center'><b><span
+  lang=FR style='font-size:9.0pt'>Articles</span></b></p>
+  </td>
+  <td width=18 valign=top style='width:13.45pt;border:none;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-left:0cm;text-align:center'><b><span
+  lang=FR style='font-size:9.0pt'>&nbsp;</span></b></p>
+  </td>
+  <td width=154 valign=top style='width:115.35pt;border:solid black 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-left:0cm;text-align:center'><b><span
+  lang=FR style='font-size:9.0pt'>ArticlesFactures</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=140 valign=top style='width:104.65pt;border:solid black 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-left:0cm'><b><u><span lang=FR
+  style='font-size:9.0pt'>Idclient</span></u></b><span lang=FR
+  style='font-size:9.0pt'> : NuméroAuto</span></p>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>Nom : Texte(30)</span></p>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>Tel : Texte(12)</span></p>
+  </td>
+  <td width=19 valign=top style='width:14.15pt;border:none;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=161 valign=top style='width:120.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-left:0cm'><b><u><span lang=FR
+  style='font-size:9.0pt'>numFacture</span></u></b><span lang=FR
+  style='font-size:9.0pt'> : NuméroAuto</span></p>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>idclient : Numérique</span></p>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>date : Date/Heure</span></p>
+  </td>
+  <td width=23 valign=top style='width:17.1pt;border:none;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=148 valign=top style='width:111.2pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-left:0cm'><b><u><span lang=FR
+  style='font-size:9.0pt'>idArticle</span></u></b><span lang=FR
+  style='font-size:9.0pt'>:NuméroAuto</span></p>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>Désign : Texte(70)</span></p>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>Prix : Numérique(réel)</span></p>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>TVA : Numérique (réel)</span></p>
+  </td>
+  <td width=18 valign=top style='width:13.45pt;border:none;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=154 valign=top style='width:115.35pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-left:0cm'><b><u><span lang=FR
+  style='font-size:9.0pt'>Numfacture</span></u></b><span lang=FR
+  style='font-size:9.0pt'> : Numérique</span></p>
+  <p class=MsoNormal style='margin-left:0cm'><b><u><span lang=FR
+  style='font-size:9.0pt'>IdArticle</span></u></b><span lang=FR
+  style='font-size:9.0pt'> : Numérique</span></p>
+  <p class=MsoNormal style='margin-left:0cm'><span lang=FR style='font-size:
+  9.0pt'>Qte : Numérique (réel)</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-indent:-18.0pt'><span
+lang=FR>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span><span lang=FR>Etablir les relations
+suivantes entre les tables :</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR><img
+width=529 height=167 src="TP1_fichiers/image001.jpg"></span></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-indent:-18.0pt'><span
+lang=FR>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span><span lang=FR>Insérer les données suivantes
+:</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR><img
+width=476 height=207 src="TP1_fichiers/image002.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR><img
+width=345 height=143 src="TP1_fichiers/image003.jpg"></span></p>
+
+<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=FR>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR><img
+width=299 height=184 src="TP1_fichiers/image004.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR><img
+width=279 height=295 src="TP1_fichiers/image005.jpg"></span></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-indent:-18.0pt'><span
+lang=FR>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span><span lang=FR>Créer les formulaires suivants
+:</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR><img
+width=416 height=148 src="TP1_fichiers/image006.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR><img
+width=283 height=119 src="TP1_fichiers/image007.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR><img
+width=600 height=321 src="TP1_fichiers/image008.jpg"></span></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-indent:-18.0pt'><span
+lang=FR>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span><span lang=FR>Créer l'état suivant :</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=FR><img
+width=558 height=540 src="TP1_fichiers/image009.jpg"></span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -80,6 +80,10 @@ pre {
   text-align: center;
 }
 
+.border-dark th, .border-dark td {
+  border: #333 solid 1px;
+}
+
 @media print {
   body {
     background: initial;

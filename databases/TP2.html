@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.3.2 (Windows)"/>
+	<meta name="created" content="2019-04-18T12:04:14.206000000"/>
+	<meta name="changed" content="2019-04-19T15:21:56.223000000"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin-left: 1.5cm; margin-right: 1.5cm; margin-top: 1cm; margin-bottom: 1cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+	</style>
+</head>
+<body lang="fr-FR" link="#000080" vlink="#800000" dir="ltr">
+<div title="header"><p>
+	<font size="2"><i><b>TP Bases de
+	donn&eacute;es		Propos&eacute; Par Mohamed Anis MANI</b></i></font></p>
+</div><p align="center">
+<font size="5"><b>TP Bases de donn&eacute;es</b></font></p>
+<p>On donne le sch&eacute;ma
+suivant de la base de donn&eacute;es &laquo;&nbsp;Gestion_Livres&nbsp;&raquo;&nbsp;:</p>
+<p align="center"><img src="TP2_html_bf2e1ad5785ce2d5.png" name="Image1" align="bottom" width="455" height="354" border="0"/>
+</p>
+<p>On demande de
+r&eacute;aliser les requ&ecirc;tes de s&eacute;lection suivantes&nbsp;:</p>
+<ol>
+	<li><p>
+	<font size="4">Afficher la liste des livres
+	(RefLivre, Titre) par ordre alphab&eacute;tique.</font></p>
+	<li><p>
+	<font size="4">Afficher la liste des livres
+	(RefLivre, Titre, NbPages) par ordre d&eacute;croissant du nombre de
+	pages.</font></p>
+	<li><p>
+	<font size="4">Afficher la liste des livres 
+	(RefLivre, Titre, DateEdition) du plus r&eacute;cent au plus vieux.</font></p>
+	<li><p>
+	<font size="4">Afficher les auteurs (Nom,
+	Pays) group&eacute;s par pays.</font></p>
+	<li><p>
+	<font size="4">Afficher les noms des auteurs
+	tunisiens par ordre alphab&eacute;tique de leurs noms.</font></p>
+	<li><p>
+	<font size="4">Afficher les noms des auteurs
+	(Nom, Pays) d&rsquo;un pays donn&eacute; par ordre alphab&eacute;tique
+	de leurs noms.</font></p>
+	<li><p>
+	<font size="4">Afficher les livres 
+	(RefLivre, Titre, NbPages) de moins de 100 pages par ordre
+	d&eacute;croissant du NbPages.</font></p>
+	<li><p>
+	<font size="4">Afficher les livres 
+	(RefLivre, Titre, DateEdition) des livres &eacute;dit&eacute;s en
+	mois de Mars 2018.</font></p>
+	<li><p>
+	<font size="4">Afficher les livres 
+	(RefLivre, Titre) des livres qui contiennent le mot &laquo;&nbsp;Win&nbsp;&raquo;.</font></p>
+	<li><p>
+	<font size="4">Afficher le prix d&rsquo;achat
+	du livre (RefLivre, Titre, PrixAchat) ayant comme RefLivre 114.</font></p>
+	<li><p>
+	<font size="4">Afficher la date d&rsquo;&eacute;dition
+	 (RefLivre, Titre, DateEdition) des livres qui commencent par le mot
+	&laquo;&nbsp;Astuce&nbsp;&raquo; en ordre croissant de la Date
+	d&rsquo;&eacute;dition.</font></p>
+	<li><p>
+	<font size="4">Afficher les livres 
+	(RefLivre, Titre, NbPages) qui contiennent entre 200 et 500 pages.</font></p>
+	<li><p>
+	<font size="4">Afficher les noms des auteurs
+	de tous les livres  (RefLivre, Titre, Nom) ordonn&eacute;s par ordre
+	alphab&eacute;tique des titres des livres.</font></p>
+	<li><p>
+	<font size="4">Afficher les noms des auteurs
+	qui ont publi&eacute; un livre au mois d&rsquo;Avril 2018 (RefLivre,
+	Titre, Nom, DateEdition).</font></p>
+	<li><p>
+	<font size="4">Afficher les titres des
+	livres  (RefLivre, Titre, Nom) publi&eacute;s par des &eacute;crivains
+	de l&rsquo;Egypte.</font></p>
+	<li><p>
+	<font size="4">Afficher les titres des
+	livres  (RefLivre, Titre) qui ont une 2nde, afficher les titres des
+	livres sans redondances.</font></p>
+	<li><p>
+	<font size="4">Afficher les prix d&rsquo;achats
+	 (RefLivre, Titre, PrixAchat) des livres publi&eacute;s par des
+	auteurs Liby&eacute;ens sans redondances et par ordre croissant du
+	prix.</font></p>
+	<li><p>
+	<font size="4">Afficher les titres des
+	livres  (RefLivre, Titre) publi&eacute;s par &laquo;&nbsp;Ayoub
+	Bouchiba&nbsp;&raquo;.</font></p>
+	<li><p>
+	<font size="4">Afficher le nombre de livres
+	enregistr&eacute;es dans la base.</font></p>
+	<li><p>
+	<font size="4">Afficher le nombre de livres
+	qui comptent moins de 200 pages.</font></p>
+	<li><p>
+	<font size="4">Afficher le nombre de livres
+	qui ont un prix d&rsquo;achat compris entre 10DT et 20DT.</font></p>
+	<li><p>
+	<font size="4">Afficher le prix maximal et
+	le prix minimal des livres.</font></p>
+	<li><p>
+	<font size="4">Afficher le titre du livre
+	qui poss&egrave;de un nombre maximal de pages.</font></p>
+	<li><p>
+	<font size="4">Afficher le nombre d&rsquo;auteurs
+	(RefLivre, Titre, NbAuteurs) de chaque livre.</font></p>
+</ol>
+<p><br/>
+
+</p>
+<p align="center">
+<font size="5">Solutions</font></p>
+<ol>
+	<li value="1"><p>
+	Afficher la liste des livres (RefLivre, Titre) par ordre
+	alphab&eacute;tique.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_7ed23ec7e960c82b.png" name="Image2" align="bottom" width="305" height="107" border="0"/>
+</p>
+<ol start="2">
+	<li><p>
+	Afficher la liste des livres (RefLivre, Titre, NbPages) par ordre
+	d&eacute;croissant du nombre de pages.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_442156e293135e7d.png" name="Image3" align="bottom" width="425" height="109" border="0"/>
+</p>
+<ol start="3">
+	<li><p>
+	Afficher la liste des livres  (RefLivre, Titre, DateEdition) du plus
+	r&eacute;cent au plus vieux.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_5e60dce59da34146.png" name="Image4" align="bottom" width="413" height="107" border="0"/>
+</p>
+<ol start="4">
+	<li><p>
+	Afficher les auteurs (Nom, Pays) group&eacute;s par pays.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_fcadc7bb6c10b4c1.png" name="Image5" align="bottom" width="300" height="109" border="0"/>
+</p>
+<ol start="5">
+	<li><p>
+	Afficher les noms des auteurs tunisiens par ordre alphab&eacute;tique
+	de leurs noms.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_326c197c65a17e94.png" name="Image6" align="bottom" width="307" height="109" border="0"/>
+</p>
+<ol start="6">
+	<li><p>
+	Afficher les noms des auteurs (Nom, Pays) d&rsquo;un pays donn&eacute;
+	par ordre alphab&eacute;tique de leurs noms.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_c9b5b0fdac3bed5d.png" name="Image8" align="bottom" width="303" height="108" border="0"/>
+
+  
+<img src="TP2_html_ef62e1ee7aea55af.png" name="Image7" align="bottom" width="216" height="98" border="0"/>
+</p>
+<p><br/>
+
+</p>
+<ol start="7">
+	<li><p>
+	Afficher les livres  (RefLivre, Titre, NbPages) de moins de 100
+	pages par ordre d&eacute;croissant du NbPages.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_26f61f18607d41bd.png" name="Image9" align="bottom" width="417" height="108" border="0"/>
+</p>
+<ol start="8">
+	<li><p>
+	Afficher les livres  (RefLivre, Titre, DateEdition) des livres
+	&eacute;dit&eacute;s en mois de Mars 2018.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_834c0d186a4bf716.png" name="Image10" align="bottom" width="504" height="106" border="0"/>
+</p>
+<ol start="9">
+	<li><p>
+	Afficher les livres  (RefLivre, Titre) des livres qui contiennent le
+	mot &laquo;&nbsp;Win&nbsp;&raquo;.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_7c198c436ed099d9.png" name="Image11" align="bottom" width="304" height="110" border="0"/>
+</p>
+<ol start="10">
+	<li><p>
+	Afficher le prix d&rsquo;achat du livre (RefLivre, Titre, PrixAchat)
+	ayant comme RefLivre 114.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_1960e2623ec499e3.png" name="Image12" align="bottom" width="416" height="104" border="0"/>
+</p>
+<ol start="11">
+	<li><p>
+	Afficher la date d&rsquo;&eacute;dition  (RefLivre, Titre,
+	DateEdition) des livres qui commencent par le mot &laquo;&nbsp;Astuce&nbsp;&raquo;
+	en ordre croissant de la Date d&rsquo;&eacute;dition.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_223c2fada2affad3.png" name="Image13" align="bottom" width="417" height="114" border="0"/>
+</p>
+<ol start="12">
+	<li><p>
+	Afficher les livres  (RefLivre, Titre, NbPages) qui contiennent
+	entre 200 et 500 pages.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_397af8cb1b20d122.png" name="Image14" align="bottom" width="420" height="107" border="0"/>
+</p>
+<p><br/>
+
+</p>
+<ol start="13">
+	<li><p>
+	Afficher les noms des auteurs de tous les livres  (RefLivre, Titre,
+	Nom) ordonn&eacute;s par ordre alphab&eacute;tique des titres des
+	livres.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_e3c5fed9d2b654ca.png" name="Image15" align="bottom" width="425" height="108" border="0"/>
+</p>
+<ol start="14">
+	<li><p>
+	Afficher les noms des auteurs qui ont publi&eacute; un livre au mois
+	d&rsquo;Avril 2018 (RefLivre, Titre, Nom, DateEdition).</p>
+</ol>
+<p align="center">
+<img src="TP2_html_19cac23246d1ee94.png" name="Image16" align="bottom" width="613" height="106" border="0"/>
+</p>
+<ol start="15">
+	<li><p>
+	Afficher les titres des livres  (RefLivre, Titre, Nom) publi&eacute;s
+	par des &eacute;crivains de l&rsquo;Egypte.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_6cdb834f0c0f0a52.png" name="Image17" align="bottom" width="530" height="107" border="0"/>
+</p>
+<ol start="16">
+	<li><p>
+	Afficher les titres des livres (RefLivre, Titre) qui ont une seconde
+	&eacute;dition, afficher les titres des livres sans redondances.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_d30c320754fd8b04.png" name="Image19" align="bottom" width="329" height="223" border="0"/>
+<img src="TP2_html_a5910a845b475535.png" name="Image18" align="bottom" width="419" height="104" border="0"/>
+</p>
+<p><br/>
+
+</p>
+<ol start="17">
+	<li><p>
+	Afficher les prix d&rsquo;achats  (RefLivre, Titre, PrixAchat) des
+	livres publi&eacute;s par des auteurs Liby&eacute;ens sans
+	redondances et par ordre croissant du prix.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_fc9d6095b1fd6bf4.png" name="Image20" align="left" width="534" height="110" border="0"/>
+<img src="TP2_html_9bc1c13fc8c4d096.png" name="Image21" align="bottom" width="312" height="154" border="0"/>
+</p>
+<ol start="18">
+	<li><p>
+	Afficher les titres des livres  (RefLivre, Titre) publi&eacute;s par
+	&laquo;&nbsp;Ayoub Bouchiba&nbsp;&raquo;.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_81e393b5606b6ccb.png" name="Image22" align="bottom" width="426" height="114" border="0"/>
+</p>
+<ol start="19">
+	<li><p>
+	Afficher le nombre de livres enregistr&eacute;es dans la base.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_6ec96dd120ee50f3.png" name="Image23" align="bottom" width="206" height="121" border="0"/>
+</p>
+<ol start="20">
+	<li><p>
+	Afficher le nombre de livres qui comptent moins de 200 pages.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_ac5299d667e0752d.png" name="Image24" align="bottom" width="323" height="120" border="0"/>
+</p>
+<ol start="21">
+	<li><p>
+	Afficher le nombre de livres qui ont un prix d&rsquo;achat compris
+	entre 10DT et 20DT.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_b4e4a990450fd02e.png" name="Image25" align="bottom" width="320" height="118" border="0"/>
+</p>
+<p><br/>
+
+</p>
+<ol start="22">
+	<li><p>
+	Afficher le prix maximal et le prix minimal des livres.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_ce9f153dfa896fc8.png" name="Image26" align="bottom" width="361" height="118" border="0"/>
+</p>
+<ol start="23">
+	<li><p>
+	Afficher le titre du livre qui poss&egrave;de un nombre maximal de
+	pages.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_8f1047b29a9b955c.png" name="Image28" align="bottom" width="317" height="181" border="0"/>
+<img src="TP2_html_2d65fdd6f890e5b.png" name="Image27" align="bottom" width="305" height="106" border="0"/>
+</p>
+<ol start="24">
+	<li><p>
+	Afficher le nombre d&rsquo;auteurs (RefLivre, Titre, NbAuteurs) de
+	chaque livre.</p>
+</ol>
+<p align="center">
+<img src="TP2_html_1e9b702f48142059.png" name="Image29" align="left" width="444" height="110" border="0"/>
+<br/>
+
+</p>
+<p><br/>
+
+</p>
+<div title="footer"><p>
+	<font size="2"><i><b>3<sup>&egrave;me</sup>
+	Economie &amp; gestion		Page <span><sdfield type=PAGE subtype=RANDOM format=PAGE>7</sdfield></span>
+	/ <span><sdfield type=DOCSTAT subtype=PAGE format=PAGE>7</sdfield></span></b></i></font></p>
+</div>
+</body>
+</html>
