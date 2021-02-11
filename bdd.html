@@ -690,7 +690,7 @@
         <p><img src="imgbd/TP2_fichiers/TP2_html_bf2e1ad5785ce2d5.png" alt="Schéma base de données"></p>
 
         <p>Télécharger la base de donnée à partir de ce lien : <a href="databases/Gestion_Livres_Eleve.accdb">Base de données</a></p>
-        
+
         <p>On demande de réaliser les requêtes de sélection suivantes :</p>
 
         <ol>
@@ -881,6 +881,80 @@
                 <p><img src="imgbd/TP2_Fichiers/TP2_html_1e9b702f48142059.png" alt=""></p>
               </div>
             </div>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>TP N°3 - Gestion de films</h3>
+
+        <p>Afin de gérer les ventes de billets dans une salle de cinéma, on se propose de présenter les données nécessaires dans le tableau suivant :</p>
+
+        <div class="my-2">
+          <figure>
+            <img src="databases/TP3/feuille.png" alt="Feuille Billets_Vendus">
+            <figcaption>Feuille Billets_Vendus</figcaption>
+          </figure>
+        </div>
+
+        <ol type="A">
+          <li>A l'aide du logiciel tableur disponible :
+            <ol>
+              <li>Saisir le tableau ci-dessus, à partir de la cellule A1, dans une feuille à nommer <strong>Billets_Vendus</strong> et enregistrer le classeur sous le nom <strong>Billets_Cinema</strong> dans votre dossier de travail.</li>
+              <li>Appliquer la même mise en forme utilisée dans le tableau ci-dessus.</li>
+              <li>Remplir la colonne <strong>Prix</strong>, par le prix de chaque billet selon le type du film.</li>
+              <li>Utiliser la mise en forme conditionnelle pour mettre en vert les billets dont la durée de film dépasse 2 heures.</li>
+              <li>Copier les doonnée de la plage <strong>A1:C4</strong> dans une nouvelle feuille à nommer <strong>TypeFilm</strong>.</li>
+              <li>Copier les données de la plage <strong>A6:E15</strong> dans une nouvelle feuille à nommer <strong>Billets</strong>.</li>
+              <li>A partir de la feuille <strong>Billets_Vendus</strong>, créer dans une nouvelle feuille de calcul à nommer <strong>TCD_Film</strong>, un tableau croisé dynamique permettant de répartir les prix des billets par type de film.</li>
+            </ol>
+          </li>
+          <li>A l'aide du logiciel de gestion de bases de données disponible :
+            <ol>
+              <li>Créer, dans votre dossier de travail, la base de données intitulée <strong>Gestion_billets</strong> décrite par le schéma relationnel suivant :
+                <ul>
+                  <li>Film(<u>IdFilm</u>, Titre)</li>
+                  <li>TypeFilm(<u>CodTypFilm</u>, TypFilm, Tarif)</li>
+                  <li>Billet(<u>NumBillet</u>, DateFilm, DureeFilm, CodTypFilm, IdFilm)</li>
+                </ul>
+              </li>
+              <li>Importer les données de la table <strong>Billet</strong> à partir de la feuille de calcul <strong>Billet</strong>.</li>
+              <li>Importer les données de la table <strong>TypeFilm</strong> à partir de la feuille de calcul <strong>TypeFilm</strong>.</li>
+              <li>Créer la table Film et la remplir par les données du tableau suivant :
+                <div class="my-2">
+                  <figure>
+                    <img src="databases/TP3/films.png" alt="Contenu de la table Films">
+                    <figcaption>Contenu de la table Films</figcaption>
+                  </figure>
+                </div>
+              </li>
+              <li>Importer le reste des données à partir du fichier <a href="databases/TP3/bac2017_01.xlsx">bac2017_01.xlsx</a> :
+                <ul>
+                  <li>Importer les données de la table <strong>Billet</strong> à partir de la feuille de calcul <strong>Billet</strong>.</li>
+                  <li>Importer les données de la table <strong>Film</strong> à partir de la feuille de calcul <strong>Film</strong>.</li>
+                </ul>
+              </li>
+              <li>Créer les relations entre les tables de cette base de données.</li>
+              <li>Créer les requêtes suivantes :
+                <ol>
+                  <li>Augmenter les <strong>Tarif</strong> des films de 20%.</li>
+                  <li>Faire une promotion de 45% sur le <strong>Tarif</strong> des films <strong>FD04</strong>.</li>
+                  <li>Afficher la liste des billets vendus (NumBillet, Titre, Durée) pour les films dont la durée dépasse 2 heures.</li>
+                  <li>Afficher la liste des des billets vendus (NumBillet, DateFilm) pour le film <strong>Skyscraper</strong>, trier le résultat par ordre décroissant de la date.</li>
+                  <li>Afficher la liste des films <strong>Film 2D</strong> sans répétitions. Trier le résultat par ordre alphabétique du titre.</li>
+                  <li>Afficher le nombre de billets vendus dont le code du type de film est <strong>FD04</strong>, en utilisant la commande <strong>Totaux</strong>.</li>
+                  <li>Afficher le nombre de billets vendus de chaque code dy type de film <strong>CodeTypFilm</strong>. Ordonner par ordre croissant du nombre de ventes.</li>
+                  <li>Afficher les billets vendus (NumBillet, Titre, DateFilm) durant la première semaine du mois de Septembre.</li>
+                  <li>Afficher la liste des films (Titre, DateFilm) qui seront présentés à 11h durant la première quinzaine du mois de Septembre.</li>
+                  <li>Afficher la date de la première sortie de tous les films présentés (Titre, DateFilm).</li>
+                  <li>Afficher les dates de présentations (DateFilm, Titre) d'un film donné.</li>
+                  <li>Afficher le nombre de présentations de tous les films, ordonnées par titre.</li>
+                  <li>Afficher la liste des films (Titre, DateFilm) présentés le 25/09/2018.</li>
+                  <li>Afficher le titre du film qui a été présenté le plus de fois.</li>
+                  <li>Afficher le top 5 des films du point de vue nombre de présentations.</li>
+                </ol>
+              </li>
+            </ol>
           </li>
         </ol>
       </section>
