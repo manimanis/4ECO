@@ -582,7 +582,7 @@
         <p>Access permet d'exporter les données d'une table sous forme d'une feuille Excel.</p>
 
         <p><b>Question :</b> Exporter le contenu de la table nuitées dans un fichier nuitées. La base de données à utiliser :
-          <a href="databases/nuitées.accdb"></a>
+          <a href="databases/nuitées.accdb">nuitées.accdb</a>
         </p>
 
         <div class="d-print-none text-center">
@@ -604,63 +604,56 @@
 
         <ol>
           <li>Créer les tables suivantes :
-            <table class="small">
-              <tbody>
-                <tr>
-                  <td>
-                    <table class="table table-bordered border-dark table-sm">
-                      <tbody>
-                        <tr>
-                          <th>Clients</th>
-                        </tr>
-                        <tr>
-                          <td><b><u>IdClient</u></b> : Numérique<br>Nom : TexteCourt(30)<br>Tel : TexteCourt(12)</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                  <td></td>
-                  <td>
-                    <table class="table table-bordered border-dark table-sm">
-                      <tbody>
-                        <tr>
-                          <th>Factures</th>
-                        </tr>
-                        <tr>
-                          <td><b><u>NumFacture</u></b> : Numérique<br>IdClient : Numérique<br>date : Date/Heure</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                  <td></td>
-                  <td>
-                    <table class="table table-bordered border-dark table-sm">
-                      <tbody>
-                        <tr>
-                          <th>Articles</th>
-                        </tr>
-                        <tr>
-                          <td><b><u>IdArticle</u></b> : Numérique<br>Désign : TexteCourt(70)<br>Prix : Numérique(réel simple)<br>TVA : Numérique(réel simple)</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                  <td></td>
-                  <td>
-                    <table class="table table-bordered border-dark table-sm">
-                      <tbody>
-                        <tr>
-                          <th>Articles</th>
-                        </tr>
-                        <tr>
-                          <td><b><u>NumFacture</u></b> : Numérique<br><b><u>IdArticle</u></b> : Numérique<br>Qte : Numérique(réel simple)</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="row">
+              <div class="col-md-6 col-xl-3">
+                <table class="table table-bordered border-dark table-sm">
+                  <tbody>
+                    <tr>
+                      <th>Clients</th>
+                    </tr>
+                    <tr>
+                      <td><b><u>IdClient</u></b> : Numérique<br>Nom : TexteCourt(30)<br>Tel : TexteCourt(12)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <table class="table table-bordered border-dark table-sm">
+                  <tbody>
+                    <tr>
+                      <th>Factures</th>
+                    </tr>
+                    <tr>
+                      <td><b><u>NumFacture</u></b> : Numérique<br>IdClient : Numérique<br>date : Date/Heure</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <table class="table table-bordered border-dark table-sm">
+                  <tbody>
+                    <tr>
+                      <th>Articles</th>
+                    </tr>
+                    <tr>
+                      <td><b><u>IdArticle</u></b> : Numérique<br>Désign : TexteCourt(70)<br>Prix : Numérique(réel simple)<br>TVA : Numérique(réel simple)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <table class="table table-bordered border-dark table-sm">
+                  <tbody>
+                    <tr>
+                      <th>ArticlesFactures</th>
+                    </tr>
+                    <tr>
+                      <td><b><u>NumFacture</u></b> : Numérique<br><b><u>IdArticle</u></b> : Numérique<br>Qte : Numérique(réel simple)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </li>
           <li>Etablir les relations suivantes entre les tables :
             <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image001.jpg" alt="Relations"></div>
