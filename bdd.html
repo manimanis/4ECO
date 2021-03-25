@@ -12,12 +12,15 @@
 <body>
   <header class="mb-4">
     <nav class="navbar navbar-expand-xl navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <a class="navbar-brand" href="#">
-        <img src="imgbd/ms_access.svg" alt="" loading="lazy" width="30" height="30"> Bases de données
+        <img src="imgbd/ms_access.svg" alt="" loading="lazy" width="30" height="30"> Bases de
+        données
       </a>
 
 
@@ -32,9 +35,12 @@
 
       <section>
         <h3>Définition</h3>
-        <p>Une base de données (« BD » ou « BDD ») est un lot d'informations stockées dans une mémoire de masse, d'une façon structurée et organisée. </p>
-        <p>Cette organisation a pour but de faciliter la manipulation des données c-à-d l'ajout, la suppression, la mise à jour et/ou l'extraction de données. </p>
-        <p>L'outil (ou le logiciel) permettant de travailler sur une base de données est appelé SGBD (Système de Gestion de Bases de Données).</p>
+        <p>Une base de données (« BD » ou « BDD ») est un lot d'informations stockées dans une
+          mémoire de masse, d'une façon structurée et organisée. </p>
+        <p>Cette organisation a pour but de faciliter la manipulation des données c-à-d l'ajout, la
+          suppression, la mise à jour et/ou l'extraction de données. </p>
+        <p>L'outil (ou le logiciel) permettant de travailler sur une base de données est appelé SGBD
+          (Système de Gestion de Bases de Données).</p>
         <p>Parmi les SGBD les plus connus on peut citer : Oracle, SQL Server, Access, MySQL.</p>
         <div class="row">
           <div class="col-sm-6 col-xl-3">
@@ -62,15 +68,18 @@
             </figure>
           </div>
         </div>
-        <p>Dans ce cours nous allons utiliser le SGBD intégré avec la suite office : <b>Access</b>.</p>
+        <p>Dans ce cours nous allons utiliser le SGBD intégré avec la suite office : <b>Access</b>.
+        </p>
       </section>
 
       <section>
         <h3>Table</h3>
 
         <p>Les données d'une base de données sont stockées dans des <b>tables</b>.</p>
-        <p>Une table est un tableau contenant des <b>enregistrements</b> ayant une même structure ou ayant les mêmes
-          <b>champs</b>.</p>
+        <p>Une table est un tableau contenant des <b>enregistrements</b> ayant une même structure ou
+          ayant les mêmes
+          <b>champs</b>.
+        </p>
 
         <div>
           <figure>
@@ -89,8 +98,10 @@
       <section>
         <h3>Organisaton</h3>
 
-        <p>Une table possède une structure formée par ses <b>champs</b>. Elle sert à enregistrer des données dans des
-          <b>enregistrements</b> ayant cette structure.</p>
+        <p>Une table possède une structure formée par ses <b>champs</b>. Elle sert à enregistrer des
+          données dans des
+          <b>enregistrements</b> ayant cette structure.
+        </p>
       </section>
 
       <section>
@@ -109,7 +120,8 @@
       <section>
         <h3>Enregistrement</h3>
 
-        <p>Un enregistrement est constitué par l'ensemble des valeurs attribuées à l'ensemble de ses champs.</p>
+        <p>Un enregistrement est constitué par l'ensemble des valeurs attribuées à l'ensemble de ses
+          champs.</p>
         <div>
           <figure>
             <img src="imgbd/img03.svg" alt="Exemple d'un enregistrement dans une table Eleves">
@@ -121,7 +133,8 @@
       <section>
         <h3>Clé primaire</h3>
 
-        <p>Au moins un champ de la table doit servir comme clé primaire pour la table. Une clé primaire permet d'identifier un enregistrement d'une façon unique. </p>
+        <p>Au moins un champ de la table doit servir comme clé primaire pour la table. Une clé
+          primaire permet d'identifier un enregistrement d'une façon unique. </p>
         <div>
           <figure>
             <img src="imgbd/img04.svg" alt="Identification de la clé primaire">
@@ -147,7 +160,8 @@
       <section>
         <h3>Schéma</h3>
 
-        <p>Le schéma d'une table est donné par l'ensemble de ses attributs (Champs). La clé primaire doit être soulignée.
+        <p>Le schéma d'une table est donné par l'ensemble de ses attributs (Champs). La clé primaire
+          doit être soulignée.
         </p>
 
         <div>
@@ -157,7 +171,8 @@
           </figure>
         </div>
 
-        <p>Le schéma de la table <b>eleves</b> est :<br> <span class="small">eleves(<u>num_eleve</u>, nom, prenom,
+        <p>Le schéma de la table <b>eleves</b> est :<br> <span
+                class="small">eleves(<u>num_eleve</u>, nom, prenom,
             genre, adresse, ville, code_postal)</span></p>
 
         <p><b>Question :</b> Donner les schémas des tables suivantes ?</p>
@@ -184,7 +199,8 @@
 
       <section>
         <h3>Problème</h3>
-        <p>Soit la table suivante extraite de la base de données d'une agence de location de voitures :</p>
+        <p>Soit la table suivante extraite de la base de données d'une agence de location de
+          voitures :</p>
 
         <div>
           <figure>
@@ -194,10 +210,14 @@
         </div>
         <p>Cette table contient plusieurs anomalies :</p>
         <ul>
-          <li>Elle contient des <b>redondances de données</b> : les informations d'un véhicule et celles d'un client sont répétés plusieurs fois.</li>
-          <li><b>Anomalie de suppression</b> : La suppression de la voiture OpelAstra entraine la suppression des informations du client Beji Mohamed.</li>
-          <li><b>Anomalie de mise à jour</b> : Si Soussi Slim change son adresse il faudra modifier tous les enregistrements qui portent son nom.</li>
-          <li><b>Anomalie d'insertion</b> : Lorsqu'on souhaite enregistrer une nouvelle location pour la voiture Peugeot 406 on peut écrire par mal attention Peuegot 640.</li>
+          <li>Elle contient des <b>redondances de données</b> : les informations d'un véhicule et
+            celles d'un client sont répétés plusieurs fois.</li>
+          <li><b>Anomalie de suppression</b> : La suppression de la voiture OpelAstra entraine la
+            suppression des informations du client Beji Mohamed.</li>
+          <li><b>Anomalie de mise à jour</b> : Si Soussi Slim change son adresse il faudra modifier
+            tous les enregistrements qui portent son nom.</li>
+          <li><b>Anomalie d'insertion</b> : Lorsqu'on souhaite enregistrer une nouvelle location
+            pour la voiture Peugeot 406 on peut écrire par mal attention Peuegot 640.</li>
         </ul>
         <p><b>Question :</b> Quelle est la solution ?</p>
       </section>
@@ -205,7 +225,8 @@
       <section>
         <h3>Solution</h3>
 
-        <p>On remarque que cette table contient les informations des véhicules et celles des clients. </p>
+        <p>On remarque que cette table contient les informations des véhicules et celles des
+          clients. </p>
         <p>On pourra les séparer en deux tables comme suit :</p>
         <div class="row">
           <div class="col-md-6">
@@ -221,14 +242,17 @@
             </figure>
           </div>
         </div>
-        <p>Malgré la décomposition que nous avons effectué sur cette table, nous faisons face à un autre problème :
-          <b>Comment faire pour dire que tel client vient de louer telle voiture ?</b></p>
+        <p>Malgré la décomposition que nous avons effectué sur cette table, nous faisons face à un
+          autre problème :
+          <b>Comment faire pour dire que tel client vient de louer telle voiture ?</b>
+        </p>
       </section>
 
       <section>
         <h3>Relation</h3>
 
-        <p>Nous devons relier ces deux tables à une troisième table nommée <b>location_vehicule</b>.</p>
+        <p>Nous devons relier ces deux tables à une troisième table nommée <b>location_vehicule</b>.
+        </p>
 
         <div>
           <figure>
@@ -254,7 +278,8 @@
 
         <h4>Relation un à un</h4>
 
-        <p>Un camion est un type de véhicule, une voiture est un type de véhicule d’où un véhicule ne peut pas être un camion et une voiture d’où la relation un à un.</p>
+        <p>Un camion est un type de véhicule, une voiture est un type de véhicule d’où un véhicule
+          ne peut pas être un camion et une voiture d’où la relation un à un.</p>
 
         <div>
           <figure>
@@ -265,10 +290,13 @@
 
         <h4>Relation un à plusieurs</h4>
 
-        <p>Dans le diagramme ci-dessous un client peut effectuer plusieurs locations. La relation entre la table clients et location_vehicule est dite relation un à plusieurs.</p>
+        <p>Dans le diagramme ci-dessous un client peut effectuer plusieurs locations. La relation
+          entre la table clients et location_vehicule est dite relation un à plusieurs.</p>
 
-        <p>Dans la relation indiquée, entre les tables clients et location_vehicule, la table clients est appelée
-          <b>table mère</b> et la table location_vehicule est dite <b>table fille</b></p>
+        <p>Dans la relation indiquée, entre les tables clients et location_vehicule, la table
+          clients est appelée
+          <b>table mère</b> et la table location_vehicule est dite <b>table fille</b>
+        </p>
 
         <div>
           <figure>
@@ -277,11 +305,14 @@
           </figure>
         </div>
 
-        <p><b>Question :</b> Identifier une deuxième relation un à plusieurs dans ce diagramme. Identifier la table mère et la table fille dans cette relation.</p>
+        <p><b>Question :</b> Identifier une deuxième relation un à plusieurs dans ce diagramme.
+          Identifier la table mère et la table fille dans cette relation.</p>
 
         <h4>Relation plusieurs à plusieurs</h4>
 
-        <p>Dans le diagramme précédent plusieurs Véhicules peuvent être louées par plusieurs Clients d’où il existe une relation plusieurs à plusieurs entre les tables Clients et Véhicule.</p>
+        <p>Dans le diagramme précédent plusieurs Véhicules peuvent être louées par plusieurs Clients
+          d’où il existe une relation plusieurs à plusieurs entre les tables Clients et Véhicule.
+        </p>
       </section>
 
       <section>
@@ -290,21 +321,26 @@
         <p>Pour créer une relation entre deux tables il faut que :</p>
         <ul>
           <li>Les champs reliés possèdent le même type de donnée et la même taille.</li>
-          <li>La valeur tapée pour une <b>clé étrangère</b> (dans la table fille) corresponde à une valeur tapée comme
-            <b>clé primaire</b> (dans la table mère).</li>
+          <li>La valeur tapée pour une <b>clé étrangère</b> (dans la table fille) corresponde à une
+            valeur tapée comme
+            <b>clé primaire</b> (dans la table mère).
+          </li>
         </ul>
 
         <div>
           <figure>
-            <img src="imgbd/img07.svg" alt="Erreur, une relation entre deux champs de types différents">
+            <img src="imgbd/img07.svg"
+                 alt="Erreur, une relation entre deux champs de types différents">
             <figcaption>Erreur, une relation entre deux champs de types différents</figcaption>
           </figure>
         </div>
 
         <div>
           <figure>
-            <img src="imgbd/img08.svg" alt="Erreur d'intégrité référentielle, la valeur tapée dans la table fille n'existe pas dans la table mère">
-            <figcaption>Erreur d'intégrité référentielle, la valeur tapée dans la table fille n'existe pas dans la table mère</figcaption>
+            <img src="imgbd/img08.svg"
+                 alt="Erreur d'intégrité référentielle, la valeur tapée dans la table fille n'existe pas dans la table mère">
+            <figcaption>Erreur d'intégrité référentielle, la valeur tapée dans la table fille
+              n'existe pas dans la table mère</figcaption>
           </figure>
         </div>
       </section>
@@ -321,7 +357,7 @@
         <div class="d-print-none text-center">
           <video controls>
             <source src="imgbd/base_de_données.wmv.mp4" type="video/mp4">
-              <source src="imgbd/base_de_données.wmv.webm" type="video/webm">
+            <source src="imgbd/base_de_données.wmv.webm" type="video/webm">
           </video>
         </div>
       </section>
@@ -401,22 +437,27 @@
         <p>Une base de données peut être exploitée à travers des <b>requêtes</b>.</p>
         <p>Il existe plusieurs types de requêtes :</p>
         <ul>
-          <li>Les <b>requêtes de sélection</b> : pour extraire des informations filtrées et triés à partir des tables.</li>
-          <li>Les <b>requêtes d'insertion</b> : pour insérer de nouvelles valeurs dans une table.</li>
-          <li>Les <b>requêtes de mise à jour</b> : pour mettre à jour les valeurs contenues dans une table.</li>
-          <li>Les <b>requêtes de suppression</b> : pour supprimer les valeurs inutiles dans une table.</li>
+          <li>Les <b>requêtes de sélection</b> : pour extraire des informations filtrées et triés à
+            partir des tables.</li>
+          <li>Les <b>requêtes d'insertion</b> : pour insérer de nouvelles valeurs dans une table.
+          </li>
+          <li>Les <b>requêtes de mise à jour</b> : pour mettre à jour les valeurs contenues dans une
+            table.</li>
+          <li>Les <b>requêtes de suppression</b> : pour supprimer les valeurs inutiles dans une
+            table.</li>
         </ul>
       </section>
 
       <section>
         <h3>📹 Requêtes de sélection</h3>
 
-        <p>On demande de trouver les noms des élèves qui ont obtenus une note inférieure à 1 en Anglais</p>
+        <p>On demande de trouver les noms des élèves qui ont obtenus une note inférieure à 1 en
+          Anglais</p>
 
         <div class="d-print-none text-center">
           <video controls>
             <source src="imgbd/requete_selection.wmv.mp4" type="video/mp4">
-              <source src="imgbd/requete_selection.wmv.webm" type="video/webm">
+            <source src="imgbd/requete_selection.wmv.webm" type="video/webm">
           </video>
         </div>
       </section>
@@ -429,7 +470,7 @@
         <div class="d-print-none text-center">
           <video controls>
             <source src="imgbd/requete_insertion.wmv.mp4" type="video/mp4">
-              <source src="imgbd/requete_insertion.wmv.webm" type="video/webm">
+            <source src="imgbd/requete_insertion.wmv.webm" type="video/webm">
           </video>
         </div>
       </section>
@@ -442,7 +483,7 @@
         <div class="d-print-none text-center">
           <video controls>
             <source src="imgbd/requete_mise_a_jour.wmv.mp4" type="video/mp4">
-              <source src="imgbd/requete_mise_a_jour.wmv.webm" type="video/webm">
+            <source src="imgbd/requete_mise_a_jour.wmv.webm" type="video/webm">
           </video>
         </div>
       </section>
@@ -455,7 +496,7 @@
         <div class="d-print-none text-center">
           <video controls>
             <source src="imgbd/requete_suppression.wmv.mp4" type="video/mp4">
-              <source src="imgbd/requete_suppression.wmv.webm" type="video/webm">
+            <source src="imgbd/requete_suppression.wmv.webm" type="video/webm">
           </video>
         </div>
       </section>
@@ -464,10 +505,14 @@
         <h3>Application</h3>
 
         <ol>
-          <li>Créer une requête qui permet de retourner le nom et le prénom des élèves qui possèdent une note inférieure à 10 en Français.</li>
-          <li>Créer une requête qui permet de retourner le nom et le prénom des élèves qui ont une note inférieure à 10 en Anglais et en Français.</li>
-          <li>Afficher les notes de tous les élèves en français. Trier les élèves par leurs noms et leurs prénoms.</li>
-          <li>Afficher la liste des élèves, qui ont des notes supérieures à 16, triée par leurs noms et prénoms.</li>
+          <li>Créer une requête qui permet de retourner le nom et le prénom des élèves qui possèdent
+            une note inférieure à 10 en Français.</li>
+          <li>Créer une requête qui permet de retourner le nom et le prénom des élèves qui ont une
+            note inférieure à 10 en Anglais et en Français.</li>
+          <li>Afficher les notes de tous les élèves en français. Trier les élèves par leurs noms et
+            leurs prénoms.</li>
+          <li>Afficher la liste des élèves, qui ont des notes supérieures à 16, triée par leurs noms
+            et prénoms.</li>
           <li>Afficher les notes de BEN Slimane Slim dans toutes les matières.</li>
           <li>Afficher la moyenne de BEN Slimane Slim en Français.</li>
         </ol>
@@ -517,9 +562,12 @@
           </tbody>
         </table>
 
-        <p class="text-danger">Il n'est pas pratique d'insérer ces données directement dans la table Notes ou en utilisant des requêtes d'insertion. <b>On préfère utiliser un formulaire pour cette tâche</b></p>
+        <p class="text-danger">Il n'est pas pratique d'insérer ces données directement dans la table
+          Notes ou en utilisant des requêtes d'insertion. <b>On préfère utiliser un formulaire pour
+            cette tâche</b></p>
 
-        <p>Les formulaires sont des outils pratiques pour permettre l'entrée/la saisie aisée des données dans une ou plusieurs tables.</p>
+        <p>Les formulaires sont des outils pratiques pour permettre l'entrée/la saisie aisée des
+          données dans une ou plusieurs tables.</p>
 
         <div>
           <figure>
@@ -539,8 +587,11 @@
       <section>
         <h3>📹 Etats</h3>
 
-        <p>Les états permettent de créer des rapports à partir des données et des requêtes enregistrées dans les tables d'une base de données. Les états sont généralement destinés à l'impression.</p>
-        <p><b>Question :</b> Créer un état pour afficher les notes des élèves classées par matière.</p>
+        <p>Les états permettent de créer des rapports à partir des données et des requêtes
+          enregistrées dans les tables d'une base de données. Les états sont généralement destinés à
+          l'impression.</p>
+        <p><b>Question :</b> Créer un état pour afficher les notes des élèves classées par matière.
+        </p>
 
         <div>
           <figure>
@@ -562,11 +613,13 @@
 
         <p>Dans Access, il est possible d'importer les données depuis Excel.</p>
 
-        <p><b>Question</b> : On désire importer les feuilles de calcul (Eleves, Matieres, et Notes) d'un classeur Excel dans une base de données Access.</p>
+        <p><b>Question</b> : On désire importer les feuilles de calcul (Eleves, Matieres, et Notes)
+          d'un classeur Excel dans une base de données Access.</p>
 
 
         <div class="d-print-none text-center">
-          <p>La vidéo suivante donne un exemple de cette opération en utilisant les données du fichier Excel : <a href="databases/Donnees.xls">Donnees.xls</a></p>
+          <p>La vidéo suivante donne un exemple de cette opération en utilisant les données du
+            fichier Excel : <a href="databases/Donnees.xls">Donnees.xls</a></p>
 
           <video controls>
             <source src="imgbd/importation.wmv.mp4" type="video/mp4">
@@ -578,10 +631,12 @@
       <section>
         <h3>📹 Exportation de données</h3>
 
-        <p>Parfois, on préfère utiliser Excel pour réaliser des calculs sur les données d'une table.</p>
+        <p>Parfois, on préfère utiliser Excel pour réaliser des calculs sur les données d'une table.
+        </p>
         <p>Access permet d'exporter les données d'une table sous forme d'une feuille Excel.</p>
 
-        <p><b>Question :</b> Exporter le contenu de la table nuitées dans un fichier nuitées. La base de données à utiliser :
+        <p><b>Question :</b> Exporter le contenu de la table nuitées dans un fichier nuitées. La
+          base de données à utiliser :
           <a href="databases/nuitées.accdb">nuitées.accdb</a>
         </p>
 
@@ -612,7 +667,8 @@
                       <th>Clients</th>
                     </tr>
                     <tr>
-                      <td><b><u>IdClient</u></b> : Numérique<br>Nom : TexteCourt(30)<br>Tel : TexteCourt(12)</td>
+                      <td><b><u>IdClient</u></b> : Numérique<br>Nom : TexteCourt(30)<br>Tel :
+                        TexteCourt(12)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -624,7 +680,8 @@
                       <th>Factures</th>
                     </tr>
                     <tr>
-                      <td><b><u>NumFacture</u></b> : Numérique<br>IdClient : Numérique<br>date : Date/Heure</td>
+                      <td><b><u>NumFacture</u></b> : Numérique<br>IdClient : Numérique<br>date :
+                        Date/Heure</td>
                     </tr>
                   </tbody>
                 </table>
@@ -636,7 +693,8 @@
                       <th>Articles</th>
                     </tr>
                     <tr>
-                      <td><b><u>IdArticle</u></b> : Numérique<br>Désign : TexteCourt(70)<br>Prix : Numérique(réel simple)<br>TVA : Numérique(réel simple)</td>
+                      <td><b><u>IdArticle</u></b> : Numérique<br>Désign : TexteCourt(70)<br>Prix :
+                        Numérique(réel simple)<br>TVA : Numérique(réel simple)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -648,7 +706,8 @@
                       <th>ArticlesFactures</th>
                     </tr>
                     <tr>
-                      <td><b><u>NumFacture</u></b> : Numérique<br><b><u>IdArticle</u></b> : Numérique<br>Qte : Numérique(réel simple)</td>
+                      <td><b><u>NumFacture</u></b> : Numérique<br><b><u>IdArticle</u></b> :
+                        Numérique<br>Qte : Numérique(réel simple)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -656,21 +715,30 @@
             </div>
           </li>
           <li>Etablir les relations suivantes entre les tables :
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image001.jpg" alt="Relations"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image001.jpg"
+                   alt="Relations"></div>
           </li>
           <li>Insérer les données suivantes :
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image002.jpg" alt="Table Articles"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image003.jpg" alt="Table Clients"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image004.jpg" alt="Table Factures"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image005.jpg" alt="Table ArticlesFactures"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image002.jpg"
+                   alt="Table Articles"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image003.jpg"
+                   alt="Table Clients"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image004.jpg"
+                   alt="Table Factures"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image005.jpg"
+                   alt="Table ArticlesFactures"></div>
           </li>
           <li>Créer les formulaires suivants :
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image006.jpg" alt="Formulaire Articles"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image007.jpg" alt="Formulaire Clients"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image008.jpg" alt="Formulaire Factures"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image006.jpg"
+                   alt="Formulaire Articles"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image007.jpg"
+                   alt="Formulaire Clients"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image008.jpg"
+                   alt="Formulaire Factures"></div>
           </li>
           <li>Créer l'état suivant :
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image009.jpg" alt="Etat Factures"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image009.jpg"
+                   alt="Etat Factures"></div>
           </li>
         </ol>
       </section>
@@ -680,200 +748,236 @@
 
         <p>On donne le schéma suivant de la base de données « Gestion_Livres » :</p>
 
-        <p><img src="imgbd/TP2_fichiers/TP2_html_bf2e1ad5785ce2d5.png" alt="Schéma base de données"></p>
+        <p><img src="imgbd/TP2_fichiers/TP2_html_bf2e1ad5785ce2d5.png" alt="Schéma base de données">
+        </p>
 
-        <p>Télécharger la base de donnée à partir de ce lien : <a href="databases/Gestion_Livres_Eleve.accdb">Base de données</a></p>
+        <p>Télécharger la base de donnée à partir de ce lien : <a
+             href="databases/Gestion_Livres_Eleve.accdb">Base de données</a></p>
 
         <p>On demande de réaliser les requêtes de sélection suivantes :</p>
 
         <ol>
           <li>
-            Afficher la liste des livres (RefLivre, Titre) par ordre alphabétique.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_7ed23ec7e960c82b.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher la liste des livres (RefLivre, Titre) par ordre alphabétique.
+              </summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_7ed23ec7e960c82b.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher la liste des livres (RefLivre, Titre, NbPages) par ordre décroissant du nombre de pages.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_7ed23ec7e960c82b.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher la liste des livres (Titre, NbPages) par ordre décroissant
+                du nombre de pages.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_2d65fdd6f890e5b.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher la liste des livres (RefLivre, Titre, DateEdition) du plus récent au plus vieux.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_5e60dce59da34146.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher la liste des livres (RefLivre, Titre, DateEdition) du plus récent au
+                plus
+                vieux.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_5e60dce59da34146.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les auteurs (Nom, Pays) groupés par pays.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_fcadc7bb6c10b4c1.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher les auteurs (Nom, Pays) groupés par pays.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_fcadc7bb6c10b4c1.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les noms des auteurs tunisiens par ordre alphabétique de leurs noms.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_326c197c65a17e94.png" alt=""></p>
-            </div>
+            <details>
+              <summary> Afficher les noms des auteurs tunisiens par ordre alphabétique de leurs
+                noms.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_326c197c65a17e94.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les noms des auteurs (Nom, Pays) d’un pays donné par ordre alphabétique de leurs noms.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_c9b5b0fdac3bed5d.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher les noms des auteurs (Nom, Pays) d’un pays donné par ordre
+                alphabétique de
+                leurs noms.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_c9b5b0fdac3bed5d.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les livres (RefLivre, Titre, NbPages) de moins de 100 pages par ordre décroissant du NbPages.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_26f61f18607d41bd.png" alt=""></p>
-            </div>
-          </li>
-          <li>Afficher les livres (RefLivre, Titre, DateEdition) des livres édités en mois de Mars 2018.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_834c0d186a4bf716.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher les livres (RefLivre, Titre, NbPages) de moins de 100 pages par
+                ordre
+                décroissant du NbPages.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_26f61f18607d41bd.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les livres (RefLivre, Titre) des livres qui contiennent le mot « Win ».
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_7c198c436ed099d9.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher les livres (RefLivre, Titre, DateEdition) des livres édités en mois
+                de Mars
+                2018.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_834c0d186a4bf716.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher le prix d’achat du livre (RefLivre, Titre, PrixAchat) ayant comme RefLivre 114.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_1960e2623ec499e3.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher les livres (RefLivre, Titre) des livres qui contiennent le mot « Win
+                ».</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_7c198c436ed099d9.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher la date d’édition (RefLivre, Titre, DateEdition) des livres qui commencent par le mot « Astuce » en ordre croissant de la Date d’édition.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_223c2fada2affad3.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher le prix d’achat du livre (RefLivre, Titre, PrixAchat) ayant comme
+                RefLivre 114.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_1960e2623ec499e3.png" alt=""></p>
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les livres (RefLivre, Titre, NbPages) qui contiennent entre 200 et 500 pages.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_397af8cb1b20d122.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher la date d’édition (RefLivre, Titre, DateEdition) des livres qui
+                commencent par
+                le mot « Astuce » en ordre croissant de la Date d’édition.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_223c2fada2affad3.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les noms des auteurs de tous les livres (RefLivre, Titre, Nom) ordonnés par ordre alphabétique des titres des livres.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_e3c5fed9d2b654ca.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher les livres (RefLivre, Titre, NbPages) qui contiennent entre 200 et
+                500 pages.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_397af8cb1b20d122.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les noms des auteurs qui ont publié un livre au mois d’Avril 2018 (RefLivre, Titre, Nom, DateEdition).
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_19cac23246d1ee94.png" alt=""></p>
-            </div>
+            <details>
+              <summary>Afficher les noms des auteurs de tous les livres (RefLivre, Titre, Nom)
+                ordonnés par ordre alphabétique des titres des livres.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_e3c5fed9d2b654ca.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les titres des livres (RefLivre, Titre, Nom) publiés par des écrivains de l’Egypte.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <p class="solution"><img src="imgbd/TP2_Fichiers/TP2_html_6cdb834f0c0f0a52.png" alt=""></p>
-            </div>
+            <details>
+              <summary> Afficher les noms des auteurs qui ont publié un livre au mois d’Avril 2018
+                (RefLivre,
+                Titre, Nom, DateEdition).</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_19cac23246d1ee94.png" alt="">
+              </div>
+            </details>
           </li>
           <li>
-            Afficher les titres des livres (RefLivre, Titre) qui ont une 2nde, afficher les titres des livres sans redondances.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <div class="solution">
+            <details>
+              <summary>Afficher les titres des livres (RefLivre, Titre, Nom) publiés par des
+                écrivains de l’Egypte.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_6cdb834f0c0f0a52.png" alt="">
+              </div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Afficher les titres des livres (RefLivre, Titre) qui ont une 2nde, afficher
+                les titres
+                des livres sans redondances.</summary>
+              <div class="my-2">
                 <p><img src="imgbd/TP2_Fichiers/TP2_html_d30c320754fd8b04.png" alt=""></p>
                 <p><img src="imgbd/TP2_Fichiers/TP2_html_a5910a845b475535.png" alt=""></p>
               </div>
-            </div>
+            </details>
           </li>
           <li>
-            Afficher les prix d’achats (RefLivre, Titre, PrixAchat) des livres publiés par des auteurs Libyéens sans redondances et par ordre croissant du prix.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <div class="solution">
+            <details>
+              <summary>Afficher les prix d’achats (RefLivre, Titre, PrixAchat) des livres publiés
+                par des
+                auteurs Libyéens sans redondances et par ordre croissant du prix.</summary>
+              <div class="my-2">
                 <p><img src="imgbd/TP2_Fichiers/TP2_html_fc9d6095b1fd6bf4.png" alt=""></p>
                 <p><img src="imgbd/TP2_Fichiers/TP2_html_9bc1c13fc8c4d096.png" alt=""></p>
               </div>
-            </div>
+            </details>
           </li>
           <li>
-            Afficher les titres des livres (RefLivre, Titre) publiés par « Ayoub Bouchiba ».
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <div class="solution">
-                <p><img src="imgbd/TP2_Fichiers/TP2_html_81e393b5606b6ccb.png" alt=""></p>
+            <details>
+              <summary>Afficher les titres des livres (RefLivre, Titre) publiés par « Ayoub Bouchiba
+                ».</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_81e393b5606b6ccb.png" alt="">
               </div>
-            </div>
+            </details>
           </li>
           <li>
-            Afficher le nombre de livres enregistrées dans la base.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <div class="solution">
-                <p><img src="imgbd/TP2_Fichiers/TP2_html_6ec96dd120ee50f3.png" alt=""></p>
+            <details>
+              <summary> Afficher le nombre de livres enregistrées dans la base.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_6ec96dd120ee50f3.png" alt="">
               </div>
-            </div>
+            </details>
           </li>
           <li>
-            Afficher le nombre de livres qui comptent moins de 200 pages.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <div class="solution">
-                <p><img src="imgbd/TP2_Fichiers/TP2_html_ac5299d667e0752d.png" alt=""></p>
+            <details>
+              <summary>Afficher le nombre de livres qui comptent moins de 200 pages.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_ac5299d667e0752d.png" alt="">
               </div>
-            </div>
+            </details>
           </li>
           <li>
-            Afficher le nombre de livres qui ont un prix d’achat compris entre 10DT et 20DT.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <div class="solution">
-                <p><img src="imgbd/TP2_Fichiers/TP2_html_b4e4a990450fd02e.png" alt=""></p>
+            <details>
+              <summary>Afficher le nombre de livres qui ont un prix d’achat compris entre 10DT et
+                20DT.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_b4e4a990450fd02e.png" alt="">
               </div>
-            </div>
+            </details>
           </li>
           <li>
-            Afficher le prix maximal et le prix minimal des livres.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <div class="solution">
-                <p><img src="imgbd/TP2_Fichiers/TP2_html_ce9f153dfa896fc8.png" alt=""></p>
+            <details>
+              <summary>Afficher le prix maximal et le prix minimal des livres.</summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_ce9f153dfa896fc8.png" alt="">
               </div>
-            </div>
+            </details>
           </li>
           <li>
-            Afficher le titre du livre qui possède un nombre maximal de pages.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <div class="solution">
+            <details>
+              <summary>Afficher le titre du livre qui possède un nombre maximal de pages.</summary>
+              <div class="my-2">
                 <p><img src="imgbd/TP2_Fichiers/TP2_html_8f1047b29a9b955c.png" alt=""></p>
                 <p><img src="imgbd/TP2_Fichiers/TP2_html_2d65fdd6f890e5b.png" alt=""></p>
               </div>
-            </div>
+            </details>
           </li>
           <li>
-            Afficher le nombre d’auteurs (RefLivre, Titre, NbAuteurs) de chaque livre.
-            <div class="hidden-content my-2">
-              <a class="link d-print-none small" href="#">(Voir Solution)</a>
-              <div class="solution">
-                <p><img src="imgbd/TP2_Fichiers/TP2_html_1e9b702f48142059.png" alt=""></p>
+            <details>
+              <summary>Afficher le nombre d’auteurs (RefLivre, Titre, NbAuteurs) de chaque livre.
+              </summary>
+              <div class="my-2">
+                <img src="imgbd/TP2_Fichiers/TP2_html_1e9b702f48142059.png" alt="">
               </div>
-            </div>
+            </details>
           </li>
         </ol>
       </section>
@@ -881,7 +985,8 @@
       <section>
         <h3>TP N°3 - Gestion de films</h3>
 
-        <p>Afin de gérer les ventes de billets dans une salle de cinéma, on se propose de présenter les données nécessaires dans le tableau suivant :</p>
+        <p>Afin de gérer les ventes de billets dans une salle de cinéma, on se propose de présenter
+          les données nécessaires dans le tableau suivant :</p>
 
         <div class="my-2">
           <figure>
@@ -893,26 +998,38 @@
         <ol type="A">
           <li>A l'aide du logiciel tableur disponible :
             <ol>
-              <li>Saisir le tableau ci-dessus, à partir de la cellule A1, dans une feuille à nommer <strong>Billets_Vendus</strong> et enregistrer le classeur sous le nom <strong>Billets_Cinema</strong> dans votre dossier de travail.</li>
+              <li>Saisir le tableau ci-dessus, à partir de la cellule A1, dans une feuille à nommer
+                <strong>Billets_Vendus</strong> et enregistrer le classeur sous le nom
+                <strong>Billets_Cinema</strong> dans votre dossier de travail.
+              </li>
               <li>Appliquer la même mise en forme utilisée dans le tableau ci-dessus.</li>
-              <li>Remplir la colonne <strong>Prix</strong>, par le prix de chaque billet selon le type du film.</li>
-              <li>Utiliser la mise en forme conditionnelle pour mettre en vert les billets dont la durée de film dépasse 2 heures.</li>
-              <li>Copier les doonnée de la plage <strong>A1:C4</strong> dans une nouvelle feuille à nommer <strong>TypeFilm</strong>.</li>
-              <li>Copier les données de la plage <strong>A6:E15</strong> dans une nouvelle feuille à nommer <strong>Billets</strong>.</li>
-              <li>A partir de la feuille <strong>Billets_Vendus</strong>, créer dans une nouvelle feuille de calcul à nommer <strong>TCD_Film</strong>, un tableau croisé dynamique permettant de répartir les prix des billets par type de film.</li>
+              <li>Remplir la colonne <strong>Prix</strong>, par le prix de chaque billet selon le
+                type du film.</li>
+              <li>Utiliser la mise en forme conditionnelle pour mettre en vert les billets dont la
+                durée de film dépasse 2 heures.</li>
+              <li>Copier les doonnée de la plage <strong>A1:C4</strong> dans une nouvelle feuille à
+                nommer <strong>TypeFilm</strong>.</li>
+              <li>Copier les données de la plage <strong>A6:E15</strong> dans une nouvelle feuille à
+                nommer <strong>Billets</strong>.</li>
+              <li>A partir de la feuille <strong>Billets_Vendus</strong>, créer dans une nouvelle
+                feuille de calcul à nommer <strong>TCD_Film</strong>, un tableau croisé dynamique
+                permettant de répartir les prix des billets par type de film.</li>
             </ol>
           </li>
           <li>A l'aide du logiciel de gestion de bases de données disponible :
             <ol>
-              <li>Créer, dans votre dossier de travail, la base de données intitulée <strong>Gestion_billets</strong> décrite par le schéma relationnel suivant :
+              <li>Créer, dans votre dossier de travail, la base de données intitulée
+                <strong>Gestion_billets</strong> décrite par le schéma relationnel suivant :
                 <ul>
                   <li>Film(<u>IdFilm</u>, Titre)</li>
                   <li>TypeFilm(<u>CodTypFilm</u>, TypFilm, Tarif)</li>
                   <li>Billet(<u>NumBillet</u>, DateFilm, DureeFilm, CodTypFilm, IdFilm)</li>
                 </ul>
               </li>
-              <li>Importer les données de la table <strong>Billet</strong> à partir de la feuille de calcul <strong>Billet</strong>.</li>
-              <li>Importer les données de la table <strong>TypeFilm</strong> à partir de la feuille de calcul <strong>TypeFilm</strong>.</li>
+              <li>Importer les données de la table <strong>Billet</strong> à partir de la feuille de
+                calcul <strong>Billet</strong>.</li>
+              <li>Importer les données de la table <strong>TypeFilm</strong> à partir de la feuille
+                de calcul <strong>TypeFilm</strong>.</li>
               <li>Créer la table Film et la remplir par les données du tableau suivant :
                 <div class="my-2">
                   <figure>
@@ -921,27 +1038,44 @@
                   </figure>
                 </div>
               </li>
-              <li>Importer le reste des données à partir du fichier <a href="databases/TP3/bac2017_01.xlsx">bac2017_01.xlsx</a> :
+              <li>Importer le reste des données à partir du fichier <a
+                   href="databases/TP3/bac2017_01.xlsx">bac2017_01.xlsx</a> :
                 <ul>
-                  <li>Importer les données de la table <strong>Billet</strong> à partir de la feuille de calcul <strong>Billet</strong>.</li>
-                  <li>Importer les données de la table <strong>Film</strong> à partir de la feuille de calcul <strong>Film</strong>.</li>
+                  <li>Importer les données de la table <strong>Billet</strong> à partir de la
+                    feuille de calcul <strong>Billet</strong>.</li>
+                  <li>Importer les données de la table <strong>Film</strong> à partir de la feuille
+                    de calcul <strong>Film</strong>.</li>
                 </ul>
               </li>
               <li>Créer les relations entre les tables de cette base de données.</li>
               <li>Créer les requêtes suivantes :
                 <ol>
                   <li>Augmenter les <strong>Tarif</strong> des films de 20%.</li>
-                  <li>Faire une promotion de 45% sur le <strong>Tarif</strong> des films <strong>FD04</strong>.</li>
-                  <li>Afficher la liste des billets vendus (NumBillet, Titre, Durée) pour les films dont la durée dépasse 2 heures.</li>
-                  <li>Afficher la liste des des billets vendus (NumBillet, DateFilm) pour le film <strong>Skyscraper</strong>, trier le résultat par ordre décroissant de la date.</li>
-                  <li>Afficher la liste des films <strong>Film 2D</strong> sans répétitions. Trier le résultat par ordre alphabétique du titre.</li>
-                  <li>Afficher le nombre de billets vendus dont le code du type de film est <strong>FD04</strong>, en utilisant la commande <strong>Totaux</strong>.</li>
-                  <li>Afficher le nombre de billets vendus de chaque code dy type de film <strong>CodeTypFilm</strong>. Ordonner par ordre croissant du nombre de ventes.</li>
-                  <li>Afficher les billets vendus (NumBillet, Titre, DateFilm) durant la première semaine du mois de Septembre.</li>
-                  <li>Afficher la liste des films (Titre, DateFilm) qui seront présentés à 11h durant la première quinzaine du mois de Septembre.</li>
-                  <li>Afficher la date de la première sortie de tous les films présentés (Titre, DateFilm).</li>
+                  <li>Faire une promotion de 45% sur le <strong>Tarif</strong> des films
+                    <strong>FD04</strong>.
+                  </li>
+                  <li>Afficher la liste des billets vendus (NumBillet, Titre, Durée) pour les films
+                    dont la durée dépasse 2 heures.</li>
+                  <li>Afficher la liste des des billets vendus (NumBillet, DateFilm) pour le film
+                    <strong>Skyscraper</strong>, trier le résultat par ordre décroissant de la date.
+                  </li>
+                  <li>Afficher la liste des films <strong>Film 2D</strong> sans répétitions. Trier
+                    le résultat par ordre alphabétique du titre.</li>
+                  <li>Afficher le nombre de billets vendus dont le code du type de film est
+                    <strong>FD04</strong>, en utilisant la commande <strong>Totaux</strong>.
+                  </li>
+                  <li>Afficher le nombre de billets vendus de chaque code dy type de film
+                    <strong>CodeTypFilm</strong>. Ordonner par ordre croissant du nombre de ventes.
+                  </li>
+                  <li>Afficher les billets vendus (NumBillet, Titre, DateFilm) durant la première
+                    semaine du mois de Septembre.</li>
+                  <li>Afficher la liste des films (Titre, DateFilm) qui seront présentés à 11h
+                    durant la première quinzaine du mois de Septembre.</li>
+                  <li>Afficher la date de la première sortie de tous les films présentés (Titre,
+                    DateFilm).</li>
                   <li>Afficher les dates de présentations (DateFilm, Titre) d'un film donné.</li>
-                  <li>Afficher le nombre de présentations de tous les films, ordonnées par titre.</li>
+                  <li>Afficher le nombre de présentations de tous les films, ordonnées par titre.
+                  </li>
                   <li>Afficher la liste des films (Titre, DateFilm) présentés le 25/09/2018.</li>
                   <li>Afficher le titre du film qui a été présenté le plus de fois.</li>
                   <li>Afficher le top 5 des films du point de vue nombre de présentations.</li>
@@ -965,7 +1099,8 @@
   </main>
   <footer>
     <nav class="d-print-none bg-light px-1 py-3 mt-4">
-      <div class="text-center small">Réalisé avec &hearts; par <strong>Mohamed Anis MANI</strong></div>
+      <div class="text-center small">Réalisé avec &hearts; par <strong>Mohamed Anis MANI</strong>
+      </div>
       <div class="text-center small">Année Scolaire <strong>2020/2021</strong></div>
     </nav>
   </footer>
@@ -980,7 +1115,7 @@
         .addClass('navbar-nav')
         .appendTo(navbar);
       $('h2')
-        .each(function(index) {
+        .each(function (index) {
           const h2 = $(this);
           const h2_id = `h2_${index + 1}`;
           const dropdown_id = `dropdown_${index + 1}`;
@@ -1005,7 +1140,7 @@
             .attr('aria-labelledby', dropdown_id)
             .appendTo(li);
           h2.closest('article').find('h3')
-            .each(function(index) {
+            .each(function (index) {
               const h3 = $(this);
               const h3_id = `${h2_id}_h3_${index + 1}`;
               const a = $('<a>')
@@ -1022,7 +1157,7 @@
         .addClass('d-none d-print-block');
       const sections = $('main section')
         .addClass('d-none d-print-block')
-        .each(function(index) {
+        .each(function (index) {
           const section = $(this);
           section
             .attr('data-index', index);
@@ -1140,7 +1275,7 @@
 
     $(() => {
       $('.hidden-content')
-        .each(function(index) {
+        .each(function (index) {
           const hc = $(this);
           const link = $('.link', hc)
             .click((e) => {
