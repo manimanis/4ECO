@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sujet 1 - Session Pratique 2017</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <main class="container">
+    <h1>Sujet 1 - 2017</h1>
+    <p><i><b>Important</b> : Dans le répertoire Bac 2021, créer un dossier de travail portant votre
+        numéro d'inscription (6 chiffres) et dans lequel vous devez enregistrer, au fur et à mesure,
+        tous les fichiers solutions de ce sujet.</i></p>
+    <hr>
+    <p>Afin de gérer le transport de marchandises d'une société pour ses clients dans les
+      différentes régions, on se propose de présenter les données nécessaires dans le tableau
+      suivant :</p>
+
+    <figure><img src="imgbd/Sujet2017-01.png" alt="Sujet 2017-01"></figure>
+
+    <ol type="A">
+      <li><strong>A l'aide du logiciel tableur disponible :</strong>
+        <ol>
+          <li>Saisir le tableau ci-dessus, à partir de la cellule A1, dans une feuille à nommer
+            "Marchandises" et enregistrer le classeur sous le nom "Transport_March dans votre
+            dossier de travail.</li>
+          <li>Appliquer la même mise en forme utilisée dans le tableau ci-dessus.</li>
+          <li>Remplir la colonne "Coefficient" pour chaque client, sachant que :
+            <ul>
+              <li><strong>Coefficient = 0,3</strong> dans le cas où le poids est strictement
+                inférieur à 100Kg</li>
+              <li><strong>Coefficient = 1,2</strong> dans le cas où le poids est strictement
+                supérieur à 300Kg</li>
+              <li><strong>Coefficient = 0,8</strong> dans les autres cas</li>
+            </ul>
+          </li>
+          <li>Remplir la colonne "MontantTrans" pour chaque client selon le type de transport,
+            sachant que :<br><strong>MontantTrans = Distance * Coefficient * Frais_km</strong></li>
+          <li>Copier les données de la plage de cellules A1:C3 dans une nouvelle feuille de calcul à
+            nommer "Type_Transp".</li>
+          <li>Copier les données de la plage de cellules A5:B11 et E5:G11 d'une manière adjacente
+            dans une nouvelle feuille à nommer "Transport" en commençant à partir de la cellule A1
+          </li>
+        </ol>
+      </li>
+      <li><strong>A l'aide du logiciel de gestion de bases de données disponible :</strong>
+        <ol>
+          <li>Créer dans votre dossier de travail, la base de données intitulée "Gestion_Transports"
+            décrite par le schéma relationnel suivant :
+            <blockquote>
+              <p><strong>Client(<u>CINClient</u>, NomClient, Region, Distance)</strong></p>
+              <p><strong>TypeTransp(<u>CodeType</u>, Libelle, Frais_km)</strong></p>
+              <p><strong>Transport(<u>CodeTrans, CINClient, DateTrans</u>, Poids_kg,
+                  CodeType)</strong>
+              </p>
+            </blockquote>
+          </li>
+          <li>Importer les données de la table "TypeTransp" à partir de la feuille de calcul
+            "Type_Transp".</li>
+          <li>Importer les données de la table "Transport à partir de la feuille de calcul
+            "Transport.</li>
+          <li>Créer la table "Client" et la remplir par les données représentées dans le tableau
+            suivant :
+            <table class="table table-bordered table-sm border-dark">
+              <thead>
+                <tr>
+                  <th colspan="4">Client</th>
+                </tr>
+                <tr>
+                  <th>CINClient</th>
+                  <th>NomClient</th>
+                  <th>Region</th>
+                  <th>Distance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01222222</td>
+                  <td>Ste Electro</td>
+                  <td>Béjà</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td>02333333</td>
+                  <td>Ali Feki</td>
+                  <td>Sfax</td>
+                  <td>270</td>
+                </tr>
+                <tr>
+                  <td>03444444</td>
+                  <td>Yemen Triki</td>
+                  <td>Sfax</td>
+                  <td>270</td>
+                </tr>
+                <tr>
+                  <td>04555555</td>
+                  <td>Ste Soft</td>
+                  <td>Gabès</td>
+                  <td>400</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>Créer les relations entre les tables de cette base de données.</li>
+          <li>Créer les requêtes suivantes :
+            <ul>
+              <li><strong>R1</strong> : Afficher la liste marchandises transportées (NomClient,
+                Région, Poids) dans la journée du "11/04/17" et dont le code de transport est
+                "Tr200"</li>
+              <li><strong>R2</strong> : Afficher la liste des marchandises transportées (NomClient,
+                Poids) dans la journée du "11/04/17" vers la région de "Sfax".</li>
+              <li>Afficher le nombre de clients de la région de <strong>Sfax</strong> en utilisant
+                la commande <strong>Totaux</strong></li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </main>
+</body>
+
+</html>
