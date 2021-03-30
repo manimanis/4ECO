@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sujet Théorique - Session Pratique 2021</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <main class="container">
+    <h1>Sujet Théorique - Session Pratique 2021</h1>
+
+    <section>
+      <h2>Exercice n°1 (4 points)</h2>
+
+      <p>Dans un contexte informatique, valider chacune des propositions ci-dessous en mettant dans
+        la case correspondante la lettre "V" si elle est correcte ou la lettre "F" dans le cas
+        contraire.</p>
+
+      <ol>
+        <li>Soit la base de données représentée par les deux tables suivantes:
+          <div class="row">
+            <div class="col-sm">
+              <table class="table table-bordered table-sm border-dark">
+                <thead>
+                  <tr>
+                    <th colspan="4">Père</th>
+                  </tr>
+                  <tr>
+                    <th>IdP</th>
+                    <th>NomP</th>
+                    <th>PrénomP</th>
+                    <th>AgeP</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>001</td>
+                    <td>Sahli</td>
+                    <td>Mahdi</td>
+                    <td>38</td>
+                  </tr>
+                  <tr>
+                    <td>002</td>
+                    <td>Toumi</td>
+                    <td>Sami</td>
+                    <td>33</td>
+                  </tr>
+                  <tr>
+                    <td>003</td>
+                    <td>Jaziri</td>
+                    <td>Mounir</td>
+                    <td>42</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-sm">
+              <table class="table table-bordered table-sm border-dark">
+                <thead>
+                  <tr>
+                    <th colspan="3">Enfant</th>
+                  </tr>
+                  <tr>
+                    <th>IdE</th>
+                    <th>PrenomE</th>
+                    <th>IdP</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>123</td>
+                    <td>Taha</td>
+                    <td>001</td>
+                  </tr>
+                  <tr>
+                    <td>124</td>
+                    <td>Jamel</td>
+                    <td>001</td>
+                  </tr>
+                  <tr>
+                    <td>125</td>
+                    <td>Salwa</td>
+                    <td>002</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <ol type="a">
+            <li>En se référant aux tables ci-dessus:
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+
+                La relation entre les deux tables <strong>PERE</strong> et <strong>ENFANT</strong>
+                est de type plusieurs à plusieurs.
+              </div>
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                Le nombre d'enregistrements dans la table <strong>PERE</strong> doit être
+                obligatoirement le même dans la table <strong>ENFANT</strong>.
+              </div>
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                La relation entre les deux tables doit être établie par le champ
+                <strong>IdP</strong> de la table <strong>PERE</strong> et le champ
+                <strong>IdP</strong> de la table <strong>ENFANT</strong>.
+              </div>
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                Le champ <strong>IdP</strong> de la table <strong>PERE</strong> permet de déterminer
+                de façon unique les enregistrements de cette table.
+              </div>
+            </li>
+            <li>Le champ <strong>IdP</strong> de la table <strong>PERE</strong> est de type :
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                Numérique
+              </div>
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                Texte
+              </div>
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                Date
+              </div>
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                NuméroAuto
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li>On se propose d'appliquer une formule sur la feuille de calcul représentant le rang de
+          chaque résultat réalisé et ce, en utilisant une fonction comme indiqué ci-contre. On
+          obtient alors :
+          <img src="imgbd/suj2021th/img01.png" alt="formule">
+          <div class="my-2">
+            <select name="" id="">
+              <option value="">-</option>
+              <option value="">V</option>
+              <option value="">F</option>
+            </select>
+            42
+          </div>
+          <div class="my-2">
+            <select name="" id="">
+              <option value="">-</option>
+              <option value="">V</option>
+              <option value="">F</option>
+            </select>
+            46
+          </div>
+          <div class="my-2">
+            <select name="" id="">
+              <option value="">-</option>
+              <option value="">V</option>
+              <option value="">F</option>
+            </select>
+            0
+          </div>
+          <div class="my-2">
+            <select name="" id="">
+              <option value="">-</option>
+              <option value="">V</option>
+              <option value="">F</option>
+            </select>
+            39
+          </div>
+        </li>
+        <li>
+          En se basant sur le graphique ci-contre représentant le temps mis par les coureurs dans
+          une course de 100 mètres, les éléments qui y figurent sont :
+          <img src="imgbd/suj2021th/img02.png" alt="graphique">
+          <div class="my-2">
+            <select name="" id="">
+              <option value="">-</option>
+              <option value="">V</option>
+              <option value="">F</option>
+            </select>
+            Etiquettes de données
+          </div>
+          <div class="my-2">
+            <select name="" id="">
+              <option value="">-</option>
+              <option value="">V</option>
+              <option value="">F</option>
+            </select>
+            Titre des axes
+          </div>
+          <div class="my-2">
+            <select name="" id="">
+              <option value="">-</option>
+              <option value="">V</option>
+              <option value="">F</option>
+            </select>
+            Titre du graphique
+          </div>
+          <div class="my-2">
+            <select name="" id="">
+              <option value="">-</option>
+              <option value="">V</option>
+              <option value="">F</option>
+            </select>
+            Légende
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Exercice n°2 (16 points)</h2>
+
+      <ol type="A">
+        <li>
+          <p>Une société d'élevage de volailles veut déterminer les volailles prêtes à la vente
+            ainsi que leurs coûts de consommation journalière. Pour celà, elle représente les
+            données
+            nécessaires dans la feuille de calcul ci-dessous intitulée
+            <strong>Coût_Volailles</strong>
+          </p>
+
+          <figure><img src="imgbd/suj2021th/img03.png" alt="Coût volailles"></figure>
+
+          <ol>
+            <li>Donner la formule à saisir dans la cellule <strong>F7</strong> pour calculer le coût
+              de consommation journalière par volaille. Sachant que le coût d'un produit est égal à
+              : <strong>Quantité du produit * Prix Unitaire</strong>
+              <div><input type="text" class="form-control" placeholder="Votre réponse ici..."></div>
+            </li>
+            <li>En utilisant une fonction prédéfinie, donner la formule à saisir dans la cellule
+              <strong>I7</strong> pour calculer en nombre de jours l'âge de chaque volaille. On
+              pourra utiliser la fonction <strong>AUJOURDHUI()</strong> pour la date du jour.
+              <div><input type="text" class="form-control" placeholder="Votre réponse ici..."></div>
+            </li>
+            <li>Dans la cellule <strong>J7</strong>, on veut élaborer une formule pour la prise de
+              décision de vente de chaque volaille selon sa catégorie et son poids, sachant que la
+              décision sera :
+              <ul>
+                <li><strong>"Vente"</strong> dans le cas où le poids du poulet dépasse 0,9Kg.</li>
+                <li><strong>"Vente"</strong> dans le cas où le poids du dindon dépasse 4Kg.</li>
+                <li><strong>"Elevage"</strong> dans les autres cas.</li>
+              </ul>
+              <p>Pour chacune des propositions suivantes, mettre dans la case correspondante la
+                lettre <strong>"V"</strong> dans le cas où la formule est correcte ou la lettre
+                <strong>"F"</strong> dans le cas contraire.
+              </p>
+
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                =SI(B7="Poulet";SI(H7>0,9;"Vente";"Elevage");SI(H7>4;"Vente";"Elevage"))
+              </div>
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                =SI(ET(H7>0,9;B7="Poulet");"Vente";SI(ET(H7>4;B7="Dindon");"Vente";"Elevage"))
+              </div>
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                =SI(B7="Poulet";SI(H7&lt;=0,9;"Elevage";"Vente");SI(H7&lt;=4;"Elevage";"Vente"))
+              </div>
+              <div class="my-2">
+                <select name="" id="">
+                  <option value="">-</option>
+                  <option value="">V</option>
+                  <option value="">F</option>
+                </select>
+                =SI(B7="Poulet";SI(H7>0,9;"Vente");SI(H7>4;"Vente");"Elevage")
+              </div>
+            </li>
+            <li>En utilisant une fonction prédéfinie, donner la formule à saisir dans la cellule
+              <strong>B16</strong> pour calculer le nombre de poulets.
+              <div><input type="text" class="form-control" placeholder="Votre réponse ici..."></div>
+            </li>
+            <li>En utilisant une fonction prédéfinie, donner la formule à saisir dans la cellule
+              <strong>F17</strong> pour calculer lecoût total de la consommation journalière.
+              <div><input type="text" class="form-control" placeholder="Votre réponse ici..."></div>
+            </li>
+            <li>On se propose d'obtenir pour chaque catégorie de volaille la quantité totale
+              consommée par produit. Pour se faire, on a créé un tableau croisé dynamique sur la
+              feuille de calcul <strong>"Coût_Volailles"</strong>.
+              <img src="imgbd/suj2021th/img04.png" alt="TCD" align="right">
+              <ol type="a">
+                <li>En se référant à <strong>Figure 1</strong> ci-contre et pour chacune des
+                  propositions suivantes dans le cas où la plage de données sélectionnée correspond
+                  aux champs du tableau croisé dynamique ou bien la lettre <strong>"F"</strong> dans
+                  le cas contraire.
+                  <div class="my-2">
+                    <select name="" id="">
+                      <option value="">-</option>
+                      <option value="">V</option>
+                      <option value="">F</option>
+                    </select>
+                    A1:F17
+                  </div>
+                  <div class="my-2">
+                    <select name="" id="">
+                      <option value="">-</option>
+                      <option value="">V</option>
+                      <option value="">F</option>
+                    </select>
+                    B6:E15
+                  </div>
+                  <div class="my-2">
+                    <select name="" id="">
+                      <option value="">-</option>
+                      <option value="">V</option>
+                      <option value="">F</option>
+                    </select>
+                    B6:J15
+                  </div>
+                  <div class="my-2">
+                    <select name="" id="">
+                      <option value="">-</option>
+                      <option value="">V</option>
+                      <option value="">F</option>
+                    </select>
+                    A1:J15
+                  </div>
+                </li>
+                <li>Compléter les zones adéquates sur cette figure pour obtenir le résultat voulu.
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>Cette société d'élevage de volailles veut gérer sa ferme avicole en exploitant la base
+          de données simplifiée intitulée <strong>"Gestion_Volailles"</strong>, décrite par le
+          schéma relationnel suivant :
+          <div class="my-2 ml-5"><strong>VOLAILLE(<u>CodeVol</u>, catégorie, DateNaiss)</strong>
+          </div>
+          <div class="my-2 ml-5"><strong>ETATVOLAILLE(<u>CodeVol, DateJ</u>, Poids, Etat)</strong>
+          </div>
+          <div class="my-2 ml-5"><strong>PRODUIT(<u>CodeProd</u>, Libellé, PrixU)</strong></div>
+          <div class="my-2 ml-5"><strong>CONSOMMATION(<u>CodeProd, CodeVol</u>, Qte)</strong></div>
+          <ol>
+            <li>En se référant au schéma relationnel de la base de données
+              <strong>"Gestion_Volailles"</strong>, compléter pour chacune des tables, le tableau
+              ci-dessous par la clé primaire et la ou les clés étrangères si elles existent.
+              <table class="table table-bordered table-sm border-dark">
+                <tr>
+                  <td>Table</td>
+                  <td>Clé Primaire</td>
+                  <td>Clé Etrangère</td>
+                </tr>
+                <tr>
+                  <td>PRODUIT</td>
+                  <td><input type="text" class="form-control" placeholder="Votre réponse ici...">
+                  </td>
+                  <td><input type="text" class="form-control" placeholder="Votre réponse ici...">
+                  </td>
+                </tr>
+                <tr>
+                  <td>CONSOMMATION</td>
+                  <td><input type="text" class="form-control" placeholder="Votre réponse ici...">
+                  </td>
+                  <td><input type="text" class="form-control" placeholder="Votre réponse ici...">
+                  </td>
+                </tr>
+                <tr>
+                  <td>ETATVOLAILLE/td>
+                  <td><input type="text" class="form-control" placeholder="Votre réponse ici...">
+                  </td>
+                  <td><input type="text" class="form-control" placeholder="Votre réponse ici...">
+                  </td>
+                </tr>
+              </table>
+            </li>
+            <li>Lors de la création de la table <strong>"ETATVOLAILLE"</strong>. On doit sépecifier
+              quelques propriétés du champ <strong>Etat</strong>. Compléter le schéma ci-dessous
+              pour représenterce champ sur un seul caractère et l'initialiser à "E" pour dire
+              "Elevage".
+              <style>
+                #prop-champ,
+                .requete {
+                  background-color: lightgray;
+                  border: #000 solid 1px;
+                  font-size: 11pt;
+                }
+
+                .requete th,
+                #prop-champ th {
+                  text-align: center;
+                }
+
+                .requete th,
+                #prop-champ td {
+                  padding: 5px;
+                  height: 50px;
+                }
+              </style>
+              <table id="prop-champ">
+                <thead>
+                  <tr>
+                    <th colspan="3">Propriétés du champ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Général</td>
+                    <td>Liste de choix</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Taille du champ</td>
+                    <td colspan="2"><input type="text" class="form-control"
+                             placeholder="Votre réponse ici..."></td>
+                  </tr>
+                  <tr>
+                    <td>Format</td>
+                    <td colspan="2">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Masque de saisie</td>
+                    <td colspan="2">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Légende</td>
+                    <td colspan="2">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Valeur par défaut</td>
+                    <td colspan="2"><input type="text" class="form-control"
+                             placeholder="Votre réponse ici..."></td>
+                  </tr>
+                  <tr>
+                    <td>Valide si</td>
+                    <td colspan="2"><input type="text" class="form-control"
+                             placeholder="Votre réponse ici..."></td>
+                  </tr>
+                  <tr>
+                    <td>Message si erreur</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Null interdit</td>
+                    <td>Non</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li>Pour chacune des requêtes ci-dessous, compléter la grille correspondante tout en
+              précisant son type.
+              <ol type="a">
+                <li><strong>Requête 1</strong> : Afficher dans l'ordre croissant des poids la liste
+                  des volailles
+                  (CodeVol, Catégorie, Poids) pour une date donnée.
+                  <table class="requete">
+                    <tr>
+                      <th>Champ</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Table</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Tri</th>
+                      <th><select name="" id="" class="form-control">
+                          <option value=""></option>
+                          <option value="">Croissant</option>
+                          <option value="">décroissant</option>
+                        </select></th>
+                      <th><select name="" id="" class="form-control">
+                          <option value=""></option>
+                          <option value="">Croissant</option>
+                          <option value="">décroissant</option>
+                        </select></th>
+                      <th><select name="" id="" class="form-control">
+                          <option value=""></option>
+                          <option value="">Croissant</option>
+                          <option value="">décroissant</option>
+                        </select></th>
+                      <th><select name="" id="" class="form-control">
+                          <option value=""></option>
+                          <option value="">Croissant</option>
+                          <option value="">décroissant</option>
+                        </select></th>
+                    </tr>
+                    <tr>
+                      <th>Afficher</th>
+                      <th><input type="checkbox" name="" id=""></th>
+                      <th><input type="checkbox" name="" id=""></th>
+                      <th><input type="checkbox" name="" id=""></th>
+                      <th><input type="checkbox" name="" id=""></th>
+                    </tr>
+                    <tr>
+                      <th>Critères</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Ou</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                  </table>
+                  <div class="my-2">Type de la requête 1 <input type="text" class="form-control"
+                           placeholder="Votre réponse"></div>
+                </li>
+                <li>
+                  <strong>Requête 2</strong> : Afficher le total des quantités consommées par
+                  produit (CodeProd, Libellé, Qté)
+                  <table class="requete">
+                    <tr>
+                      <th>Champ</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Table</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Opération</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Tri</th>
+                      <th><select name="" id="" class="form-control">
+                          <option value=""></option>
+                          <option value="">Croissant</option>
+                          <option value="">décroissant</option>
+                        </select></th>
+                      <th><select name="" id="" class="form-control">
+                          <option value=""></option>
+                          <option value="">Croissant</option>
+                          <option value="">décroissant</option>
+                        </select></th>
+                      <th><select name="" id="" class="form-control">
+                          <option value=""></option>
+                          <option value="">Croissant</option>
+                          <option value="">décroissant</option>
+                        </select></th>
+                      <th><select name="" id="" class="form-control">
+                          <option value=""></option>
+                          <option value="">Croissant</option>
+                          <option value="">décroissant</option>
+                        </select></th>
+                    </tr>
+                    <tr>
+                      <th>Afficher</th>
+                      <th><input type="checkbox" name="" id=""></th>
+                      <th><input type="checkbox" name="" id=""></th>
+                      <th><input type="checkbox" name="" id=""></th>
+                      <th><input type="checkbox" name="" id=""></th>
+                    </tr>
+                    <tr>
+                      <th>Critères</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Ou</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                  </table>
+                  <div class="my-2">Type de la requête 2 <input type="text" class="form-control"
+                           placeholder="Votre réponse"></div>
+                </li>
+                <li>
+                  <strong>Requête 3</strong> : Changer l'état de la volaille à <strong>"V"</strong>
+                  (Vente) pour les poulets ayant un poids supèrieur à 0,9 Kg et les dindons ayant un
+                  poids supèrieur à 4 Kg pour la journée du 01/06/2020.
+                  <table class="requete">
+                    <tr>
+                      <th>Champ</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Table</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Mise à jour</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Critères</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                    <tr>
+                      <th>Ou</th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                      <th><input type="text" class="form-control"></th>
+                    </tr>
+                  </table>
+                  <div class="my-2">Type de la requête 3 <input type="text" class="form-control"
+                           placeholder="Votre réponse"></div>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+  </main>
+</body>
+
+</html>
