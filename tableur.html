@@ -112,7 +112,8 @@
         </div>
 
         <p>L'intérêt de ces types de références est visible lorsqu'on souhaite <strong>recopier une formule</strong>
-          <em><u>vers la droite</u></em> ou <em><u>vers le bas</u></em>.</p>
+          <em><u>vers la droite</u></em> ou <em><u>vers le bas</u></em>.
+        </p>
       </section>
 
       <section>
@@ -134,6 +135,18 @@
       <section>
         <h3>Introduction</h3>
         <p>On utilise des <strong>formules</strong> pour effectuer le calcul dans les cellules d'une feuille.</p>
+        <p>Une formule peut contenir :</p>
+        <ul>
+          <li><strong>Une constante</strong>,
+            <ul>
+              <li>="25"</li>
+              <li>="Aymen"</li>
+            </ul>
+          </li>
+          <li><strong>La référence d'une autre cellule</strong>, exemple : =A5</li>
+          <li><strong>Un appel de fonction</strong>, exemple : =somme(A2:A10)</li>
+          <li><strong>Une expression</strong> qui combine les trois éléments déjà cités.</li>
+        </ul>
       </section>
 
       <section>
@@ -203,6 +216,7 @@
           <li>Télécharger le classeur suivant : <a href="classeurs/fonctions_base.xlsx">fonctions_base.xlsx</a></li>
           <li>Compléter la feuille <b>Activité 1</b>.</li>
           <li>Compléter la feuille <b>Activité 2</b>.</li>
+          <li>Compléter la feuille <b>Activité 3</b>.</li>
         </ul>
       </section>
     </article>
@@ -213,7 +227,12 @@
       <section>
         <h3>Fonction SI</h3>
 
-        <p>La fonction <strong>SI</strong> permet de renvoyer un résultat selon deux ou plusieurs conditions.</p>
+        <p>La fonction <strong>SI</strong> permet de renvoyer un seul résultat parmi plusieurs, selon une condition.</p>
+
+        <figure>
+          <picture><img src="imgs/img44.png" alt="Fonction SI"></picture>
+          <figcaption>Fonction SI</figcaption>
+        </figure>
       </section>
 
       <section>
@@ -237,9 +256,11 @@
           </div>
 
           <div class="col-md-4">
-            <pre>(1) =SI(B2&gt;=10;"Admis";"Refusé")</pre>
+            <pre>(1) =SI(B2&gt;=10;"Admis";"Refusé")
+(2) =B2&gt;=10</pre>
             ou aussi
-            <pre>(1) =SI(B2&lt;10;"Refusé";"Admis")</pre>
+            <pre>(1) =SI(B2&lt;10;"Refusé";"Admis")
+(2) =B2&lt;10</pre>
           </div>
         </div>
 
@@ -255,14 +276,20 @@
         <h3>Activité 4</h3>
 
         <p>On demande de calculer l'appréciation d'un élève après un examen national en tenant compte de la possibilité
-          de
-          passage d'une session de contrôle.</p>
+          de passage d'une session de contrôle.</p>
 
         <ul>
           <li>Admis, si la moyenne >= 10</li>
           <li>Contrôle, si la 9 &lt;= moyenne &lt; 10</li>
           <li>Refusé, si la moyenne &lt; 9</li>
         </ul>
+
+        <figure>
+          <picture>
+            <img src="imgs/img45.png" alt="calculer l'appréciation d'un élève">
+          </picture>
+          <figcaption>Calculer l'appréciation d'un élève en utilisant la fonction SI</figcaption>
+        </figure>
 
         <h4>Activité Pratique</h4>
         <p>On demande de :</p>
@@ -318,6 +345,41 @@
 
         <p>La fonction <strong>NB.SI</strong> compte le nombre de cellules d’une plage qui répondent à un critère donné.
         </p>
+      </section>
+
+      <section>
+        <h3>Activité 5</h3>
+
+        <p>On souhaite retrouver le nombre de majeurs et de mineurs de deux façons différentes. On dispose du tableau
+          suivant
+          :
+        </p>
+
+        <div class="row">
+          <div class="col-md-8">
+            <figure>
+              <picture>
+                <img src="imgs/img46.png" alt="calculer le nombre de majeurs et de mineurs">
+              </picture>
+              <figcaption>Calculer le nombre de majeurs et de mineurs en utilisant la fonction NB.SI
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <pre>(1) =SI(B2>=18;"Majeur";"Mineur")
+(2) =NB.SI(C2:C6;"Majeur")
+(3) =NB.SI(C2:C6;"Mineur")
+(4) =NB.SI(B2:B6;">=18")
+(5) =NB.SI(B2:B6;"&lt;18")</pre>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/fonction_nbsi.xlsx">fonction_nbsi.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 5</b>.</li>
+        </ul>
       </section>
 
       <section>
@@ -390,11 +452,15 @@
       <section>
         <h3>Fonction SOMME.SI</h3>
 
-        <p>La fonction <strong>SOMME.SI</strong> permet de calculer la somme des valeurs d’une plage (plage : deux
-          cellules
-          au minimum d’une feuille de calcul. Une plage peut contenir des cellules adjacentes ou non adjacentes.) qui
-          répond
-          à un critère spécifié. </p>
+        <p>La fonction <strong>SOMME.SI</strong> permet de calculer la somme des valeurs d’une <abbr
+            title="Deux cellules au minimum d’une feuille de calcul">plage</abbr> qui répond à un critère spécifié. </p>
+
+        <figure>
+          <picture>
+            <img src="imgs/img47.png" alt="Les paramètres de la fonction SOMME.SI">
+          </picture>
+          <figcaption>Les paramètres de la fonction SOMME.SI</figcaption>
+        </figure>
       </section>
 
       <section>
@@ -828,7 +894,8 @@
 
         <p>Mettre en <span style="color: red">rouge</span> les matières ayant un coefficient supérieur ou égal à 3, en
           <span style="color: green">vert</span> les matières ayant un coefficient
-          1,5 et en <span style="color: blue">bleu</span> les matières ayant un coefficient 1.</p>
+          1,5 et en <span style="color: blue">bleu</span> les matières ayant un coefficient 1.
+        </p>
 
         <div class="row">
           <div class="col-md-4">
