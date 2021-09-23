@@ -150,6 +150,19 @@
       </section>
 
       <section>
+        <h3>Fonctions de base</h3>
+
+        <p>Parmi les fonctions de base les plus utilisées dans un tableur on peut citer :</p>
+
+        <ul>
+          <li><strong>SOMME</strong> : Calculer la somme d'une plage de cellules.</li>
+          <li><strong>MOYENNE</strong> : Calculer la moyenne arithmétique d'une plage de cellules.</li>
+          <li><strong>MIN</strong> : Calculer la valeur minimale dans une plage de cellules.</li>
+          <li><strong>MAX</strong> : Calculer la valeur maximale dans une plage de cellules.</li>
+        </ul>
+      </section>
+
+      <section>
         <h3>Activité 1</h3>
 
         <p>Dans la feuille suivante on demande de calculer :</p>
@@ -209,6 +222,158 @@
       </section>
 
       <section>
+        <h3>Activité 3</h3>
+
+        <p>La feuille suivante contient les notes des devoirs de contrôle (DC) et de synthèse (DS) d'un groupe d'élèves.
+          On demande de calculer :</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <ul>
+              <li>La moyenne de chaque élève en utilisant les références absolues</li>
+              <li>La meilleure moyenne</li>
+              <li>La pire moyenne</li>
+              <li>La moyenne du groupe</li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <pre>(1) =(B6*$B$2+C6*$B$3)/($B$2+$B$3)
+(2) =MAX(D6:D11)
+(3) =MIN(D6:D11)
+(4) =MOYENNE(D6:D11)</pre>
+          </div>
+        </div>
+
+
+        <figure>
+          <picture>
+            <img src="imgs/img49.png" alt="Notes des élèves">
+          </picture>
+          <figcaption>Notes des élèves</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Fonctions NB et NBVAL</h3>
+
+        <p>Bien que les deux fonctions semblent identiques, en réalité, ils remplissent des tâches différentes :</p>
+
+        <ul>
+          <li>La fonction <strong>NB</strong> retourne le nombre de cellules qui contiennent des nombres.</li>
+          <li>La fonction <strong>NBVAL</strong> retourne le nombre de cellules non vides dans une plage donnée.</li>
+        </ul>
+
+        <p>La figure ci-dessous illustre la fonction de chacune d'entre-elles. La plage contient 3 valeurs numériques et
+          2 valeurs non numériques et une cellule vide.</p>
+
+        <figure>
+          <picture>
+            <img src="imgs/img52.png" alt="Fonctions NB et NBVAL">
+          </picture>
+          <figcaption>Fonctions NB et NBVAL</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Activité 4</h3>
+
+        <p>Dans une usine les ouvriers bénéficient d'une prime de rendement en fonction de leurs rendements moyens et de
+          leurs absences.</p>
+
+        <p>La feuille suivante montre le <strong>nombre de pièces</strong> fabriquées par les ouvriers d'une section de
+          l'usine, ainsi que leurs <strong>absences</strong> (cellules vides).</p>
+
+        <figure>
+          <picture>
+            <img src="imgs/img48.png" alt="calcul d'un nombre de cellules non vides">
+          </picture>
+          <figcaption>Calcul d'un nombre de cellules non vides</figcaption>
+        </figure>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>On demande de :</p>
+            <ol>
+              <li>Calculer le nombre de jours de présnces d'un ouvrier.</li>
+              <li>Calculer le nombre de jours d'absences.</li>
+              <li>Calculer le rendement moyen par ouvrier.</li>
+            </ol>
+          </div>
+          <div class="col-sm-6">
+            <pre>(1) =NB(B3:G3)
+(2) =6-NB(B3:G3)
+(2) =6-H3
+(3) =SOMME(B3:G3)/NB(B3:G3)
+(3) =SOMME(B3:G3)/H3</pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Fonctions avec les dates</h3>
+
+        <p>La fonction <strong>AUJOURDHUI</strong> n'admet pas d'arguments et renvoie la date système.</p>
+
+        <div class="fs-1 text-center">=AUJOURDHUI() &rarr;
+          <script>
+            const dt = new Date();
+            const s = ((dt.getDate() < 10) ? "0" : "") + dt.getDate() + '/' +
+              ((dt.getMonth() < 9) ? "0" : "") + (dt.getMonth() + 1) + '/' +
+              dt.getFullYear();
+            document.writeln(s);
+          </script>
+        </div>
+
+        <p>La fonction <strong>JOUR</strong> renvoie le jour du mois d'une date passée en argument.</p>
+
+        <p>La fonction <strong>MOIS</strong> renvoie le mois d'une date passée en argument.</p>
+
+        <p>La fonction <strong>ANNEE</strong> renvoie l'année d'une date passée en argument.</p>
+
+        <figure>
+          <picture><img src="imgs/img51.png" alt="Fonctions avec les dates"></picture>
+          <figcaption>Fonction avec les dates</figcaption>
+        </figure>
+
+        <p>La fonction <strong>DATE</strong> permet de reconstituer une date à partir des arguments qui lui sont passés.
+        </p>
+
+        <div class="fs-1 text-center">=DATE(1984;1;7) &rarr; 07/01/1984</div>
+      </section>
+
+      <section>
+        <h3>Activité 5</h3>
+
+        <p>Cette feuille contient juste quelques fonctions de manipulation des dates.</p>
+
+        <figure>
+          <picture><img src="imgs/img50.png" alt="Fonctions avec les dates"></picture>
+          <figcaption>Fonction avec les dates</figcaption>
+        </figure>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>On demande de :</p>
+            <ol>
+              <li>Remplacer la date de naissance par la votre.</li>
+              <li>Calculer votre âge en jours.</li>
+              <li>Extraire le jour, le mois et l'année de votre date de naissance.</li>
+              <li>Déterminer le numéro de jour de semaine dans lequel vous êtes nés.</li>
+              <li>Reconstituer une date à partie des informations données.</li>
+            </ol>
+          </div>
+          <div class="col-sm-6">
+            <pre>(1) =B2-A2 (Format>Cellule...>Nombre>Standard)
+(2) =JOUR(A2)
+(3) =MOIS(A2)
+(4) =ANNEE(A2)
+(5) =JOURSEM(A2)
+(6) =DATE(C9;B9;A9)</pre>
+          </div>
+        </div>
+      </section>
+      </section>
+
+      <section>
         <h3>Activité Pratique</h3>
 
         <p>On demande de :</p>
@@ -217,6 +382,8 @@
           <li>Compléter la feuille <b>Activité 1</b>.</li>
           <li>Compléter la feuille <b>Activité 2</b>.</li>
           <li>Compléter la feuille <b>Activité 3</b>.</li>
+          <li>Compléter la feuille <b>Activité 4</b>.</li>
+          <li>Compléter la feuille <b>Activité 5</b>.</li>
         </ul>
       </section>
     </article>
@@ -236,7 +403,7 @@
       </section>
 
       <section>
-        <h3>Activité 3</h3>
+        <h3>Activité 6</h3>
 
         <p>On demande de calculer l'appréciation d'un élève après un examen national.</p>
 
@@ -268,12 +435,12 @@
         <p>On demande de :</p>
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/fonction_si.xlsx">fonction_si.xlsx</a></li>
-          <li>Compléter la feuille <b>Activité 3</b>.</li>
+          <li>Compléter la feuille <b>Activité 6</b>.</li>
         </ul>
       </section>
 
       <section>
-        <h3>Activité 4</h3>
+        <h3>Activité 7</h3>
 
         <p>On demande de calculer l'appréciation d'un élève après un examen national en tenant compte de la possibilité
           de passage d'une session de contrôle.</p>
@@ -295,12 +462,12 @@
         <p>On demande de :</p>
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/fonction_si.xlsx">fonction_si.xlsx</a></li>
-          <li>Compléter la feuille <b>Activité 4</b>.</li>
+          <li>Compléter la feuille <b>Activité 7</b>.</li>
         </ul>
       </section>
 
       <section>
-        <h3>Activité 5</h3>
+        <h3>Activité 8</h3>
 
         <p>On souhaite retrouver le degré de satisfaction d'un client d'un restaurant. Les clients notent le service
           d'une
@@ -336,7 +503,7 @@
         <p>On demande de :</p>
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/fonction_si.xlsx">fonction_si.xlsx</a></li>
-          <li>Compléter la feuille <b>Activité 5</b>.</li>
+          <li>Compléter la feuille <b>Activité 8</b>.</li>
         </ul>
       </section>
 
@@ -348,7 +515,7 @@
       </section>
 
       <section>
-        <h3>Activité 5</h3>
+        <h3>Activité 9</h3>
 
         <p>On souhaite retrouver le nombre de majeurs et de mineurs de deux façons différentes. On dispose du tableau
           suivant
@@ -378,12 +545,12 @@
         <p>On demande de :</p>
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/fonction_nbsi.xlsx">fonction_nbsi.xlsx</a></li>
-          <li>Compléter la feuille <b>Activité 5</b>.</li>
+          <li>Compléter la feuille <b>Activité 9</b>.</li>
         </ul>
       </section>
 
       <section>
-        <h3>Activité 6</h3>
+        <h3>Activité 10</h3>
 
         <p>On souhaite retrouver le nombre de filles et de garçons dans un groupe d'élèves. On dispose du tableau
           suivant
@@ -411,12 +578,12 @@
         <p>On demande de :</p>
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/fonction_nbsi.xlsx">fonction_nbsi.xlsx</a></li>
-          <li>Compléter la feuille <b>Activité 6</b>.</li>
+          <li>Compléter la feuille <b>Activité 10</b>.</li>
         </ul>
       </section>
 
       <section>
-        <h3>Activité 7</h3>
+        <h3>Activité 11</h3>
 
         <p>Un développeur de circuits imprimés souhaite faire des statistiques sur le nombre de cartes développées en
           fonction de leurs surface. Pour cela il a dressé le tableau suivant :</p>
@@ -445,7 +612,7 @@
         <p>On demande de :</p>
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/fonction_nbsi.xlsx">fonction_nbsi.xlsx</a></li>
-          <li>Compléter la feuille <b>Activité 7</b>.</li>
+          <li>Compléter la feuille <b>Activité 11</b>.</li>
         </ul>
       </section>
 
@@ -464,7 +631,7 @@
       </section>
 
       <section>
-        <h3>Activité 8</h3>
+        <h3>Activité 12</h3>
 
         <p>On demande de calculer la somme des valeurs qui sont supèrieurs ou égaux à 15. Et la somme des valeurs
           inférieurs
@@ -492,12 +659,12 @@
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/fonction_sommesi.xlsx">fonction_sommesi.xlsx</a>
           </li>
-          <li>Compléter la feuille <b>Activité 8</b>.</li>
+          <li>Compléter la feuille <b>Activité 12</b>.</li>
         </ul>
       </section>
 
       <section>
-        <h3>Activité 9</h3>
+        <h3>Activité 13</h3>
 
         <p>Un drugstore dispose d'un stock de pièces de monnaie de valeur (50 Millimes) et (100 Millimes), pour compter
           le
@@ -531,7 +698,7 @@
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/fonction_sommesi.xlsx">fonction_sommesi.xlsx</a>
           </li>
-          <li>Compléter la feuille <b>Activité 9</b>.</li>
+          <li>Compléter la feuille <b>Activité 13</b>.</li>
         </ul>
       </section>
     </article>
@@ -540,46 +707,12 @@
       <h2>Fonctions utiles</h2>
 
       <section>
-        <h3>Tri</h3>
+        <h3>📹 Tri</h3>
 
         <p>L'opération de <strong>tri</strong> consiste à ordonner les éléments d'un tableau selon les valeurs d'une ou
           de plusieurs colonnes en ordre croissant (du plus petit au plus grand) ou en ordre décroissant.</p>
-      </section>
 
-      <section>
-        <h3>Activité 10</h3>
-
-        <p>Nous souhaitons ordonner un groupe d'élève en ordre croissant de leurs noms.</p>
-
-        <div class="row">
-          <div class="col-md-6">
-            <figure>
-              <picture>
-                <img src="imgs/img16.png" alt="tableau non ordonné">
-              </picture>
-              <figcaption>Tableau non ordonné</figcaption>
-            </figure>
-          </div>
-          <div class="col-md-6">
-            <figure>
-              <picture>
-                <img src="imgs/img18.png" alt="tableau ordonné par ordre alphabétique des noms des élèves">
-              </picture>
-              <figcaption>Tableau ordonné par ordre alphabétique des noms des élèves</figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <h4>Activité Pratique</h4>
-        <p>On demande de :</p>
-        <ul>
-          <li>Télécharger le classeur suivant : <a href="classeurs/tri.xlsx">tri.xlsx</a></li>
-          <li>Compléter la feuille <b>Activité 10</b>.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>📹 Procédure de tri</h3>
+        <h4>Procédure de tri</h4>
 
         <ol>
           <li>Sélectionner la plage de données à trier (dans l'exemple A1:B9)</li>
@@ -614,7 +747,39 @@
       </section>
 
       <section>
-        <h3>Activité 11</h3>
+        <h3>Activité 14</h3>
+
+        <p>Nous souhaitons ordonner un groupe d'élève en ordre croissant de leurs noms.</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img16.png" alt="tableau non ordonné">
+              </picture>
+              <figcaption>Tableau non ordonné</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img18.png" alt="tableau ordonné par ordre alphabétique des noms des élèves">
+              </picture>
+              <figcaption>Tableau ordonné par ordre alphabétique des noms des élèves</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a href="classeurs/tri.xlsx">tri.xlsx</a></li>
+          <li>Compléter la feuille <b>Activité 14</b>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Activité 15</h3>
 
         <p>Recopier le tableau précédent dans une nouvelle feuille, puis trier les élèves par ordre décroissant de leurs
           moyennes.</p>
@@ -641,7 +806,7 @@
         <p>On demande de :</p>
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/tri.xlsx">tri.xlsx</a></li>
-          <li>Compléter la feuille <b>Activité 11</b>.</li>
+          <li>Compléter la feuille <b>Activité 15</b>.</li>
         </ul>
       </section>
 
@@ -668,10 +833,8 @@
             </figure>
           </div>
         </div>
-      </section>
 
-      <section>
-        <h3>📹 Procédure d'alignement sur plusieurs lignes</h3>
+        <h4>📹 Procédure d'alignement sur plusieurs lignes</h4>
 
         <ol>
           <li>Sélectionner les cellules à mettre en forme</li>
@@ -722,7 +885,7 @@
       </section>
 
       <section>
-        <h3>📹 Activité 12</h3>
+        <h3>📹 Activité 16</h3>
 
         <p>Recopier le tableau suivant tout en respectant la mise en forme de son entête.</p>
 
@@ -738,7 +901,7 @@
         <p>On demande de :</p>
         <ul>
           <li>Télécharger le classeur suivant : <a href="classeurs/mise_en_forme.xlsx">mise_en_forme.xlsx</a></li>
-          <li>Compléter la feuille <b>Activité 12</b>.</li>
+          <li>Compléter la feuille <b>Activité 16</b>.</li>
         </ul>
 
         <div class="text-center d-print-none">
@@ -747,33 +910,14 @@
             <source src="imgs/mise_en_forme.wmv.webm" type="video/webm">
           </video>
         </div>
-
       </section>
-    </article>
-
-    <article>
-      <h2>Mise en forme conditionnelle</h2>
 
       <section>
-        <h3>Introduction</h3>
+        <h3>Mise en forme conditionnelle</h3>
         <p>La mise en forme conditionnelle permet de mettre en forme les cellules (Couleur, Remplissage, Bordure, etc.)
-          selon
-          une ou plusieurs critères.</p>
-      </section>
+          selon un ou plusieurs critères.</p>
 
-      <section>
-        <h3>📹 Activité 13</h3>
-
-        <p>On demande de colorier :</p>
-
-        <ul>
-          <li>en <span
-              style="display: inline-block; width: 7em; padding: 3px; background-color: red; color: #fff">rouge</span>
-            les notes infèrieures à 10,</li>
-          <li>en <span
-              style="display: inline-block; width: 7em; padding: 3px; background-color: green; color: #fff">vert</span>
-            les notes supèrieures ou égales à 10.</li>
-        </ul>
+        <h4>Procédure</h4>
 
         <div class="row">
           <div class="col-md-6">
@@ -793,26 +937,6 @@
             </figure>
           </div>
         </div>
-
-        <h4>Activité Pratique</h4>
-        <p>On demande de :</p>
-        <ul>
-          <li>Télécharger le classeur suivant : <a
-              href="classeurs/mise_en_forme_conditionnelle.xlsx">mise_en_forme_conditionnelle.xlsx</a>
-          </li>
-          <li>Compléter la feuille <b>Activité 13</b>.</li>
-        </ul>
-
-        <div class="text-center d-print-none">
-          <video controls>
-            <source src="imgs/mfc1.wmv.mp4" type="video/mp4">
-            <source src="imgs/mfc1.wmv.webm" type="video/webm">
-          </video>
-        </div>
-      </section>
-
-      <section>
-        <h3>Procédure</h3>
 
         <ol>
           <li>Sélectionner la plage de cellules C2:C11</li>
@@ -890,7 +1014,57 @@
       </section>
 
       <section>
-        <h3>📹 Activité 14</h3>
+        <h3>📹 Activité 17</h3>
+
+        <p>On demande de colorier :</p>
+
+        <ul>
+          <li>en <span
+              style="display: inline-block; width: 7em; padding: 3px; background-color: red; color: #fff">rouge</span>
+            les notes infèrieures à 10,</li>
+          <li>en <span
+              style="display: inline-block; width: 7em; padding: 3px; background-color: green; color: #fff">vert</span>
+            les notes supèrieures ou égales à 10.</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img27.png" alt="Notes de l'élève avant la mise en forme">
+              </picture>
+              <figcaption>Notes de l'élève avant la mise en forme</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <picture>
+                <img src="imgs/img30.png" alt="Notes de l'élève après la mise en forme conditionnelle">
+              </picture>
+              <figcaption>Notes de l'élève après la mise en forme conditionnelle</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h4>Activité Pratique</h4>
+        <p>On demande de :</p>
+        <ul>
+          <li>Télécharger le classeur suivant : <a
+              href="classeurs/mise_en_forme_conditionnelle.xlsx">mise_en_forme_conditionnelle.xlsx</a>
+          </li>
+          <li>Compléter la feuille <b>Activité 17</b>.</li>
+        </ul>
+
+        <div class="text-center d-print-none">
+          <video controls>
+            <source src="imgs/mfc1.wmv.mp4" type="video/mp4">
+            <source src="imgs/mfc1.wmv.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>📹 Activité 18</h3>
 
         <p>Mettre en <span style="color: red">rouge</span> les matières ayant un coefficient supérieur ou égal à 3, en
           <span style="color: green">vert</span> les matières ayant un coefficient
@@ -931,7 +1105,7 @@
           <li>Télécharger le classeur suivant : <a
               href="classeurs/mise_en_forme_conditionnelle.xlsx">mise_en_forme_conditionnelle.xlsx</a>
           </li>
-          <li>Compléter la feuille <b>Activité 14</b>.</li>
+          <li>Compléter la feuille <b>Activité 18</b>.</li>
         </ul>
 
         <div class="text-center d-print-none">
