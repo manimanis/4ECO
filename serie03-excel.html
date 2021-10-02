@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Série </title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header class="mb-4">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">
+        <img src="imgs/ms_excel.svg" alt="" loading="lazy" width="30" height="30">
+        Tableur
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Série 3</h1>
+
+    <article>
+      <h2>Gare de Sousse</h2>
+
+      <section>
+        <h3>Travail demandé</h3>
+        <ol>
+          <li>Télécharger, puis ouvrir la <strong>Feuil1</strong> du classeur <a
+              href="classeurs/Série03.xlsx">Série03.xlsx</a></li>
+          <li>Déterminer le Prix de Billet (Utiliser les références absolues) :
+            <ul>
+              <li>Prix de Billet = 8 ; Si Type = ‘A’</li>
+              <li>Prix de Billet = 13,5 ; Si Type =’AR’</li>
+            </ul>
+          </li>
+          <li>Calculer le Total :
+            <p class="text-center"><strong>Total = Prix Billet x Billets Vendus</strong></p>
+          </li>
+          <li>Calculer la Taxe (Utiliser les références absolues) :
+            <ul>
+              <li>Taxe = 1 ; Si type = ‘A’</li>
+              <li>Taxe = 2 ; Si Type =’AR’</li>
+            </ul>
+          </li>
+          <li>Calculer le Montant Taxe :
+            <p class="text-center">Montant Taxe = Taxe x Billets Vendus</p>
+          </li>
+          <li>Calculer le montant Net des ventes :
+            <p class="text-center">Net = Total – Montant Taxe</p>
+          </li>
+          <li>Calculer le nombre de billets vendus de chaque type.</li>
+          <li>Calculer le maximum, le minimum et la moyenne des ventes.</li>
+          <li>Dessiner un graphique en histogramme pour les ventes de billets.</li>
+        </ol>
+      </section>
+    </article>
+
+    <article>
+      <h2>Ventes d'un magasin</h2>
+
+      <section>
+        <h3>Travail demandé</h3>
+
+        <ol>
+          <li>Ouvrir la <strong>Feuil2</strong> du classeur précédent.</li>
+          <li>Calculer le Stock Final :
+            <p class="text-center"><strong>Stock Final = Stock Initial – Ventes
+          </li></strong></p>
+          <li>Calculer le nombre d’articles à commander (Commande):
+            <ul>
+              <li>Commande = 15 ; Si Stock Final &le; Seuil et Type = ‘A’</li>
+              <li>Commande = 30 ; Si Stock Final &le; Seuil et Type = ‘B’</li>
+              <li>Commande = 0 ; Si Stock Final > Seuil</li>
+            </ul>
+          </li>
+          <li>Calculer le Nouveau Stock :
+            <p class="text-center"><strong>Nouveau Stock = Commande + Stock Final</strong></p>
+          </li>
+          <li>Déterminer les articles en surstock :
+            <ul>
+              <li>Surstock = ‘Oui’ ; Si Nouveau Stock &ge; 2 * Seuil</li>
+              <li>Surstock = ‘Non’ ; Si Nouveau Stock &lt; 2 * Seuil</li>
+            </ul>
+          </li>
+          <li>Déterminer les articles en promotion :
+            <ul>
+              <li>Promo = -20% ; Si Type = ‘B’</li>
+              <li>Promo = 0% ; Si Type =’A’</li>
+            </ul>
+          </li>
+          <li>Calculer les totaux.</li>
+          <li>Calculer l’état de ventes :
+            <ul>
+              <li>Etat de vente = ‘Acceptable’ ; Si Totaux Ventes &ge; 75% &times; Stock Initial</li>
+              <li>Etat de vente = ‘Critique’ ; Si Totaux ventes &lt; 75% &times; Stock Initial</li>
+            </ul>
+          </li>
+          <li>Représenter graphiquement, en courbe, les ventes et le Stock Final.</li>
+        </ol>
+      </section>
+    </article>
+
+    <article>
+      <h2>Notes des élèves</h2>
+
+      <section>
+        <h3>Travail demandé</h3>
+
+        <ol>
+          <li>Ouvrir la feuille <strong>Feuil3</strong> du classeur précédent.</li>
+          <li>Calculer la moyenne de chaque élève (utiliser les références absolues)</li>
+          <li>Calculer la décision :
+            <ul>
+              <li>Décision = ‘Admis’ ; Si Moyenne &ge; 10 et Sexe = ‘G’</li>
+              <li>Décision = ‘Admise’ ; Si Moyenne &ge; 10 et Sexe = ‘F’</li>
+              <li>Décision = ‘Refusé’ ; Si Moyenne &lt; 10 et Sexe = ‘G’</li>
+              <li>Décision = ‘Refusée’ ; Si Moyenne &lt; 10 et Sexe = ‘F’</li>
+            </ul>
+          </li>
+          <li>Calculer la moyenne de la classe</li>
+          <li>Calculer le nombre de filles et le nombre de garçons.</li>
+          <li>Mettre en forme le tableau</li>
+          <li>Représenter graphiquement les notes des élèves (graphique courbe).</li>
+        </ol>
+      </section>
+    </article>
+
+    <article>
+      <h2>Location de voitures</h2>
+      <section>
+        <h3>Travail demandé</h3>
+
+        <ol>
+          <li>Ouvrir la feuille <strong>Feuil4</strong> du classeur précédent.</li>
+          <li>Calculer la durée de location :
+            <p class="text-center"><strong>Durée Location = Date Sortie – Date Entrée</strong></p>
+          </li>
+          <li>Calculer les Frais HT :
+            <ul>
+              <li>Frais HT = 60 &times; Durée Location ; Si Durée Location &le; 5 jours</li>
+              <li>Frais HT = 50 &times; Durée Location ; Si Durée Location &le; 10 jours</li>
+              <li>Frais HT = 45 &times; Durée Location ; Si Durée Location > 10 jours</li>
+            </ul>
+          </li>
+          <li>Calculer la TVA :
+            <p class="text-center"><strong>TVA = Frais HT &times; TVA%</strong></p>
+          </li>
+          <li>Calculer les Frais TTC :
+            <p class="text-center"><strong>Frais TTC = Frais HT + TVA</strong></p>
+          </li>
+          <li>Calculer le Total.</li>
+          <li>Mettre en forme le tableau, mettre les montants avec trois décimales.</li>
+          <li>Représenter graphiquement la durée de location en fonction du CIN.</li>
+        </ol>
+      </section>
+    </article>
+
+    <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
+      <div class="text-center my-2">
+        <span>Page : </span>
+        <input type="number" id="num-page" min="1">
+        <span>/</span>
+        <span id="count-pages"></span>
+      </div>
+      <ul class="pagination justify-content-center"></ul>
+    </nav>
+
+  </main>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/navbar.js"></script>
+</body>
+
+</html>
