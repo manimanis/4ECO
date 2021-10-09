@@ -1129,8 +1129,175 @@
           <li>Le <strong>filtre élaboré</strong> qui permet d'<strong>extraire uniquement quelques colonnes du tableau
               qui répondent aux critères</strong> dans un autre emplacement du classeur ou sur place. Avec le filtre
             élaboré il est possible de définir <strong>des critères d'extraction plus sophistiqués</strong> et de
-            <strong>sélectionner uniquement quelques colonnes à afficher</strong>.</li>
+            <strong>sélectionner uniquement quelques colonnes à afficher</strong>.
+          </li>
         </ul>
+      </section>
+
+      <section>
+        <h3>Filtre automatique</h3>
+
+        <p>Le <strong>filtre automatique</strong> filtre les données en place. Il est principalement destiné à explorer
+          les données. Et il supporte uniquement les conditions simples.</p>
+      </section>
+
+      <section>
+        <h3>📹 Activité 19</h3>
+
+        <p>La société <strong>El Ettihad</strong> a effectué des achats pour mettre à jour son parc informatique.</p>
+        <p>Le gestionnaire de l'entreprise veut connaitre quels sont les article qui possède une TVA de 8% (<strong>type
+            C</strong>). Pour celà on recommande <strong>un filtre automatique</strong>.</p>
+
+        <figure>
+          <img src="imgs/facture-filtre-auto.png" alt="Facture d'achats d'articles informatiques">
+          <figcaption>Facture d'achats d'articles informatiques</figcaption>
+        </figure>
+
+        <p>Pour répondre à cette question on doit :</p>
+        <ul>
+          <li>Télécharger le fichier <a href="classeurs/filtrage_automatique.xlsx" target="_blank"
+              rel="noopener noreferrer">filtrage_automatique.xlsx</a></li>
+          <li>Sélectionner la plage de données <strong>A6:G16</strong></li>
+          <li>Ouvrir l'onglet <strong>Données</strong> > <strong>Filtrer</strong>
+            <figure>
+              <img src="imgs/filtarge-automatique-etape1.PNG" alt="Filtrage automatique">
+              <figcaption>Filtrage automatique</figcaption>
+            </figure>
+          </li>
+          <li>Cliquer sur le triangle en face de la colonne <strong>Type</strong>. Décocher tout. <strong>Sélectionner
+              le type désiré</strong>
+            <figure>
+              <img src="imgs/filtrage-automatique-etape2.png" alt="Sélection du type d'article désiré">
+              <figcaption>Sélection du type d'article désiré</figcaption>
+            </figure>
+          </li>
+          <li>Uniquement les lignes du tableaux qui répondent au <strong>critère de filtrage</strong> sont visibles.
+            <figure>
+              <img src="imgs/filtrage-automatique-etape3.png" alt="Affichage du résultat">
+              <figcaption>Affichage du résultat</figcaption>
+            </figure>
+          </li>
+        </ul>
+
+        <div class="text-center d-print-none">
+          <video controls>
+            <source src="imgs/filtre-automatique-01.mp4" type="video/mp4">
+            <source src="imgs/filtre-automatique-01.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>📹 Activité 20</h3>
+
+        <p>Utiliser un filtre automatique avec le classeur précédent pour déterminer :</p>
+        <ul>
+          <li>Les articles dont le <strong>Prix Unitaire</strong> est entre 100 et 300.</li>
+          <li>Les articles dont la <strong>Quantité</strong> est égale à 12 et dont le <strong>Prix Unitaire</strong>
+            est supérieur ou égal à 300.</li>
+          <li>Les articles dont le <strong>Montant TTC</strong> est supérieur à 3000.</li>
+        </ul>
+
+        <div class="text-center d-print-none">
+          <video controls>
+            <source src="imgs/filtre-automatique-02.mp4" type="video/mp4">
+            <source src="imgs/filtre-automatique-02.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>Filtre élaboré</h3>
+
+        <p>Le <strong>filtre élaboré</strong> offre plus de flexibilité et de possibilités que le filtre
+          <u>automatique</u>. Il permet d'extraire les données vers un autre emplacement du classeur sans nécessiter de
+          copier/coller.
+        </p>
+
+        <p>Avec ce filtre on doit obligatoirement définir :</p>
+        <ul>
+          <li>La <strong>zone de critère</strong> : qui contient les conditions requis</li>
+          <li>La <strong>zone d'extraction</strong> : qui contient les noms des champs à extraire</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>📹 Activité 21</h3>
+
+        <p>On demande d'extraire le nom d'<strong>Article</strong>, le <strong>Prix Unitaire</strong>et la
+          <strong>Quantité</strong> des articles de <strong>Type</strong> B.
+        </p>
+
+        <p>Les étapes seront comme suit :</p>
+        <ul>
+          <li>Définir la <strong>zone de critère</strong> qui contient les conditions à vérifier.<br>
+            <strong><em>Il est conseillé de copier/coller les noms des colonnes à partir du tableau
+                principal</em></strong>
+            <figure>
+              <img src="imgs/filtre-elabore-01.PNG" alt="Définir la zone de critère">
+              <figcaption>Définir la zone de critère</figcaption>
+            </figure>
+          </li>
+          <li>Définir la <strong>zone d'extraction</strong> qui contient les noms des colonnes <strong>à
+              extraire</strong>.
+            <figure>
+              <img src="imgs/filtre-elabore-02.PNG" alt="Définir la zone d'extraction">
+              <figcaption>Définir la zone d'extraction</figcaption>
+            </figure>
+          </li>
+          <li>Ouvrir <strong>Données</strong> > <strong>Filtre avancé</strong>
+            <figure>
+              <img src="imgs/filtrage-elabore-03.png" alt="Ouvrir filtre avancé">
+              <figcaption>Définir la zone d'extraction</figcaption>
+            </figure>
+          </li>
+          <li>Remplir les champs du formulaire qui apparait sur l'écran :
+            <ul>
+              <li>Cocher <strong>Copier vers un autre emplacement</strong></li>
+              <li>Sélectionner la <strong>Plages</strong> qui contient toutes les données</li>
+              <li>Sélectionner la <strong>Zone de critères</strong> qui contient les conditions à vérifier</li>
+              <li>Sélectionner la <strong>Zone d'extraction</strong> (<strong>Copier dans</strong>) qui contient les
+                noms des colonnes à extraire</li>
+            </ul>
+            <figure>
+              <img src="imgs/filtre-elabore-04.png" alt="Remplir les champs du formulaire">
+              <figcaption>Remplir les champs du formulaire</figcaption>
+            </figure>
+          </li>
+          <li>Le résultat d'extraction s'affiche dans la <strong>Zone d'extraction.
+              <figure>
+                <img src="imgs/filtre-elabore-05.PNG" alt="Remplir les champs du formulaire">
+                <figcaption>Remplir les champs du formulaire</figcaption>
+              </figure>
+            </strong></li>
+        </ul>
+
+        <div class="text-center d-print-none">
+          <video controls>
+            <source src="imgs/filtre-elabore-01.mp4" type="video/mp4">
+            <source src="imgs/filtre-elabore-01.webm" type="video/webm">
+          </video>
+        </div>
+      </section>
+
+      <section>
+        <h3>📹 Activité 22</h3>
+
+        <p>Utiliser un filtre élaboré pour extraire dans une nouvelle feuille:</p>
+        <ul>
+          <li>Les <strong>Article</strong>s et <strong>Prix Unitaire</strong>s des articles dont le <strong>Prix
+              Unitaire</strong> est entre 100 et 300.</li>
+          <li>Les <strong>Article</strong>s, les <strong>Quantité</strong>s et <strong>Prix Unitaire</strong>s des
+            articles dont la <strong>Quantité</strong> est supèrieure à 30.</li>
+          <li>Les <strong>Article</strong>s et les <strong>Montant TVA</strong> des articles de <strong>Type</strong> C.</li>
+        </ul>
+
+        <div class="text-center d-print-none">
+          <video controls>
+            <source src="imgs/filtre-elabore-02.mp4" type="video/mp4">
+            <source src="imgs/filtre-elabore-02.webm" type="video/webm">
+          </video>
+        </div>
       </section>
     </article>
 
