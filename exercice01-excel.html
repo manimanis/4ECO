@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice Excel</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header class="mb-4">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">
+        <img src="imgs/ms_excel.svg" alt="" loading="lazy" width="30" height="30">
+        Tableur
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Exercice de rappel</h1>
+
+    <article>
+      <h2>Ventes d'un magasin</h2>
+
+      <section>
+        <h3>Rappels sur la Mise en forme conditionnelle et le Filtre automatique</h3>
+
+        <p>Le tableau suivant présente les ventes ainsi que les dépenses d'un magasin.</p>
+
+        <figure>
+          <img src="imgs/exercice01-01.png" alt="Ventes d'un magasin">
+          <figcaption>Ventes d'un magasin</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Copier le tableau ci-dessus dans une feuille Excel.</li>
+          <li>Calculer la croissance du mois de <strong>Février</strong> et des mois suivants :
+            <p class="text-center">croissance(Février) = Ventes(Février) - Ventes(Janvier)</p>
+          </li>
+          <li>Calculer le <strong>Profit</strong> de chaque mois :
+            <p class="text-center">Profit = Ventes - Dépenses</p>
+          </li>
+          <li>Calculer l'<strong>Observation</strong> :
+            <ul>
+              <li>Déficitaire, si Profit &lt; 0</li>
+              <li>Bénéficiaire, si Profit &ge; 0</li>
+            </ul>
+          </li>
+          <li>Calculer le <strong>Profit total</strong>.</li>
+          <li>Calculer le <strong>Nbre mois de décroissance</strong> des ventes, c-à-d le nombre de mois où la
+            croissance est négative.</li>
+          <li>Calculer le <strong>Nbre de mois déficitaires</strong>.</li>
+          <li>Utiliser la mise en forme conditionnelle (MFC) pour :
+            <ol>
+              <li>Colorier en <span class="text-success">vert</span> les <strong>Mois</strong> ayant un <u>profit
+                  positif ou nul</u>, et en <span class="text-danger">rouge</span> les <strong>Mois</strong> ayant un
+                <u>profit négatif</u>.
+              </li>
+              <li>Colorier en <span class="text-success">vert</span> les <strong>Observation</strong>
+                <u>bénéficiaires</u>, et en <span class="text-danger">rouge</span> les <strong>Observation</strong>
+                <u>déficitaires</u>.
+              </li>
+              <li>Colorier en <span class="text-success">vert</span> les <strong>Ventes</strong> ayant une
+                <strong>Croissance</strong> <u>strictement positive</u>, et en <span class="text-danger">rouge</span>
+                les <strong>Ventes</strong> ayant une <strong>Croissance</strong> <u>strictement négative</u>.
+              </li>
+            </ol>
+            <figure>
+              <img src="imgs/exercice01-02.png" alt="Résultats de la mise en forme conditionnelle">
+              <figcaption>Résultats de la mise en forme conditionnelle</figcaption>
+            </figure>
+          </li>
+          <li>En utilisant un <strong>Filtre automatique</strong> :
+            <ul>
+              <li>Trouver les mois dont les <strong>Ventes</strong> sont <u>supérieures ou égales à 5000</u>, copier le
+                résultat dans une nouvelle feuille nommée <strong>Filtres</strong>.
+                <figure>
+                  <img src="imgs/exercice01-03.png" alt="Mise en forme conditionnelle">
+                  <figcaption>Résultats attendus</figcaption>
+                </figure>
+              </li>
+              <li>Trouver les mois dont l'<strong>Observation</strong> est <u>Déficitaire</u> malgré une
+                <strong>Croissance</strong> <u>positive</u> des ventes, copier le résultat dans la feuille
+                <strong>Filtres</strong>.
+                <figure>
+                  <img src="imgs/exercice01-04.png" alt="Mise en forme conditionnelle">
+                  <figcaption>Résultats attendus</figcaption>
+                </figure>
+              </li>
+              <li>Trouver les mois dont le <strong>Profit</strong> est <u>négatif</u> et la <strong>Croissance</strong>
+                est <u>négative</u>, copier le résultat dans la feuille <strong>Filtres</strong>.
+                <figure>
+                  <img src="imgs/exercice01-05.png" alt="Mise en forme conditionnelle">
+                  <figcaption>Résultats attendus</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+    </article>
+
+    <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
+      <div class="text-center my-2">
+        <span>Page : </span>
+        <input type="number" id="num-page" min="1">
+        <span>/</span>
+        <span id="count-pages"></span>
+      </div>
+      <ul class="pagination justify-content-center"></ul>
+    </nav>
+
+  </main>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/navbar.js"></script>
+</body>
+
+</html>

@@ -12,9 +12,8 @@
 <body>
   <header class="mb-4">
     <nav class="navbar navbar-expand-xl navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-              aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -171,8 +170,7 @@
           </figure>
         </div>
 
-        <p>Le schéma de la table <b>eleves</b> est :<br> <span
-                class="small">eleves(<u>num_eleve</u>, nom, prenom,
+        <p>Le schéma de la table <b>eleves</b> est :<br> <span class="small">eleves(<u>num_eleve</u>, nom, prenom,
             genre, adresse, ville, code_postal)</span></p>
 
         <p><b>Question :</b> Donner les schémas des tables suivantes ?</p>
@@ -329,8 +327,7 @@
 
         <div>
           <figure>
-            <img src="imgbd/img07.svg"
-                 alt="Erreur, une relation entre deux champs de types différents">
+            <img src="imgbd/img07.svg" alt="Erreur, une relation entre deux champs de types différents">
             <figcaption>Erreur, une relation entre deux champs de types différents</figcaption>
           </figure>
         </div>
@@ -338,7 +335,7 @@
         <div>
           <figure>
             <img src="imgbd/img08.svg"
-                 alt="Erreur d'intégrité référentielle, la valeur tapée dans la table fille n'existe pas dans la table mère">
+              alt="Erreur d'intégrité référentielle, la valeur tapée dans la table fille n'existe pas dans la table mère">
             <figcaption>Erreur d'intégrité référentielle, la valeur tapée dans la table fille
               n'existe pas dans la table mère</figcaption>
           </figure>
@@ -451,7 +448,7 @@
       <section>
         <h3>📹 Requêtes de sélection</h3>
 
-        <p>On demande de trouver les noms des élèves qui ont obtenus une note inférieure à 1 en
+        <p>On demande de trouver les noms des élèves qui ont obtenus une note inférieure à 10 en
           Anglais</p>
 
         <div class="d-print-none text-center">
@@ -502,7 +499,7 @@
       </section>
 
       <section>
-        <h3>Application</h3>
+        <h3>Application n°3</h3>
 
         <ol>
           <li>Créer une requête qui permet de retourner le nom et le prénom des élèves qui possèdent
@@ -515,6 +512,375 @@
             et prénoms.</li>
           <li>Afficher les notes de BEN Slimane Slim dans toutes les matières.</li>
           <li>Afficher la moyenne de BEN Slimane Slim en Français.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Application n°4 - Exercice bac 2008</h3>
+
+        <p>Soit la table <strong>operation</strong> de la base de données <strong>banque</strong> contenant les données
+          suivantes :</p>
+
+        <figure>
+          <img src="imgbd/application04-01.png" alt="Table operation">
+          <figcaption>Table operation</figcaption>
+        </figure>
+
+        <ol>
+          <li>Compléter le tableau suivant par le type de la requête :
+            <table class="table table-sm table-bordered border-dark">
+              <thead>
+                <tr>
+                  <th width="50%">Rôle de la requête</th>
+                  <th>Type de la requête</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Afficher les numéros des comptes, le type et la date des opérations de versement.</td>
+                  <td><textarea cols="30" rows="2" class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                  <td>Calculer et afficher le total des montants de retrait pour l'année 2007</td>
+                  <td><textarea cols="30" rows="2" class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                  <td>Modifier la date pour le compte n°205012 et le numéro de l'opération 200</td>
+                  <td><textarea cols="30" rows="2" class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                  <td>Effacer les opérations faites durant l'année 2006</td>
+                  <td><textarea cols="30" rows="2" class="form-control"></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>Afficher le numéro du compte, la date et le montant pour chaque opération de retrait.
+            <table class="table table-sm table-bordered border-dark">
+              <tbody>
+                <tr>
+                  <td width="116">Champ</td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tri</td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Afficher</td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Critères</td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                  <td>Ou</td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>Calculer et afficher la moyenne des opérations de versement effectuées avant le 31/12/2007.
+            <table class="table table-sm table-bordered border-dark">
+              <tbody>
+                <tr>
+                  <td width="116">Champ</td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>numéro_compte</option>
+                      <option>numéro_operation</option>
+                      <option>date_operation</option>
+                      <option>type_operation</option>
+                      <option>montant</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>operation</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Operation</td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>Compte</option>
+                      <option>Somme</option>
+                      <option>Minimum</option>
+                      <option>Maximum</option>
+                      <option>Moyenne</option>
+                      <option>Où</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>Compte</option>
+                      <option>Somme</option>
+                      <option>Minimum</option>
+                      <option>Maximum</option>
+                      <option>Moyenne</option>
+                      <option>Où</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>Compte</option>
+                      <option>Somme</option>
+                      <option>Minimum</option>
+                      <option>Maximum</option>
+                      <option>Moyenne</option>
+                      <option>Où</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>Compte</option>
+                      <option>Somme</option>
+                      <option>Minimum</option>
+                      <option>Maximum</option>
+                      <option>Moyenne</option>
+                      <option>Où</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control">
+                      <option></option>
+                      <option>Compte</option>
+                      <option>Somme</option>
+                      <option>Minimum</option>
+                      <option>Maximum</option>
+                      <option>Moyenne</option>
+                      <option>Où</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tri</td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                  <td><select class="form-control">
+                      <option></option>
+                      <option>Croissant</option>
+                      <option>Décroissant</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Afficher</td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Critères</td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                  <td>Ou</td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
         </ol>
       </section>
     </article>
@@ -715,30 +1081,21 @@
             </div>
           </li>
           <li>Etablir les relations suivantes entre les tables :
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image001.jpg"
-                   alt="Relations"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image001.jpg" alt="Relations"></div>
           </li>
           <li>Insérer les données suivantes :
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image002.jpg"
-                   alt="Table Articles"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image003.jpg"
-                   alt="Table Clients"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image004.jpg"
-                   alt="Table Factures"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image005.jpg"
-                   alt="Table ArticlesFactures"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image002.jpg" alt="Table Articles"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image003.jpg" alt="Table Clients"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image004.jpg" alt="Table Factures"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image005.jpg" alt="Table ArticlesFactures"></div>
           </li>
           <li>Créer les formulaires suivants :
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image006.jpg"
-                   alt="Formulaire Articles"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image007.jpg"
-                   alt="Formulaire Clients"></div>
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image008.jpg"
-                   alt="Formulaire Factures"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image006.jpg" alt="Formulaire Articles"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image007.jpg" alt="Formulaire Clients"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image008.jpg" alt="Formulaire Factures"></div>
           </li>
           <li>Créer l'état suivant :
-            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image009.jpg"
-                   alt="Etat Factures"></div>
+            <div class="text-center my-2"><img src="imgbd/TP1_fichiers/image009.jpg" alt="Etat Factures"></div>
           </li>
         </ol>
       </section>
@@ -751,8 +1108,8 @@
         <p><img src="imgbd/TP2_fichiers/TP2_html_bf2e1ad5785ce2d5.png" alt="Schéma base de données">
         </p>
 
-        <p>Télécharger la base de donnée à partir de ce lien : <a
-             href="databases/Gestion_Livres_Eleve.accdb">Base de données</a></p>
+        <p>Télécharger la base de donnée à partir de ce lien : <a href="databases/Gestion_Livres_Eleve.accdb">Base de
+            données</a></p>
 
         <p>On demande de réaliser les requêtes de sélection suivantes :</p>
 
@@ -1039,7 +1396,7 @@
                 </div>
               </li>
               <li>Importer le reste des données à partir du fichier <a
-                   href="databases/TP3/bac2017_01.xlsx">bac2017_01.xlsx</a> :
+                  href="databases/TP3/bac2017_01.xlsx">bac2017_01.xlsx</a> :
                 <ul>
                   <li>Importer les données de la table <strong>Billet</strong> à partir de la
                     feuille de calcul <strong>Billet</strong>.</li>
@@ -1089,9 +1446,12 @@
       <section>
         <h3>Sujets de Bac 2017</h3>
 
-        <p><a href="sujet2017-01.html" target="_blank" rel="noopener noreferrer">Sujet 1 - 2017 (Sans correction)</a></p>
-        <p><a href="sujet2017-02.html" target="_blank" rel="noopener noreferrer">Sujet 2 - 2017 (Avec correction)</a></p>
-        <p><a href="sujet2021-th.html" target="_blank" rel="noopener noreferrer">Sujet Théorique - 2021 (Sans correction)</a></p>
+        <p><a href="sujet2017-01.html" target="_blank" rel="noopener noreferrer">Sujet 1 - 2017 (Sans correction)</a>
+        </p>
+        <p><a href="sujet2017-02.html" target="_blank" rel="noopener noreferrer">Sujet 2 - 2017 (Avec correction)</a>
+        </p>
+        <p><a href="sujet2021-th.html" target="_blank" rel="noopener noreferrer">Sujet Théorique - 2021 (Sans
+            correction)</a></p>
       </section>
     </article>
 
