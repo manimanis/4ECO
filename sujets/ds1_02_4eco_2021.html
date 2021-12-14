@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Devoir de Synthèse n°1 - Nouveau Régime</title>
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <style>
+    main {
+      font-family: 'Book Antiqua';
+      font-size: 12pt;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="mb-4">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">
+        <img src="../imgs/ms_excel.svg" alt="" loading="lazy" width="30" height="30">
+        Tableur
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Devoir de synthèse n°1 - Nouveau Régime</h1>
+
+    <article>
+      <h2>Devoir</h2>
+
+      <section>
+        <h3>Exercice n&deg;1 &ndash; 2,5 Points</h3>
+        <p><b>Pour chacune des propositions suivantes, mettre dans la case correspondante la lettre V si la
+            r&eacute;ponse est juste ou (F) si la r&eacute;ponse est fausse.</b></p>
+        <table width="100%">
+          <tr>
+            <td width="5%"><input type="text" class="form-control"></td>
+            <td width="95%">Pour afficher des donn&eacute;es &agrave; partir de plusieurs tables on doit faire des
+              relations entre elles.</td>
+          </tr>
+          <tr>
+            <td width="5%"><input type="text" class="form-control"></td>
+            <td width="95%">Une cl&eacute; primaire peut &ecirc;tre d&eacute;finie par plusieurs colonnes.</td>
+          </tr>
+          <tr>
+            <td width="5%"><input type="text" class="form-control"></td>
+            <td width="95%">Dans une base de donn&eacute;es les tables servent &agrave; stocker les donn&eacute;es.</td>
+          </tr>
+          <tr>
+            <td width="5%"><input type="text" class="form-control"></td>
+            <td width="95%">Une cl&eacute; &eacute;trang&egrave;re est une cl&eacute; primaire dans une autre table.
+            </td>
+          </tr>
+          <tr>
+            <td width="5%"><input type="text" class="form-control"></td>
+            <td width="95%">Une table correspond &agrave; un ensemble d'informations tri&eacute;es concernant seulement
+              des individus.</td>
+          </tr>
+        </table>
+        <p><b>Qui suis-je&nbsp;?</b></p>
+        <p>Je suis une collection de donn&eacute;es organis&eacute;es et structur&eacute;es&nbsp;: <b>Base de
+            donn&eacute;es</b></p>
+        <p>Je suis une collection de donn&eacute;es relatives &agrave; un sujet sp&eacute;cifique&nbsp;:
+          <input type="text" class="form-control">
+        </p>
+        <p>Je suis une colonne permettant d'identifier d'une mani&egrave;re unique chaque ligne de la table&nbsp;:
+          <input type="text" class="form-control">
+        </p>
+        <p>Je suis un lien entre deux tables&nbsp;:
+          <input type="text" class="form-control">
+        </p>
+        <p>Je suis un moyen d'interrogation et de consultation du contenu d'une base de donn&eacute;es&nbsp;:
+          <input type="text" class="form-control">
+        </p>
+      </section>
+
+      <section>
+        <h3>Exercice 2 &ndash; 4,5 points</h3>
+
+        <p>Un commer&ccedil;ant veut organiser la gestion des commandes aupr&egrave;s des fournisseurs.</p>
+        <p>Ceux-ci (les <u><b>fournisseurs</b></u>) sont d&eacute;finies par&nbsp;: un <b>num&eacute;ro
+          </b><b>fournisseur</b>, un <b>nom</b>, et une <b>adresse</b>.</p>
+        <p>Les <u><b>produits</b></u> sont d&eacute;finis par&nbsp;: un <b>code</b>, un <b>libell&eacute;</b>, un
+          <b>prix</b>, un <b>poids</b>, et une <b>quantit&eacute;</b> en
+          stock.
+        </p>
+        <p>Chaque <u><b>fournisseur</b></u> peut commander plusieurs <u><b>produits</b></u>, chaque commande est
+          d&eacute;finie par un <b>num&eacute;ro fournisseur</b>, un <b>code produit</b>, et une <b>quantit&eacute;
+            command&eacute;e</b>.</p>
+        <ol>
+          <li>D&eacute;gager les tables et leurs champs &agrave; partir du texte pr&eacute;c&eacute;dent.</li>
+          <li>Souligner les cl&eacute;s primaires des tables.</li>
+        </ol>
+        <textarea cols="30" rows="10" class="form-control"></textarea>
+      </section>
+
+      <section>
+        <h3>Exercice n&deg;3 &ndash; 13 Points</h3>
+
+        <p>Soit la base de donn&eacute;es simplifi&eacute;e relative &agrave; l'exploitation des chambres d'un
+          h&ocirc;tel d&eacute;finie comme suit&nbsp;:</p>
+        <p>Chambre(<u>num_ch</u>, prix, nbre_lits, nbre_pers)</p>
+        <p>Client(<u>num_client</u>, nom, prenom, adresse)</p>
+        <p>R&eacute;servation(<u>num_ch, num_client</u>, date_arr, date_dep)</p>
+
+        <p><b>Travail demand&eacute;</b></p>
+        <ol>
+          <li>Compl&eacute;ter le sch&eacute;ma graphique de la base de donn&eacute;es, dessiner les relations entre les
+            tables. (Sur le cahier)
+            <figure>
+              <img src="ds1_02_4eco_2021_html_fcb5a522fdbc6fdb.gif" name="Objet de groupe 1" alt="Schéma graphique" />
+            </figure>
+          </li>
+          <script>
+            const tablesFields = ["num_ch", "prix", "nbre_lits", "nbre_pers", "num_client", "nom", "prenom", "adresse", "date_arr", "date_dep"];
+            const tables = ["Chambre", "Client", "Réservation"];
+            function drawTable(tables, tablesFields, typeReq, colNum, defaultValues = {}) {
+              let fields = [];
+              let typeFields;
+              const sortFields = ["Croissant", "Décroissant"];
+              const opFields = ["Compte", "Somme", "Moyenne", "Minimum", "Maximum", "Où"];
+              document.writeln("<table class=\"table table-bordered table-sm border-dark\">");
+              if (typeReq == "select") {
+                fields = ["Champ", "Table", "Tri", "Afficher", "Critères", "Ou"];
+                typeFields = {
+                  "Champ": tablesFields,
+                  "Table": tables,
+                  "Tri": sortFields,
+                  "Afficher": "checkbox",
+                  "Critères": "textbox",
+                  "Ou": "textbox"
+                };
+              } else if (typeReq == "select_agr") {
+                fields = ["Champ", "Table", "Opération", "Tri", "Afficher", "Critères", "Ou"];
+                typeFields = {
+                  "Champ": tablesFields,
+                  "Table": tables,
+                  "Opération": opFields,
+                  "Tri": sortFields,
+                  "Afficher": "checkbox",
+                  "Critères": "textbox",
+                  "Ou": "textbox"
+                };
+              } else if (typeReq == "update") {
+                fields = ["Champ", "Table", "Mise à jour", "Critères", "Ou"];
+                typeFields = {
+                  "Champ": tablesFields,
+                  "Table": tables,
+                  "Mise à jour": "textbox",
+                  "Critères": "textbox",
+                  "Ou": "textbox"
+                };
+              }
+              for (let j = 0; j < fields.length; j++) {
+                document.writeln("<tr>");
+                for (let i = 0; i <= colNum; i++) {
+                  document.writeln("<td" + ((j == 0) ? " width=\"" + (100 / (colNum + 1)) + "%\"" : "") + ">");
+                  if (i == 0) {
+                    document.writeln(fields[j] + " :");
+                  } else if (Array.isArray(typeFields[fields[j]])) {
+                    document.writeln("<select class=\"form-control\">");
+                    document.writeln("<option></option>");
+                    for (let field of typeFields[fields[j]]) {
+                      if (defaultValues[fields[j]] && defaultValues[fields[j]][i - 1] == field) {
+                        console.log(defaultValues[fields[j]][i], "==", field);
+                      }
+                      document.writeln("<option" + ((defaultValues[fields[j]] && defaultValues[fields[j]][i - 1] == field) ? " selected" : "") + ">" + field + "</option>");
+                    }
+                    document.writeln("</select>");
+                  } else if (typeFields[fields[j]] == "checkbox") {
+                    document.writeln("<div class=\"text-center\"><input type=\"checkbox\"" + ((defaultValues[fields[j]] && defaultValues[fields[j]][i - 1]) ? " checked" : "") + "></div>");
+                  } else if (typeFields[fields[j]] == "textbox") {
+                    document.writeln("<div class=\"text-center\"><input type=\"text\" class=\"form-control\"></div>");
+                  }
+                  document.writeln("</td>");
+                }
+                document.writeln("</tr>");
+              }
+              document.writeln("</table>");
+            }
+          </script>
+          <li>Pour chacune des requ&ecirc;tes suivantes remplir la grille correspondante&nbsp;:
+            <ol type="a">
+              <li>
+                <p><b>Requ&ecirc;te 1&nbsp;:</b> Afficher le num&eacute;ro des chambres et le num&eacute;ro
+                  des clients ayant r&eacute;serv&eacute; des chambres au mois de Mai 2021.</p>
+                <script>
+                  drawTable(tables, tablesFields, "select", 6);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 2&nbsp;:</b> Afficher les num&eacute;ros des chambres qui co&ucirc;tent
+                moins de 80 Dinars ou celles qui comptent plus de deux lits.
+                <script>
+                  drawTable(tables, tablesFields, "select", 6);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 3&nbsp;:</b> Afficher la date d'arriv&eacute;e, le num&eacute;ro
+                du chambre et le prix de la chambre pour un client donn&eacute;.
+                <script>
+                  drawTable(tables, tablesFields, "select", 6);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 4&nbsp;:</b> Afficher le nombre total de lits disponibles dans l'h&ocirc;tel.
+                <script>
+                  drawTable(tables, tablesFields, "select_agr", 6);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 5&nbsp;:</b> Afficher le nombre de chambres r&eacute;serv&eacute;es au mois de <b>Mai
+                  2021</b>.
+                <script>
+                  drawTable(tables, tablesFields, "select_agr", 6);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 6 : </b> Augmenter les prix des chambres qui comptent moins de trois lits de 15%.
+                <script>
+                  drawTable(tables, tablesFields, "update", 6);
+                </script>
+              </li>
+              <li><b>Expliquer le r&ocirc;le de la requ&ecirc;te suivante</b>.
+                <script>
+                  const defaultValues = {
+                    "Champ": ["num_client", "num_ch", "date_arr", "adresse"],
+                    "Table": ["Réservation", "Réservation", "Réservation", "Client"],
+                    "Tri": [null, null, "Croissant", null],
+                    "Afficher": [true, true, false, false],
+                    "Critères": [null, null, "#07/05/2021#", "\"Paris\""]
+                  };
+                  drawTable(tables, tablesFields, "select", 4, defaultValues);
+                </script>
+                <textarea class="form-control" cols="30" rows="10"></textarea>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </section>
+    </article>
+
+    <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
+      <div class="text-center my-2">
+        <span>Page : </span>
+        <input type="number" id="num-page" min="1">
+        <span>/</span>
+        <span id="count-pages"></span>
+      </div>
+      <ul class="pagination justify-content-center"></ul>
+    </nav>
+  </main>
+  <script src="../scripts/jquery.min.js"></script>
+  <script src="../scripts/popper.min.js"></script>
+  <script src="../scripts/bootstrap.min.js"></script>
+  <script src="../scripts/navbar.js"></script>
+</body>
+
+</html>

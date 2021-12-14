@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Devoir de Synthèse n°1 - Ancien Régime</title>
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <style>
+    main {
+      font-family: 'Book Antiqua';
+      font-size: 12pt;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="mb-4">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">
+        <img src="../imgs/ms_excel.svg" alt="" loading="lazy" width="30" height="30">
+        Tableur
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Devoir de synthèse n°1 - Ancien Régime</h1>
+
+    <article>
+      <h2>Devoir</h2>
+
+      <section>
+        <h3>Exercice 1 &ndash; 5 Points</h3>
+        <p>Dans
+          un contexte de tableur r&eacute;pondre aux questions ci-dessous en
+          mettant dans chaque case, la lettre V si la r&eacute;ponse est
+          correcte ou la lettre F sinon.</p>
+        <ol type="a">
+          <li>
+            <p>Sachant que les cellules A2, A3, A4, A5 et A6 contiennent les noms de trois villes&nbsp;: Sousse, Sfax et
+              Tunis. Quelle est la formule &agrave; utiliser pour calculer le nombre d'apparitions de la ville de Sousse
+              dans cette plage&nbsp;?</p>
+            <table width="100%">
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=NB.SI(A2;A6;&quot;Sousse&quot;)</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=NB(A2:A6)</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=NB.SI(A2:A6;&quot;Sousse&quot;)</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=NB(A2:A6)</td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <p>Sachant que les cellules B2, B3, B4, B5 et B6 contiennent les moyennes des &eacute;l&egrave;ves d'une
+              classe. Quelle est la formule &agrave; utiliser pour calculer la moyenne de ces
+              &eacute;l&egrave;ves&nbsp;?</p>
+            <table width="100%">
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=MOYENNE(A2;A6)</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=MOYENNE(A2:A6)</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=SOMME(A2:A6)/NB(A2:A6)</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=SOMME(A2:A6)/NBVAL(A2:A6)</td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <p>Sachant que la colonne A contient les noms des villes et que la colonne B contient le nombre de personnes
+              vaccin&eacute;es par jour. Quelle est la formule &agrave; utiliser pour calculer le nombre de personnes
+              vaccin&eacute;es dans la r&eacute;gion de Sousse&nbsp;?</p>
+            <table width="100%">
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=NB.SI(B2:B31;&quot;Sousse&quot;;C2:C31)</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=SOMME.SI(B2:B31;&quot;Sousse&quot;;C2:C31)</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=SOMME(B2:B31)</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=SI(B2:B31=&quot;Sousse&quot;;SOMME(B2:B31);0)</td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <p>Sachant que les cellules A4, B2 et C2 contiennent respectivement les valeurs 15, &quot;Admis&quot; et
+              &quot;Refus&eacute;&quot;. La valeur renvoy&eacute;e par la formule suivante&nbsp;: =SI(A4&lt;10;C$2;B$2)
+              est&nbsp;:</p>
+            <table width="100%">
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">Admis</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">Refus&eacute;</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">15</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">Erreur</td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <p>Quel est le graphique qu'on peut utiliser pour pr&eacute;senter l'&eacute;volution des ventes au cours
+              des ann&eacute;es&nbsp;:</p>
+            <table width="100%">
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">Histogramme</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">Secteur</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">Courbe</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">Nuage de points</td>
+              </tr>
+            </table>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Exercice 2 &ndash;15 Points</h3>
+
+        <p>Télécharger le classeur de travail : <a href="ds01_2021.xlsx" target="_blank"
+            rel="noopener noreferrer">ds01_2021.xlsx</a></p>
+
+        <p>Afin de r&eacute;gler la r&eacute;mun&eacute;ration journali&egrave;re des coursiers qui distribuent les
+          magazines publicitaires d'une grande surface, on propose de r&eacute;capituler les donn&eacute;es
+          n&eacute;cessaires dans la feuille de calcul intitul&eacute;e &quot;<b>Distribution</b>&quot;
+          repr&eacute;sent&eacute;e dans le tableau suivant&nbsp;:</p>
+        <figure><img src="ds1_03_4eco_2021_html_b50cf56f3f7f03ee.png" alt="Données"></figure>
+        <ol>
+          <li>Dans la cellule G7, on veut calculer la <b>R&eacute;mun&eacute;ration par Distribution</b> pour chaque
+            coursier selon le mode de transport utilis&eacute;. Pour chacune des propositions suivantes, mettre la
+            lettre &quot;<b>V</b>&quot; dans le cas o&ugrave; la formule est correcte ou la lettre
+            &quot;<b>F</b>&quot; dans le cas contraire.
+            <table width="100%">
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=SI(D7=$A2;F7*$C2;SI(D7=$A3;F7*$C3;F7*$C4))</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=SI(D7=A$2;F7*C$2;SI(D7=A$3;F7*C$3;F7*C$4))</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=SI(D7=$A$2;F7*$C$2;SI(D7=$A$3;F7*$C$3;F7*$C$4))</td>
+              </tr>
+              <tr>
+                <td width="5%"><input type="text" class="form-control"></td>
+                <td width="95%">=SI(D7=A2;F7*C2;SI(D7=A3;F7*C3;F7*C4))</td>
+              </tr>
+            </table>
+          </li>
+          <li>&Eacute;crire la formule &agrave; saisir dans la cellule H7 pourd&eacute;terminer la prime, sachant
+            que&nbsp;:
+            <ul>
+              <li><i><b>Prime = 2%* R&eacute;mun&eacute;ration par Distribution</b></i>&nbsp;; Si Nbre Magazines
+                Distribu&eacute;s &le; 5000</li>
+              <li><i><b>Prime = 3%* R&eacute;mun&eacute;ration par Distribution</b></i>&nbsp;; Dans le cas contraire
+              </li>
+            </ul>
+            <input type="text" class="form-control">
+          </li>
+          <li>&Eacute;crire la formule &agrave; saisir dans la cellule I7 pour d&eacute;terminer la
+            <b>r&eacute;mun&eacute;ration nette</b>, sachant que&nbsp;:</p>
+            <p class="text-center"><i><b>R&eacute;mun&eacute;ration Nette = R&eacute;mun&eacute;ration par Distribution
+                  + Prime</b></i></p>
+            <input type="text" class="form-control">
+          </li>
+          <li>Utiliser une fonction pr&eacute;d&eacute;finie dans la cellule <b>D25</b> pour d&eacute;terminer le
+            <b>Nombre de distributions par voiture</b>&nbsp;:
+            <input type="text" class="form-control">
+          </li>
+          <li>Utiliser une fonction pr&eacute;d&eacute;finie dans la cellule <b>D26</b> pour d&eacute;terminer le
+            <b>Nombre de magazines distribu&eacute;s par voiture</b>.
+            <input type="text" class="form-control">
+          </li>
+          <li>On veut colorier en <u><b>Vert</b></u> les <b>noms des coursiers</b> qui ont utilis&eacute; la
+            <i><b>voiture</b></i> comme <i>moyen de transport</i> pour la distribution, en utilisant la Mise en forme
+            conditionnelle.
+            <ol type="a">
+              <li>Quelle est la plage de cellule &agrave; s&eacute;lectionner avant d'effectuer cette mise en forme ?
+                <input type="text" class="form-control">
+              </li>
+              <li>Quel est le bon choix &agrave; faire, cocher la bonne r&eacute;ponse. Selon votre choix
+                compl&eacute;ter par&nbsp;:
+                <ol>
+                  <li>La valeur de cellule &agrave; chercher</li>
+                  <li>La formule &agrave; utiliser&nbsp;:</li>
+                </ol>
+              </li>
+            </ol>
+            <table width="100%">
+              <tr>
+                <td colspan="2">
+                  <figure><img src="ds1_03_4eco_2021_html_f5c5e8e56f621034.png" alt="MFC"></figure>
+                </td>
+              </tr>
+              <tr>
+                <td width="50%">
+                  <input type="checkbox">
+                  Appliquer une mise en forme uniquement aux cellules qui contiennent une valeur de cellule
+                  &eacute;gale à :
+                  <input type="text" class="form-control">
+                </td>
+                <td width="50%">
+                  <input type="checkbox">
+                  Utiliser une formule pour d&eacute;terminer pour quelles cellules le format sera
+                  appliqu&eacute;&nbsp;:
+                  <input type="text" class="form-control">
+                </td>
+              </tr>
+            </table>
+          </li>
+          <li>On veut extraire en utilisant un <i><b>filtre &eacute;labor&eacute;</b></i> la <b>Date</b>, la <b>Voie
+              Desservie</b> et le <b>Nbre de Magazines
+              Distribu&eacute;s</b> par <u><b>Malek Sahli</b></u> entre le <u><b>2 et le 5 Juin 2021</b></u>. On demande
+            de remplir la zone de crit&egrave;res
+            et la zone d'extraction permettant de r&eacute;pondre &agrave; cette question.
+            <table width="100%">
+              <tr>
+                <td width="50%">
+                  <p class="text-center"><b>Zone de crit&egrave;res</b></p>
+                  <table width="100%">
+                    <tr>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="50%">
+                  <p class="text-center"><b>Zone d'extraction</b></p>
+                  <table width="100%">
+                    <tr>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                      <td width="25%"><input type="text" class="form-control"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </li>
+        </ol>
+      </section>
+    </article>
+
+    <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
+      <div class="text-center my-2">
+        <span>Page : </span>
+        <input type="number" id="num-page" min="1">
+        <span>/</span>
+        <span id="count-pages"></span>
+      </div>
+      <ul class="pagination justify-content-center"></ul>
+    </nav>
+  </main>
+  <script src="../scripts/jquery.min.js"></script>
+  <script src="../scripts/popper.min.js"></script>
+  <script src="../scripts/bootstrap.min.js"></script>
+  <script src="../scripts/navbar.js"></script>
+</body>
+
+</html>
