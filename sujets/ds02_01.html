@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Devoir de Synthèse n°1 - Nouveau Régime</title>
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <style>
+    main {
+      font-family: 'Book Antiqua';
+      font-size: 12pt;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="mb-4">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">
+        <img src="../imgs/ms_excel.svg" alt="" loading="lazy" width="30" height="30">
+        Tableur
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Devoir de synthèse n°1 - Nouveau Régime</h1>
+
+    <article>
+      <h2>Devoir</h2>
+
+      <section>
+        <h3>Exercice n&deg;1 &ndash; 5 Points</h3>
+
+        <p>Une agence immobilière &laquo; Agence El Ferdows &raquo; loue des appartements pour les locataires qui
+          désirent emménager.</p>
+        <p>On donne, ci-dessous, un exemple de contrat signé par les locataires :</p>
+
+        <figure>
+          <img src="contrat.PNG" alt="Contrat de location" class="border border-dark">
+          <figcaption>Exemplaire d'un contrat de location</figcaption>
+        </figure>
+
+        <p>Cette agence veut créer une base de données pour gérer les données de location.</p>
+
+        <ol>
+          <li>Relever à partir de la figure ci-dessus quelles sont les données nécessaires pour remplir un contrat de
+            location.
+            <textarea cols="30" rows="3" class="form-control"></textarea>
+          </li>
+          <li>Classer les données retrouvées dans la question précédente dans trois tables, indiquer les noms des
+            champs. La table <strong>Location</strong> assure la liaison entre les tables <strong>Locataire</strong> et
+            <strong>Appartement</strong>.
+            <table class="table table-sm table-bordered border-dark">
+              <thead>
+                <tr>
+                  <th>Locataire</th>
+                  <th>Location</th>
+                  <th>Appartement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><textarea cols="30" rows="6" class="form-control"></textarea></td>
+                  <td><textarea cols="30" rows="6" class="form-control"></textarea></td>
+                  <td><textarea cols="30" rows="6" class="form-control"></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>Indiquer les clés primaires des trois tables.
+            <textarea cols="30" rows="3" class="form-control"></textarea>
+          </li>
+        </ol>
+
+      </section>
+
+      <section>
+        <h3>Exercice 2 &ndash; 7 points</h3>
+
+        <p>Les articles vendus par un magasin proviennent de plusieurs fournisseurs. Soit la base de données intitulée
+          <strong>gestion_articles</strong> décrite par le schéma suivant et gérée par un SGBD.
+        </p>
+        <p><strong>Fournisseur(<u>num_frs</u>, société, adresse, téléphone)</strong></p>
+        <p><strong>Article(<u>ref</u>, catégorie, nom, num_frs, phtva, tva)</strong></p>
+        <p><strong>Fournisseur_article(<u>num_frs, ref, date_appro</u>)</strong></p>
+
+        <ol>
+          <li> Donner le type de chacun des champs suivants :
+            <table class="table table-sm table-borderless">
+              <tbody>
+                <tr>
+                  <td>
+                    <table class="table table-sm table-bordered border-dark">
+                      <thead>
+                        <tr>
+                          <th colspan="2">Table Fournisseur</th>
+                        </tr>
+                        <tr>
+                          <th>Nom du champ</th>
+                          <th>Type</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>num_frs</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                          <td>société</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                          <td>adresse</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                          <td>téléphone</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td>
+                    <table class="table table-sm table-bordered border-dark">
+                      <thead>
+                        <tr>
+                          <th colspan="2">Table Article</th>
+                        </tr>
+                        <tr>
+                          <th>Nom du champ</th>
+                          <th>Type</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>ref</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                          <td>catégorie</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                          <td>nom</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                          <td>num_frs</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                          <td>phtva</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                          <td>tva</td>
+                          <td><input type="text" class="form-control"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>Donner le type de relation entre les deux tables <strong>fournisseur</strong> et <strong>article</strong>.
+            <input type="text" class="form-control">
+          </li>
+          <li>Quel est le rôle de la clé primaire dans une table ?
+            <input type="text" class="form-control">
+          </li>
+          <li>Quels sont les champs qui doivent être utilisés pour relier les trois tables ?
+            <textarea cols="30" rows="2" class="form-control"></textarea>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Exercice n&deg;3 &ndash; 8 Points</h3>
+
+        <p>On se propose de créer et d'interroger la base de données &laquo; site_marchand &raquo; définie par les
+          tablres ci-dessous :</p>
+        <p>Articles(<u>id_art</u>, nom_art, prix_art, marque_art)</p>
+        <p>Acheteurs(<u>id_ach</u>, nom_ach, ville_ach, password_ach)</p>
+        <p>Liste_Achats(<u>id_liste_ach, id_ach, id_art</u>, date_ach)</p>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-xl-4">
+            <h4>Articles</h4>
+            <table class="table table-sm table-bordered border-dark">
+              <thead>
+                <tr>
+                  <th>id_art</th>
+                  <th>nom_art</th>
+                  <th>prix_art</th>
+                  <th>marque_art</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001</td>
+                  <td>Serviette Pops</td>
+                  <td>1,200</td>
+                  <td>Pops</td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Boisson Boga</td>
+                  <td>1,000</td>
+                  <td>Boga</td>
+                </tr>
+                <tr>
+                  <td>003</td>
+                  <td>Serviette Lilas</td>
+                  <td>1,250</td>
+                  <td>Lilas</td>
+                </tr>
+                <tr>
+                  <td>004</td>
+                  <td>Boisson Coca Cola</td>
+                  <td>1,000</td>
+                  <td>Coca Cola</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-sm-12 col-md-6 col-xl-4">
+            <h4>Acheteurs</h4>
+            <table class="table table-sm table-bordered border-dark">
+              <thead>
+                <tr>
+                  <th>id_ach</th>
+                  <th>nom_ach</th>
+                  <th>ville_ach</th>
+                  <th>password_ach</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001</td>
+                  <td>Saber</td>
+                  <td>Sousse</td>
+                  <td>125adf23</td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Mouna</td>
+                  <td>Hammam Sousse</td>
+                  <td>236as6a1</td>
+                </tr>
+                <tr>
+                  <td>003</td>
+                  <td>Mahmoud</td>
+                  <td>Sousse</td>
+                  <td>987ert4</td>
+                </tr>
+                <tr>
+                  <td>004</td>
+                  <td>Yassine</td>
+                  <td>Khézama</td>
+                  <td>784hbh8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-sm-12 col-md-6 col-xl-4">
+            <h4>Liste_Achats</h4>
+            <table class="table table-sm table-bordered border-dark">
+              <thead>
+                <tr>
+                  <th>id_liste_ach</th>
+                  <th>id_ach</th>
+                  <th>id_art</th>
+                  <th>date_ach</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>010</td>
+                  <td>001</td>
+                  <td>001</td>
+                  <td>04/03/2022</td>
+                </tr>
+                <tr>
+                  <td>010</td>
+                  <td>001</td>
+                  <td>002</td>
+                  <td>04/03/2022</td>
+                </tr>
+                <tr>
+                  <td>010</td>
+                  <td>001</td>
+                  <td>003</td>
+                  <td>04/03/2022</td>
+                </tr>
+                <tr>
+                  <td>010</td>
+                  <td>001</td>
+                  <td>002</td>
+                  <td>04/03/2022</td>
+                </tr>
+                <tr>
+                  <td>011</td>
+                  <td>002</td>
+                  <td>001</td>
+                  <td>05/03/2022</td>
+                </tr>
+                <tr>
+                  <td>011</td>
+                  <td>002</td>
+                  <td>002</td>
+                  <td>05/03/2022</td>
+                </tr>
+                <tr>
+                  <td>011</td>
+                  <td>002</td>
+                  <td>003</td>
+                  <td>05/03/2022</td>
+                </tr>
+                <tr>
+                  <td>012</td>
+                  <td>003</td>
+                  <td>002</td>
+                  <td>05/03/2022</td>
+                </tr>
+                <tr>
+                  <td>013</td>
+                  <td>004</td>
+                  <td>001</td>
+                  <td>06/03/2022</td>
+                </tr>
+                <tr>
+                  <td>013</td>
+                  <td>004</td>
+                  <td>002</td>
+                  <td>06/03/2022</td>
+                </tr>
+                <tr>
+                  <td>013</td>
+                  <td>004</td>
+                  <td>003</td>
+                  <td>06/03/2022</td>
+                </tr>
+                <tr>
+                  <td>014</td>
+                  <td>001</td>
+                  <td>002</td>
+                  <td>06/03/2022</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <p><b>Travail demand&eacute;</b></p>
+        <ol>
+          <li>Compl&eacute;ter le sch&eacute;ma graphique de la base de donn&eacute;es, dessiner les relations entre les
+            tables. (Sur le cahier)
+            <figure>
+              <img src="ds1_02_4eco_2021_html_fcb5a522fdbc6fdb.gif" name="Objet de groupe 1" alt="Schéma graphique" />
+            </figure>
+          </li>
+          <script>
+            const tablesFields = ["id_art", "nom_art", "prix_art", "marque_art", "id_ach", "nom_ach", "ville_ach", "password_ach", "id_liste_ach", "date_ach"];
+            const tables = ["Liste_Achats", "Articles", "Acheteurs"];
+            function drawTable(tables, tablesFields, typeReq, colNum, defaultValues = {}) {
+              let fields = [];
+              let typeFields;
+              const sortFields = ["Croissant", "Décroissant"];
+              const opFields = ["Compte", "Somme", "Moyenne", "Minimum", "Maximum", "Où"];
+              document.writeln("<table class=\"table table-bordered table-sm border-dark\">");
+              if (typeReq == "select") {
+                fields = ["Champ", "Table", "Tri", "Afficher", "Critères", "Ou"];
+                typeFields = {
+                  "Champ": tablesFields,
+                  "Table": tables,
+                  "Tri": sortFields,
+                  "Afficher": "checkbox",
+                  "Critères": "textbox",
+                  "Ou": "textbox"
+                };
+              } else if (typeReq == "select_agr") {
+                fields = ["Champ", "Table", "Opération", "Tri", "Afficher", "Critères", "Ou"];
+                typeFields = {
+                  "Champ": tablesFields,
+                  "Table": tables,
+                  "Opération": opFields,
+                  "Tri": sortFields,
+                  "Afficher": "checkbox",
+                  "Critères": "textbox",
+                  "Ou": "textbox"
+                };
+              } else if (typeReq == "update") {
+                fields = ["Champ", "Table", "Mise à jour", "Critères", "Ou"];
+                typeFields = {
+                  "Champ": tablesFields,
+                  "Table": tables,
+                  "Mise à jour": "textbox",
+                  "Critères": "textbox",
+                  "Ou": "textbox"
+                };
+              }
+              for (let j = 0; j < fields.length; j++) {
+                document.writeln("<tr>");
+                for (let i = 0; i <= colNum; i++) {
+                  document.writeln("<td" + ((j == 0) ? " width=\"" + (100 / (colNum + 1)) + "%\"" : "") + ">");
+                  if (i == 0) {
+                    document.writeln(fields[j] + " :");
+                  } else if (Array.isArray(typeFields[fields[j]])) {
+                    document.writeln("<select class=\"form-control\">");
+                    document.writeln("<option></option>");
+                    for (let field of typeFields[fields[j]]) {
+                      if (defaultValues[fields[j]] && defaultValues[fields[j]][i - 1] == field) {
+                        console.log(defaultValues[fields[j]][i], "==", field);
+                      }
+                      document.writeln("<option" + ((defaultValues[fields[j]] && defaultValues[fields[j]][i - 1] == field) ? " selected" : "") + ">" + field + "</option>");
+                    }
+                    document.writeln("</select>");
+                  } else if (typeFields[fields[j]] == "checkbox") {
+                    document.writeln("<div class=\"text-center\"><input type=\"checkbox\"" + ((defaultValues[fields[j]] && defaultValues[fields[j]][i - 1]) ? " checked" : "") + "></div>");
+                  } else if (typeFields[fields[j]] == "textbox") {
+                    document.writeln("<div class=\"text-center\"><input type=\"text\" class=\"form-control\"></div>");
+                  }
+                  document.writeln("</td>");
+                }
+                document.writeln("</tr>");
+              }
+              document.writeln("</table>");
+            }
+            function drawSelectTables(tables) {
+              document.writeln("<select class=\"form-control\">");
+              document.writeln("<option>-</option>");
+              for (let table of tables) {
+                document.writeln("<option>" + table + "</option>");
+              }
+              document.writeln("</select>");
+            }
+          </script>
+          <li>Donner l'ordre de remplissage des trois tables :
+            <ol>
+              <li>
+                <script>
+                  drawSelectTables(tables);
+                </script>
+              </li>
+              <li>
+                <script>
+                  drawSelectTables(tables);
+                </script>
+              </li>
+              <li>
+                <script>
+                  drawSelectTables(tables);
+                </script>
+              </li>
+            </ol>
+          </li>
+          <li>Pour chacune des requ&ecirc;tes suivantes remplir la grille correspondante&nbsp;:
+            <ol type="a">
+              <li>
+                <p><b>Requ&ecirc;te 1&nbsp;:</b> Afficher la liste des acheteurs dont les noms contiennent la lettre
+                  "n".
+                </p>
+                <script>
+                  drawTable(tables, tablesFields, "select", 4);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 2&nbsp;:</b> Afficher les liste des produits achetées par des acheteurs d'une ville
+                donnée.
+                <script>
+                  drawTable(tables, tablesFields, "select", 4);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 3&nbsp;:</b> Afficher le prix d'un produit donné.
+                <script>
+                  drawTable(tables, tablesFields, "select", 4);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 4&nbsp;:</b> Afficher le total des achats de "Mouna" pour le 05/03/2022.
+                <script>
+                  drawTable(tables, tablesFields, "select_agr", 5);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 5&nbsp;:</b> Afficher le nombre d'articles achetés par "Mahmoud".
+                <script>
+                  drawTable(tables, tablesFields, "select_agr", 5);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 6&nbsp;:</b> Afficher le nombre de boissons "Boga" achetés par les clients durant le
+                mois de Mars.
+                <script>
+                  drawTable(tables, tablesFields, "select_agr", 5);
+                </script>
+              </li>
+              <li><b>Requ&ecirc;te 7&nbsp;:</b> Suite aux tentatives de piratages de son compte "Yassine" veut changer
+                son mot de passe à "yasso2023".
+                <script>
+                  drawTable(tables, tablesFields, "update", 5);
+                </script>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </section>
+    </article>
+
+    <nav id="nav-bottom" class="d-print-none" aria-label="Navigation">
+      <div class="text-center my-2">
+        <span>Page : </span>
+        <input type="number" id="num-page" min="1">
+        <span>/</span>
+        <span id="count-pages"></span>
+      </div>
+      <ul class="pagination justify-content-center"></ul>
+    </nav>
+  </main>
+  <script src="../scripts/jquery.min.js"></script>
+  <script src="../scripts/popper.min.js"></script>
+  <script src="../scripts/bootstrap.min.js"></script>
+  <script src="../scripts/navbar.js"></script>
+</body>
+
+</html>
